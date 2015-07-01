@@ -22,14 +22,14 @@ wave 60o to the left , then write the equation for each below.<br>
 <br>
 A geat question! Don tried copying the sine wave on tracing paper, then with a protractor, 
 rotated the sine wave 60o ccw. He had the answer, but no points or equation. 
-Shaleen on the other hand did the rotation by hand as we’ll see later. <br>
+Shaleen on the other hand did the rotation by hand as we'll see later. <br>
 
 
 Don had never done this, but had rotated parabolas and ellipses in the Japanese 
 version of his book Changing Shapes With Matrices. He figured he could do this.<br>
 <br>
 He called Wolfram support for help in how to write the matrix product. The 
-problem, as pointed out by a physics teacher and parent of one of Don’s 
+problem, as pointed out by a physics teacher and parent of one of Don's 
 students, was that {x, sin[x]} was not a function (after rotating it &#960;/3), so we 
 had to use a parametric plot. With Wolfram support, Don was able to come up with 
 the graph for the rotated sine wave.<br>
@@ -61,9 +61,9 @@ degrees. </p>
 <p align="center">
 <img border="0" src="../images/ShaleenRotatedTheSineWave.png" width="492" height="383"><br>
 &nbsp;</p>
-<p align="left">This ‘mistake’ wasn’t a problem because Shaleen’s method would work for any 
+<p align="left">This 'mistake' wasn't a problem because Shaleen's method would work for any 
 angle up to 90 degrees. He was probably so full of excitement that he just 
-didn’t notice, which is fine! At any rate, after rotating the x-axis, Shaleen, 
+didn't notice, which is fine! At any rate, after rotating the x-axis, Shaleen, 
 translated the x-values vertically to the rotated x-axis (see the blue arrow). 
 Then, using the y-values from the original sine (and cosine) curve, plotted 
 those the same vertical distance but perpendicular to the rotated x-axis (see 
@@ -102,13 +102,13 @@ Once Don used a ParametricPlot to graph the function, he wanted to
 know if there was a way to plot this graph with one equation, the one he derived above: <br>
 y - x*Sqrt[3] == 2 Sin[(y*Sqrt[3]&nbsp; + x)/2] <br>
 He asked Lori to verify his work. She did and it seemed to be right but that 
-wasn’t enough. Don wanted to verify this equation another way. He wanted to know 
+wasn't enough. Don wanted to verify this equation another way. He wanted to know 
 if the rotated x-y values make true statements if substituted into his new Cartesian 
 equation. And since most mathematical processes are reversible, rotating the new 
 sine wave -60 or 60 degrees clockwise would put the sine function into its 
 original position. Neither Don nor Lori wanted to do either of these by hand!<br>
 <br>
-The question is how to do that in Mathematica! She had too much fun ‘working’ 
+The question is how to do that in Mathematica! She had too much fun 'working' 
 for Don: making videos of&nbsp; Don and his students, taking pictures with his camera 
 and hers, working with his students, rummaging through his bookshelves, etc. So, 
 Lori had to do this when she got back to Kansas City.<br>
@@ -124,7 +124,7 @@ This code generates the rotated points:<br>
 </font>
 <p align="center">
 <br>
-Here’s the plot:<br>
+Here's the plot:<br>
 <img border="0" src="../images/lorilistlplotRotPts.jpg" width="684" height="604"><br>
 <br>
 <br>
@@ -154,7 +154,7 @@ solve for y. Now for the technical part. Lori tried the Mathematica functions
 she already knew: Solve[], NSolve[], Reduce[], and FindRoot[], without success. 
 Then there was FindInstance[]. Given an equation, FindInstance will find at 
 least one solution but that may not be the solution needed. Lori was able to 
-find a solution for when x = -0.226401 but it didn’t match the points on the 
+find a solution for when x = -0.226401 but it didn't match the points on the 
 graph. <br>
 <br>
 <img border="0" src="../images/loriRotSine4pts.jpg" width="260" height="151"><br>
@@ -196,7 +196,7 @@ Reals] /. y -&gt; 2.7207<br>
 <br>
 Lori loved this challenge. New questions arose: Why did FindInstance[] find 
 solutions that did not seem to relate to the rotated sine graph? How are the 
-complex solutions related to the equation when ‘Reals’ is not indicated as an 
+complex solutions related to the equation when 'Reals' is not indicated as an 
 option in FindInstance[]? <br>
 <br>
 This was a great learning experience for Don, Shaleen, and Lori, and Shaleen was 
