@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Sqrt by av & iterating</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="5" color="#800080">Finding the Square root of a
+number by 'iteration of the average method'/Chapter10</font></b></p>
+
+<p align="center">&nbsp;</p>
+<p align="left">
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Finding <sup><img align=middle src="../images/sqrt40.gif" width="27" height="18"></sup>by 
+'iteration of the average' method.</b><br>What does <sup><img align=middle 
+src="../images/sqrt40.gif" width="27" height="18"></sup> mean? We're looking for a number such that 
+when you multiply it by itself you get 40 or <sup> <img align=middle 
+src="../images/bxb40.gif" width="91" height="22"></sup>. Suppose we guess 5. 40/5 = 8. 8x5=40, but 
+the two factors have to be the same. 8 is too big 
+and 5 is too small. If we find their average, we'll be closer to the  
+<sup><img align=middle src="../images/sqrt40.gif" width="27" height="18"></sup>. So we'll do 
+this<img 
+align=middle src="../images/g5.gif" width="60" height="44">= 6.5. Then we'll take 6.5 and find 
+the average of this and 40/6.5, like this <img
+align=middle src="../images/g65.gif" width="56" height="40">. Notice we have an iteration 
+problem now where <b>G</b> is the guess number <img 
+align=middle src="../images/itav40.gif" width="61" height="46"> -> 
+<b>G</b>! Here's a number line picture of these first 2 iterations:</p>
+<p align="center"><br>
+<img src="../images/itavpic.gif" width="402" height="168"></p>
+<p align="left"><br>
+So we get an <font color="#FF0000"><b> infinite sequence</b></font> 5, 6.5, 6.326923077, 6.324555763, 
+6.324555320, ... After only 4 iterations we get the <sup> <img align=middle 
+src="../images/sqrt40.gif" width="27" height="18"></sup>correct to 9 decimal places. This 
+method gives a rapidly converging sequence to find the square root of a 
+number.</p>
+<p><b>Using <i>Mathematica</i> where x is the guess number</b></p>
+<p>h[x_]=(40/x+x)/2</p>
+<p>1/2 (40/x+x)</p>
+<p>N[NestList[h,5,10],10]</p>
+<p>{5.000000000,6.500000000,6.326923077,6.324555763,6.324555320,6.324555320,6.324555320,6.324555320,6.324555320,6.324555320,6.324555320}</p>
+<p>ListLinePlot[%]</p>
+<p align="center"><img SRC="../images/Image41.gif" WIDTH="359" HEIGHT="211"></p>
+<p align="center">(the y-axis does have decimal points in the numbers)</p>
+<p align="left"> <br>Write a program to do this iteration.</p>
+<p><b>Finding the square root of N by the 
+iteration of the averaging method.</b><br>Gayla, a 6th grader, wrote this 
+program to get the square root 
+of N , starting with <b>G</b><UL><LI>10 C=0<LI>20 INPUT N<LI>30 INPUT 
+G<LI>40 G=(G+N/G)/2<LI>50 C=C+1<LI>60 PRINT G<LI>70 If C is less than 19 
+THEN GOTO 40<LI>80 END</UL>
+<p>&nbsp;</p>
+<p>See <a href="maura.html">Maura's </a> and other iteration solutions.</p>
+
+<p>See <a href="maddy&amp;sqrts.html">Maddy's work on square roots</a></p>
+
+</body>
+
+</html>

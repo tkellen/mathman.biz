@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>David's Rule Generator</title>
+</head>
+
+<body>
+
+<p align="center"><font size="5" color="#800080"><b>David Dlott's&nbsp; Rule Generator/functions</b></font></p>
+<p>&nbsp;</p>
+<p>Don's rule y=<font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>x
+</sup></b></font>+ x, with pairs of numbers <font SIZE="4">(x,y),
+(0,1), (1,</font><font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>1
+</sup></b></font>+ 1<font SIZE="4">),<sup> </sup></font><font SIZE="4">(2,</font><font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>2
+</sup></b></font>+ 2<font SIZE="4">),<sup> </sup>(3,</font><font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>3
+</sup></b></font>+ 3<font SIZE="4">)</font></p>
+<p>Expand<font size="3">[</font>1*(((x-1)(x-2)(x-3))*(1/((0-1)(0-2)(0-3))))+</p>
+<p>(N[<font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>1
+</sup></b></font>+ 1])<sup>*</sup><font size="3">(((x)(x-2)(x-3))*(1/((1)(1-2)(1-3))))</font>+</p>
+<sup><p>(N[<font FACE="Mathematica1Mono" size="4"><b>ã</b></font></sup><font size="2"><b><sup><sup>2</sup></sup></b></font><sup><font size="2"><b><sup>
+</sup></b></font>+ 2])*</sup><font size="4"><sup>(((x-1)(x)(x-3))*(1/((2-1)(2)(2-3))))+</sup></font></p>
+<sup><p>(N[<font FACE="Mathematica1Mono" size="4"><b>ã</b></font></sup><font size="2"><b><sup><sup>3</sup></sup></b></font><sup><font size="2"><b><sup>
+</sup></b></font>+ 3])*</sup><font size="4"><sup>(((x-1)(x-2)(x))*(1/((3-1)(3-2)(3))))]</sup></font></p>
+<p>David's rule generator gives the function:&nbsp; 1 + 2.93311 x - 1.06036 x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>
++ 0.845536 x<font size="2"><b><sup>3</sup></b></font></p>
+<p><font face="Mathematica1Mono" size="3"><b>N.B.:</b></font><b><font FACE="Mathematica1Mono" size="4">&nbsp;
+ã</font></b><font size="2"><b><sup>0 </sup></b></font>+ 0 = 1, <b><font FACE="Mathematica1Mono" size="4">ã</font></b><font size="2"><b><sup>1
+</sup></b></font>+ 1 = 3.71828, <font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>2
+</sup></b></font>+ 2 = 9.38906, and <font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font size="2"><b><sup>3
+</sup></b></font>+ 3 = 23.0855 .</p>
+<p>Don shows below that when the x-value is substituted into the function (at
+the end /.x<font FACE="Mathematica1Mono">®</font>1) , the
+y-value comes out correctly</p>
+<p>1 + 2.9331069780437167`x - 1.0603608348801465`x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>+ 0.8455356852954754`x<font size="2"><b><sup>3</sup></b></font>/.x<font FACE="Mathematica1Mono">®</font>0</p>
+<p>y=1</p>
+<hr>1 + 2.9331069780437167`x - 1.0603608348801465`x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>+ 0.8455356852954754`x<font size="2"><b><sup>3</sup></b></font>/.x<font FACE="Mathematica1Mono">®</font>1
+<p>y=3.71828</p>
+<hr>1 + 2.9331069780437167`x -1 .0603608348801465`x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>+ 0.8455356852954754`x<font size="2"><b><sup>3</sup></b></font>/.x<font FACE="Mathematica1Mono">®</font>2
+<p>y=9.38906</p>
+<hr>
+<p>1 + 2.9331069780437167`x - 1.0603608348801465`x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>+ 0.8455356852954754`x<font size="2"><b><sup>3</sup></b></font>/.x<font FACE="Mathematica1Mono">®</font>3</p>
+<p>y=23.0855</p>
+<hr><font size="3">Don graphed David's <font color="#0000FF">function</font> (a cubic polynomial) and Don's
+<font color="#800080">
+exponential function</font> from 0 to 8, that shows from 0-3 they
+are exactly the same then Don's exponential function jumps up
+faster when x&gt;3</font><font SIZE="1">.</p>
+</font>
+<p>Plot[{<font color="#0000FF">1+ 2.933106978043716`x - 1.0603608348801465`x<font size="2"><b><sup>2</sup></b></font><sup>
+</sup>+ 0.845535685295475` x<font size="2"><b><sup>3</sup></b></font></font>,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#800080"><b><font FACE="Mathematica1Mono" size="4">ã</font></b><font size="2"><b><sup>x
+</sup></b></font>+ x</font>},{x,0,8}]</p>
+<p align="center"><img SRC="../images/DDgr1.gif" WIDTH="604" HEIGHT="382"></p>
+
+</body>
+
+</html>

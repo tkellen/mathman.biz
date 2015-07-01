@@ -1,0 +1,267 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Don's work on Polypowers</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="5" face="Arial">Don's work on polypowers</font></b></p>
+
+<p align="left"><font face="Arial"><font size="3">Don, without realizing at the time what it was
+called, had done work on polypowers in his worksheet book in chapter 11. He
+found <img align="middle" src="../images/itoi.jpg" width="53" height="56">in the
+following ways in <i>Mathematica </i></font>with the help of Theo Gray:</font></p>
+
+<p ALIGN="LEFT">&nbsp;</p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[i^i,10] </font></b></p>
+<p ALIGN="LEFT"><font face="Arial">0.20788 +0<b><font size="4">i</font></b>&nbsp;&nbsp;&nbsp; (which
+is 0.20788 ; so&nbsp; <b><font size="4">i</font></b> <b><sup>i</sup></b> turns out to be a real number!) can you prove that?</font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[<font size="4">i</font>^(<font size="4">i</font>^<font size="4">i</font>),10]</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">0.947159 +0.320764 <b><font size="4">i</font></b></font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[<font size="4">i</font>^<font size="4">i</font>^<font size="4">i</font>,10]</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">0.947159 +0.320764 <b><font size="4">i</font></b></font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[<font size="4">i</font>^(<font size="4">i</font>^(<font size="4">i</font>^<font size="4">i</font>)),10]</font></p>
+</b>
+<p ALIGN="LEFT"><font face="Arial">0.0500922 +0.602117 <b><font size="4">i</font></b></font></p>
+<p ALIGN="LEFT">
+
+<b>
+<font face="Arial">g[x_]=</font></b><font face="Arial"> <b><font size="4">i</font></b></font><b><font face="Arial">^x&nbsp; 
+(</font></b><font face="Arial">defines the function)</font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[NestList[g,1,2],10]&nbsp; </font> </b>
+<font face="Arial">(NestList tells the computer to
+iterate the function g or <b><font size="4">i</font>^x</b>, start with
+<font size="4"><b>1</b></font> in for <b>x</b>, do  2 iterations and write the answer to 10 digits.
+We get as an output <b><font size="4">i</font></b>, <b><font size="4">i</font>^<font size="4">i</font>
+</b>and<b> <font size="4">i</font>^<font size="4">i</font>^<font size="4">i</font></b> 
+or&nbsp; {0. +1. <b><font size="4">i</font></b>, 0.20788 +0 <b><font size="4">i</font></b>,
+0.947159 +0.320764 <b><font size="4">i</font></b>}</font></p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">N[NestList[g,1,20],10] </font>
+</b>
+<font face="Arial">(iterate the function 20 times)
+<br>{0. +1. <b><font size="4">i</font></b>,&nbsp; 0.20788 +0<b><font size="4">i</font></b>,&nbsp;&nbsp;&nbsp; 0.947159
++0.320764 <b><font size="4">i</font></b>,&nbsp;&nbsp;
+<br>0.0500922 +0.602117 <b><font size="4">i</font></b>, 0.387166
++0.0305271 <b><font size="4">i</font></b>,
+<br>0.782276 +0.544607 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.142562
++0.400467 ä,
+<br>0.519786 +0.118384 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.568589
++0.605078 ä,
+<br>0.242365 +0.301151 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.578489
++0.23153 ä,
+<br>0.42734 +0.548231 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.330967
++0.262892 ä,
+<br>0.574271 +0.328716 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.369948
++0.468173 <b><font size="4">i</font></b>,<br>0.400633 +0.26312 <b>
+<font size="4">i</font></b>,&nbsp;&nbsp;&nbsp;&nbsp; 0.534744
++0.389328 <b><font size="4">i</font></b>,&nbsp;
+<br>0.362114 +0.403964 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.446697
++0.285567 <b><font size="4">i</font></b>,
+<br>0.487696 +0.412175 <b><font size="4">i</font></b>,&nbsp;&nbsp; 0.37717
++0.362866 <b><font size="4">i</font></b>} </font>
+</p>
+<p ALIGN="LEFT"><font face="Arial">It doesn't look like there is a pattern here, but If we take it out 120 terms and look at the last
+2 </font>
+</p>
+<b>
+<p ALIGN="LEFT"><font face="Arial">Take[N[NestList[g,1,120],10],-2]&nbsp; </font> </b>
+<font face="Arial">, we get</font></p>
+<p><font face="Arial">{0.438284 +0.360593 <b><font size="4">i</font></b>, 0.438282 +0.360593
+<b><font size="4">i</font></b>}</font></p>
+
+<p align="left"><font face="Arial">If we graph this sequence and connect the 
+points,&nbsp;we get</font></p>
+
+<b>
+<p ALIGN="LEFT"><font face="Arial">ListPlot[Map[{Re[#],Im[#]}&amp;,N[NestList[g,0+1,100]]],</font></p>
+<p><font face="Arial">PlotJoined-&gt;True,PlotRange-&gt;All,AspectRatio®Automatic];</font></p>
+</b>
+
+<p align="center"><font face="Arial"><img border="0" src="../images/gritoi.jpg" width="248" height="210"></font></p>
+
+<p align="left"> <font face="Arial">we can see
+that it converges in a<b> spiral</b>, to about 0.438282 + 0.360593 <b>
+<font size="4">i</font></b>&nbsp;.&nbsp;</font></p>
+
+<p align="left"><font face="Arial">If we <b>don't</b> connect the points, by taking out the
+PlotJoined-&gt;True,</font></p>
+
+<b>
+<p ALIGN="LEFT"><font face="Arial">ListPlot[Map[{Re[#],Im[#]}&amp;,N[NestList[g,0+I,100]]],</font></b><font face="Arial"> <b>PlotRange-&gt;All,</b></font></p>
+<p ALIGN="LEFT"><b><font face="Arial">AspectRatio® Automatic,Prolog®AbsolutePointSize[5]];</font></p>
+</b>
+
+<p align="center"><font face="Arial">
+<img border="0" src="../images/gfitoidots.jpg" width="285" height="293"></font></p>
+
+<p align="left"><font face="Arial">We get what looks like 3 spirals converging at the same point!
+The complex numbers in the sequence go from one spiral to the second spiral,
+then to the third spiral, then back to the first spiral, and so on as the
+sequence converges.</font></p>
+
+<p align="left"><font face="Arial">Some time after Don put this on his <a href="http://www.mathman.biz/html/prob11.html">website</a>
+, IES, the java applet -making site in Japan found this page and asked to use this idea.
+They made a <b>great</b> <a href="http://www.ies.co.jp/math/java/comp/itoi/itoi.html">java
+applet </a>in which you can start with any point on the complex plane, do the
+powers of that point or complex number, and see
+whether the sequence converges or diverges, by graphing it like that above. It's
+in color, blue if it converges, red if not, and yellow if they don't know- and
+the result is a fractal!</font></p>
+
+<p align="left"><font face="Arial">When<a href="http://www.mathman.biz/html/geofpolypowers.html"> Geoffrey started with his
+polypowers</a>, <img align="middle" src="../images/12to14.jpg" width="126" height="106">Don
+did the following polypowers of <img align="middle" src="../images/12to12.jpg" width="120" height="102">below</font></p>
+
+<p class="MsoNormal"><font face="Arial"><b>g[x_]=(1/2)^x<o:p>
+</o:p>
+</b></font></p>
+<p class="MsoNormal"><font face="Arial"><b>2<sup>-x<o:p>
+</o:p>
+</sup></b></font></p>
+<p class="MsoNormal"><b><font face="Arial">N[NestList[g,1/2,15],20]<o:p>
+</o:p>
+</font>
+<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" align="center"><font face="Arial">{0.50000000000000000000,<span style="mso-spacerun: yes">&nbsp;
+</span>0.70710678118654752440, 0.61254732653606592463, 0.65404086004206947198,
+0.63549784581337376987, 0.64371864172286913077, 0.64006102117723968592,
+0.64168580704299834213, 0.64096353717796321197, 0.64128450906658501514,
+0.64114185147173778001, 0.64120525244986237073, 0.64117707452883861956,
+0.64118959776687235711, 0.64118403197862250826, 0.64118650561396046518}</font></p>
+<p class="MsoNormal" align="left"><font face="Arial">So the sequence converges to about
+0.64118650561396046518... one number, while Geoffrey's converges to 2 numbers!
+Looking at the numbers above in radical form, Don used this command.</font></p>
+<p class="MsoNormal"><font face="Arial">&nbsp;<o:p>
+</o:p>
+<b>NestList[g,1/2,10]<o:p>
+ </o:p>
+</b></font></p>
+<p class="MsoNormal" align="center" style="text-align:center">
+<font face="Arial">
+<img border="0" src="../images/donpoly12.jpg" width="472" height="136"></font></p>
+<p class="MsoNormal" align="left"><font face="Arial">The second term above comes from&nbsp; 
+<img align="middle" src="../images/polypowers12%202.gif" width="238" height="56"></font></p>
+<p class="MsoNormal"><font face="Arial">&nbsp;<o:p>
+</o:p>
+<b>ListPlot[N[NestList[g,1/2,15],20],<o:p>
+</o:p>
+</b></font><b><font face="Arial">PlotJoined-&gt;True,PlotRange-&gt;All];<o:p>
+</o:p>
+</font>
+<o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" align="center" style="text-align:center">
+<font face="Arial">
+ <img border="0" src="../images/donpoly12gr.jpg" width="291" height="184"></font></p>
+<p class="MsoNormal" align="left"><font face="Arial">The first 3 points on the graph
+above are (1, 0.5), (2, 0.707..) and (3, 0.612..) Looking at the graph we see it converges to
+about 0.64118650561396046518... </font>
+</p>
+
+<p class="MsoNormal"><font face="Arial"><b>November 12, 2002 , Don received the following email:</b><o:p>
+</o:p>
+</font>
+</p>
+<p class="MsoNormal"><font color="#FF00FF"><b><font face="Arial">&quot;I won the mathematics and
+computers section of the 1968 Metropolitan Detroit Science Fair with a project
+titled &quot;Infinite Exponentiation.&quot;&nbsp; The core of the project was
+the question, &quot;Why is the square root of two equal to the fourth root of
+four?</font><span style="font-family:&quot;Arial&quot;"><o:p>
+</o:p>
+</span></b></font></p>
+<p class="MsoNormal"><font color="#FF00FF"><b><font face="Arial">&nbsp;<o:p>
+</o:p>
+I found there were pairs of numbers from one to infinity, around a largest
+value, which was the&nbsp; e-th root of e.&nbsp; (about 1.44)<o:p>
+</o:p>
+</font>
+<o:p>
+</o:p>
+</b></font></p>
+<p class="MsoNormal"><font color="#FF00FF"><b><font face="Arial">I used an IBM 1620 computer and
+about thirty hours of computer time to generate values.&nbsp; My algebra skills
+were such then that I was able to prove eth root of e was the largest value of
+nth root of n.<o:p>
+</o:p>
+</font>
+<o:p>
+</o:p>
+</b></font></p>
+<p class="MsoNormal"><font face="Arial"><font color="#FF00FF"><b>Thirty years later the
+calculations take a few seconds in mathematica&quot;.<o:p>
+</o:p>
+ -H. F., NYU</b></font><o:p>
+</o:p>
+</font>
+</p>
+<p align="left"><font face="Arial">It's nice to know other people are interested in what we are
+doing!</font></p>
+
+<p class="MsoNormal" align="left"><font face="Arial">Don plotted n^(1/n) and <b>E</b>^(1/<b>E</b>)
+below </font>
+</p>
+<p class="MsoNormal" align="left"><font face="Arial"><b>Plot[{n^(1/n),E^(1/E)},{n,1,5}]</b>
+</font>
+</p>
+<p class="MsoNormal" align="left"><font face="Arial"><font SIZE="2">
+<img SRC="../images/e^1e.gif" width="449" height="267"></font> </font>
+</p>
+<p class="MsoNormal" align="left"><font face="Arial">Don used <i>Derive</i> to find the derivative
+of x^(1/x), then set that equal to zero to get the maximum and minimum
+points.&nbsp; </font>
+</p>
+<p class="MsoNormal" align="left"><font face="Arial">x <sup> 1/x</sup><br>
+<br>
+d&nbsp;&nbsp; x <sup> 1/x</sup><br>
+——&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =<br>
+dx&nbsp; </font>
+</p>
+<p class="MsoNormal" align="left"><font face="Arial">= x<sup>(1 - 2·x)/x&nbsp;</sup> ·(1 - LN(x))
+, this is the derivative, then Don set this = 0<br>
+<br>
+x<sup> (1 - 2·x)/x&nbsp;</sup> ·(1 - LN(x)) = 0, then solved that equation in <i>Derive</i><br>
+<br>
+<br>
+APPROX(SOLVE(x<sup> (1 - 2·x)/x&nbsp;</sup>           ·(1 - LN(x)) = 0, x)),
+to get these answers.<br>
+<br>
+x = ± î·Inf or&nbsp; x = ±Inf&nbsp; or x = 2.718281828... </font>
+</p>
+<font face="Arial">The one value of x that made sense to Don was 2.71828.. which is <b>E</b>, and
+the y value of the function at&nbsp; x = <b>E&nbsp;&nbsp;</b> is 1.44... </font>
+<hr>
+<font face="Arial">Back to <a href="http://www.mathman.biz/html/geofpolypowers.html">Geoffrey's
+work on polypowers</a> </font>
+<p><font color="#ff0000" face="Arial"><font size="4">To order</font><a href="https://www.mathman.biz/html/order.html">
+Don's materials</a><br>
+<a href="http://www.mathman.biz">Mathman home</a></font></p>
+<p class="MsoNormal" align="left"><font face="Arial"></o:p>
+</font>
+</p>
+<p class="MsoNormal"><font face="Arial"><b>&nbsp;<o:p>
+</o:p>
+</b></font></p>
+
+<p align="left">&nbsp;</p>
+
+<p align="center">&nbsp;</p>
+
+</body>
+
+</html>

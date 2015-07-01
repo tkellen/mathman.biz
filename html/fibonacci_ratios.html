@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Fibonacci ratios</title>
+</head>
+
+<body>
+
+<p align="center"><font color="#800080" size="5"><b>The ratios of successive
+Fibonacci numbers, the graph and comparing the Fibonacci and Nautilus shell
+spirals/chapter 7</b></font></p>
+<p><b> The 
+Fibonacci ratios:</b> <center><img src="../images/fibchb.gif" width="403" height="187"></center>
+</p>
+<p>Geoffrey worked on the Fibonacci numbers and got their ratios. He graphed the
+ratios, and saw they formed an <b><font color="#FF0000">infinite sequence</font></b> that was alternating and approached
+the number 1.618033...</p>
+<p align="center"><img border="0" src="../images/geoffsfibgr.jpg" width="329" height="633"></p>
+<p align="left"><font face="Arial" size="3">In Wells' &quot;Dictionary of
+Curious and Interesting Numbers&quot; he found that (Sqrt 5 +1)/2 = 1.61803... ,
+was an irrational number, and was called The Divine Proportion or The Golden
+Mean.</font></p>
+Don and Geoffrey wrote a program in basic to get the ratios. Then that evening,
+Geoffrey and his Dad wrote a program in <i>Mathematica</i> to get the Fibonacci
+numbers. The following 9 lines formed the input, the output was the first 22
+Fibonacci numbers below:<br>
+a=1;<br>
+b=1;
+<br">Print[a];<br>
+Print[b];<br>
+Do[s=a+b;<br>
+&nbsp; Print[s];<br>
+&nbsp; a=b;<br>
+&nbsp; b=s,<br>
+&nbsp; {i,1,20}]
+<p class="MsoNormal">1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,
+987, 1597, 2584, 4181, 6765, 10946, 17711</p>
+
+<p class="MsoNormal"><b><span style="border-collapse: collapse; font-family: arial, sans-serif; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3">Dear
+Don,<br>
+<br>
+I was a student of yours about ten years ago. &nbsp;I just wanted to send you a<br>
+little note to let you know that I still very often use the most important<br>
+lesson that you taught me: when a problem is too difficult, first think of<br>
+an easier case of the problem and work from there.<br>
+I am now a student at the California Institute of Technology, studying<br>
+Chemistry. &nbsp;I very much enjoyed working with you when I was younger, and I<br>
+don't recall whether I ever really got to thank you, so I wanted to make<br>
+sure that I did that.<br>
+<br>
+Thanks,</font></span></b></p>
+
+<p class="MsoNormal"><b><span class="Apple-style-span"><font size="3"><span style="border-collapse: collapse; font-family: arial, sans-serif; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">Geoffrey</span></font></span></b></p>
+
+<hr>
+<p align="center"><b><font face="Arial" color="#800080" size="4">Don compares the Fibonacci 
+spiral with the Nautilus spiral</font></b>
+<p align="left"><b><font face="Arial" color="#008000">An old friend emailed Don 
+to ask if there was a relationship between the Fibonacci numbers and the 
+Nautilus shell. Don did the following in response to this question.</font></b></p>
+<p align="left"><b><font face="Arial" color="#008000">He found the Fibonacci polar equation in Coxeter's 
+&quot;Introduction to Geometry&quot; and he used <i>Mathematica </i>
+to plot it<i> </i>
+with this command:</font></b></p>
+<b>
+<p ALIGN="LEFT">PolarPlot[((1+Sqrt[5])/2)^(2*n/Pi),{n,0,4*Pi}, AspectRatio -&gt; 
+Automatic, PlotStyle-&gt;</p>
+<p>{Thickness[.01],RGBColor[0,0,1]}];</p>
+</b>
+<p align="left"><b><font color="#008000"><font face="Arial">The angles (alpha) 
+measured below are the smaller of the two formed by the radius vector, say OB<sub>3</sub> 
+and the tangent to the curve at point B<sub>3 </sub>(four of these were done and 
+averaged). The radius vectors, say OB<sub>3</sub> and OA<sub>3</sub> (360° 
+apart) were measured and the ratio OB<sub>3</sub></font>/<font face="Arial">OA<sub>3
+</sub>was calculated (four of these were done and averaged).</font></font></b></p>
+<p align="left">&nbsp;</p>
+<p align="center"><img border="0" src="../images/fibspiral.jpg" width="476" height="569"></p>
+<p><b><font face="Arial">Both spirals-Fibonacci and Nautilus shell, below- are
+equiangular. The angles of the tangent to the spirals shown 
+above average 74° , and 79.5° below, with a growth in the radius vector average of 6.7
+and 3.2 below, in 360°. Don hasn't seen this done for the Fibonacci spiral before. He would be interested in 
+hearing from others who have done this.</font></b>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3" color="#CC0066">Nautilus
+shell</font></span></b></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font size="3" color="#CC0066">Polar
+Equation: r =&nbsp;E</font></span><font size="3" color="#CC0066"><sup><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">x<span style="vertical-align: text-top; border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font face="Arial">•</font></span>Cot[79.5<font face="Arial"><span style="vertical-align: super; border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">&nbsp;</span><span style="vertical-align: text-top; border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">•</span></font></span><font face="Euclid Symbol">p</font></sup><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><sup>/180]</sup>;</span></font></span></b></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3" color="#CC0066">Ratio
+of radius vectors every 360<font face="Arial">°</font>&nbsp;is ~3.2;</font></span></b></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><font color="#CC0066"><font size="3"><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span">Smaller
+angle between tangent to curve and radius vector is ~79.5</span></font><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3" face="Arial"><span style="border-collapse: separate; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px">°</span></font></span></font></b></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3">PolarPlot[E^(x*Cot[79.5*Pi/180]),{x,0,4*Pi},
+AspectRatio -&gt; Automatic, PlotStyle</font></span></b></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b><span style="border-collapse: separate; color: rgb(0, 0, 0); font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px" class="Apple-style-span"><font size="3">-&gt;{Thickness[.011],RGBColor[1,0,1]}];</font></span></b></p>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<p class="MsoNormal" align="center" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><img border="0" src="../images/nautilussp.gif" v:shapes="_x0000_s1025" width="408" height="301"></p>
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; font-size: 12pt; font-family: 'Arial Unicode MS'; margin-left: 0in; margin-right: 0in; margin-top: 0in; "><b>&nbsp;</b></p>
+</span>
+<p>&nbsp;
+
+</body>
+
+</html>

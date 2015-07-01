@@ -1,0 +1,80 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1789,         70]
+NotebookOptionsPosition[      1359,         49]
+NotebookOutlinePosition[      1716,         65]
+CellTagsIndexPosition[      1673,         62]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  UnderoverscriptBox["\[Sum]", 
+   RowBox[{"k", "=", "1"}], "\[Infinity]"], 
+  RowBox[{
+   RowBox[{"(", 
+    FractionBox["2", "100"], ")"}], "^", "k"}]}]], "Input",
+ CellChangeTimes->{{3.558207455362862*^9, 3.5582074773970337`*^9}, 
+   3.55820752744163*^9, 3.5582075644723263`*^9, 3.558207640267828*^9, {
+   3.5582076844664*^9, 3.558207762225614*^9}}],
+
+Cell[BoxData[
+ FractionBox["1", "49"]], "Output",
+ CellChangeTimes->{3.558207993964531*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"%", ",", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.558208012841721*^9, 3.558208036654228*^9}}],
+
+Cell[BoxData["0.02040816326530612244897959183673469388`5."], "Output",
+ CellChangeTimes->{3.558208038189229*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 756},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 375, 9, 54, "Input"],
+Cell[957, 33, 91, 2, 47, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1085, 40, 143, 3, 27, "Input"],
+Cell[1231, 45, 112, 1, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

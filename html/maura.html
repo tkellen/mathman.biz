@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Maura finds patterns while iterating functions</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="5" color="#800080">Patterns I
+found while </font><font face="Arial" size="5" color="#FF0000">iterating</font><font face="Arial" size="5" color="#800080">
+functions/Chapter 8a</font></b></p>
+<p align="center"><font color="#000000" face="Arial" size="4">by Maura, 10th
+grader</font></p>
+<p align="center"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="2">[This
+problem came from a teacher in one of Don's workshops.]</font></span></p>
+<p align="left"><font size="4"><font color="#000000" face="Arial">Mr. Cohen gave
+me the function 5 + x/2 to iterate. I plugged in the number 10 for x and I got
+the number 10 back out (5+10/2 = 5 + 5 = </font><font face="Arial" color="#FF00FF">10</font><font color="#000000" face="Arial">).
+That was easy. Then I plugged <b>2</b> in for x. 5 + <b>2</b>/2 = </font><font face="Arial" color="#FF0000">6</font><font color="#000000" face="Arial">.
+Then I put the output number <b>6,</b> in for x ( 5 + <b>6</b>/2 = </font><font face="Arial" color="#FF0000">8</font><font color="#000000" face="Arial">).
+Then I put <b>8</b> in for x&nbsp; ( 5 + <b>8</b>/2 = </font><font face="Arial" color="#FF0000">9</font><font color="#000000" face="Arial">).
+So I got the infinite sequence</font><b> <span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial"><font color="#FF0000">2,
+6, 8, 9, 9.5, 9.75, 9.875, 9.9375, 9.96875...</font> </font></span></b><font face="Arial"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">which
+kept getting closer to <font color="#FF00FF">10</font>. This putting back the
+output number in for x repeatedly, is called <font color="#FF0000">feedback or
+iteration</font>. When I used the <i>Mathematica</i><sup>® </sup>command<sup> </sup><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Take[N[NestList[f,2,200],300],-1]
+,&nbsp; </span>which tells the computer to do the iteration or feedback on our
+function f , 200 times, carry it to 300 digits, and look at only the last number
+in the sequence, we got:</span></font></font></p>
+<p align="left"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">&nbsp;<span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">9.99999999999999999999999999999999999999</span></font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">9999999999999999999995021587777711086634</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">28474875697590060752779826502306629351910</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">67081682409327716932470528441414994291064</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">34426728355902014300227165222167968750000</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">00000000000000000000000000000000000000000</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">00000000000000000000000000000000000000000</font></span></p>
+<p align="left"><font size="4"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-family: Arial"><font face="Arial">0000000000000000
+--</font></span><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">very,
+very close to <b><font color="#FF00FF">10</font></b>.</span></font></span></font></p>
+<p align="left"><font face="Arial" size="4"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">In
+</span><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><i>Mathematica</i><sup>®&nbsp;&nbsp;
+</sup>Mr. Cohen graphed this iteration using the command:</span></font></p>
+<p align="left"><font face="Arial" size="4">ListPlot[N[NestList[f,2,10],20],Prolog
+-&gt; AbsolutePointSize[4]]</font></p>
+<p align="center"><img border="0" src="../images/gr5x2.jpg" width="286" height="189"></p>
+<p align="left"><font size="4"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">And
+<b>every</b> number I started with to plug in for x, always formed an infinite
+sequence that got closer and closer to <b><font color="#FF00FF">10</font></b>. I
+noticed in the rule <font color="#0000FF">5 + x/2</font>, the numbers 5 and 2
+and&nbsp; 5*2=<font color="#FF00FF"><b>10</b></font>. When Mr. Cohen gave me the
+function <font color="#0000FF">6 + x/2</font>, every number I plugged in for x
+went to 12. I thought 5*2=<font color="#FF00FF"><b>10</b></font> and 6*2=<font color="#FF00FF"><b>12</b></font>,
+I thought the rule was the number times the denominator. But when I used <font color="#0000FF">6
++ x/3</font> I realized it didn't work. Every starting number goes to <b><font color="#FF00FF">9</font></b>.
+So I kept working it out more and realized the numbers go to 6*3/2&nbsp; or
+6*3/(3-1). Using a calculator, then </span><i>Mathematica</i><sup>®</sup><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">,
+I found that every number I plugged in for x in</span></font></span></font></p>
+<p align="left"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4"><font color="#0000FF">6
++ x/4</font>&nbsp;&nbsp; goes to <b><font color="#FF00FF">8</font> , </b>and&nbsp;
+6<span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">*4/3
+= 6*4/(4-1) = <b><font color="#FF00FF">8</font></b></span></font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4"><font color="#0000FF">12
++ x/6</font> goes to <b><font color="#FF00FF">14.4</font>, </b>and 12*6/5 =
+12*6/(6-1) =<font color="#FF00FF"> <b>14.4</b></font></font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4"><font color="#0000FF">13
++ x/3</font> goes to <b><font color="#FF00FF">19.5</font>, </b>and 13*3/2 =
+13*3/(3-1) = <b><font color="#FF00FF">19.5</font></b></font></span></p>
+<p align="center"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" size="4">So
+for the function <font color="#0000FF">a + x/b</font> all numbers you start with
+to plug in for x, will form an <font color="#FF0000"><b> infinite sequence</b></font> that goes to <b><font color="#FF00FF">(</font></b><font color="#FF00FF"><b>a</b>*<b>b)/(b-1).</b></font></font></span></p>
+<p align="center"><font color="#FF00FF" face="Arial" size="4"><b><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Fine
+work, Maura!</span></b></font></p>
+<hr>
+<p align="center"><b><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="5">Other
+links to iterating functions</font></span></b></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><a href="costa.html">Costa</a>
+finds other patterns while iterating functions</span></font></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="3"><a href="10waystosolveaquadraticeq.html">10
+ways
+to solve a quadratic equation</a>, <a href="prob8a.html">chapter 8a</a></font></span>
+<span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="3">and
+answers to <a href="ans8a.html">chapter 8a</a></font></span></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Kelda</span></font></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#FF0000" size="3">Iterate</font><font face="Arial" color="#000000" size="3">
+6/x</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="3">Jamie
+solves the quadratic equation x</font><font face="Arial" color="#000000" size="2"><sup><b>2</b></sup></font><font face="Arial" color="#000000" size="3">-x-1=0
+to get x= Sqrt(x+1), then <a href="jamieiterates.html">iterates</a> the right
+side to get the golden mean!</font></span></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="3"><a href="matsumoto.html">Mr
+Matsumoto</a> wrote from Japan after reading Don's book in Japanese, to show how he gets the square root of a number by
+</font><font face="Arial" color="#FF0000" size="3">
+iteration</font></span></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Finding
+the sqrt of a number by <a href="prob10.html"> iterating and averaging</a>  in
+Chapter 10 <b>#6</b> and <a href="ans10.html">answers</a></span></font></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Nanako's
+Mum <a href="nanako.html">solves a linear equation by iteration</a> (map #22)</span></font></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Jane
+iterates 2x (video)</span></font></p>
+<p align="left"><font face="Arial" color="#000000" size="3"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Students
+find the sqrt(sqrt(sqrt(...(x)&nbsp; what happens? See <a href="ans10.html">chapter
+10</a>  <b> #4, Map upper left corner.</b></span></font></p>
+<p align="left"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font face="Arial" color="#000000" size="3">Finding
+a new number-<a href="Dottie_Number.html"> the Dottie number</a> by </font><font face="Arial" color="#FF0000" size="3"> iterating</font><font face="Arial" color="#000000" size="3">
+cos x</font></span></p>
+<p align="left">Finding an <a href="infinite_continued_fractions.html"> infinite continued fraction by <font color="#FF0000"> iteration</font>
+</a>
+of 5 - 6/x</p>
+<p class="MsoNormal"><font size="3"><a href="http://www.mathman.biz/html/prob11.html"><span style="mso-fareast-font-family: Arial Unicode MS; color: black; mso-bidi-font-weight: bold">Graph
+the </span><span style="mso-fareast-font-family: Arial Unicode MS; mso-bidi-font-weight: bold"><font color="#FF0000"> iteration</font></span><span style="mso-fareast-font-family: Arial Unicode MS; color: black; mso-bidi-font-weight: bold"> of <b>i<sup>n</sup></b></span></a><span style="mso-fareast-font-family: Arial Unicode MS; color: black; mso-bidi-font-weight: bold"><b><sup>
+</sup></b>, (#11a) starting with n=</span><b><span style="mso-fareast-font-family:&quot;Arial Unicode MS&quot;;
+color:black">i, </span></b><span style="mso-fareast-font-family: Arial Unicode MS; color: black; mso-bidi-font-weight: bold">on the
+Argand or complex plane.
+</span></font><span style="font-size:10.0pt;mso-fareast-font-family:
+&quot;Arial Unicode MS&quot;;color:black;mso-bidi-font-weight:bold">
+</o:p>
+ &nbsp;
+</span></p>
+<p class="MsoNormal" align="center"><span style="font-size:12.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" alt="" style='width:157.5pt;
+ height:176.5pt'>
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.png"
+  o:href="../My%20Webs/mathman/images/giti%5ei.gif"/>
+</v:shape><![endif]-->
+ </span><font size="-1">
+<center><img src="../images/gitii.gif" width="257" height="287"></center> </font></p>
+<p class="MsoNormal" align="left"><a href="http://www.ies.co.jp/math/java/comp/itoi/itoi.html">IES
+applet</a> iterates (a+bi)<sup>(a+bi)...</sup> using Don's idea above in chapter
+11&nbsp;</p>
+<hr>
+<a href="discover.html">To other discoveries</a><br>
+<font color="#ff0000"><font size="4">To order</font><a href="https://www.mathman.biz/html/order.html">
+Don's materials</a><br>
+<a href="http://www.mathman.biz">Mathman home</a></font>
+
+</body>
+
+</html>

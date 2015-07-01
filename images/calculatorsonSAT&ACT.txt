@@ -1,0 +1,24 @@
+SAT
+Besides the following notes, there are no specific calculator policies for the SAT except, obviously, you can only use it on the math sections. CollegeBoard’s policy specifically states that you are NOT required to clear your memory before the test, which means it might be helpful to store formulas, lists, or programs on your calculator.
+Acceptable Calculators
+Graphing calculators
+Scientific calculators
+Four-function calculators (not recommended)
+Unacceptable Calculators
+Laptop or a portable/handheld computer
+Calculator that has QWERTY (keyboard-like) keypad, uses an electrical outlet, makes noise or has a paper tape
+Electronic writing pad or pen-input/stylus-driven device
+Pocket organizer
+Cell phone calculator
+The TI-83+, TI-84+, TI-86, TI-89, and related models are all allowed on the SAT. The TI-92 and Voyage 200 are not because they have QWERTY-type keyboards.
+
+
+ACT
+The ACT has a very strict calculator policy. Most notably, the TI-89 is NOT allowed. ACT, Inc. makes a point of noting this, so it apparently happens often enough that students get kicked out for it. Don’t let this happen to you. If you have a graphing calculator, its memory must be cleared before the test, and using notes typed onto your calculator is not permitted. If there’s anything that you don’t want to get erased (apps, etc.) make sure they are archived.
+All calculators that are unacceptable for the SAT are unacceptable for the ACT, with the addition of calculators with a CAS (built-in computer algebra system). This includes the following:
+Texas Instruments: All model numbers that begin with TI-89 or TI-92 and the TI-Nspire CAS—Note: The TI-Nspire (non-CAS) is permitted.
+Hewlett-Packard: HP 48GII and all model numbers that begin with HP 40G, HP 49G, or HP 50G
+Casio: Algebra fx 2.0, ClassPad 300 and ClassPad 330, and all model numbers that begin with CFX-9970G
+Calculators that use a stylus are prohibited with the exception of the Sharp EL-9600.
+The TI-83+ and TI-84+ and related models are acceptable. However, if your calculator has an IR data port (used for optically transferring data between calculators), then the port must be covered with dark tape.
+We hope this helps you prepare for whichever test you will be taking. Good luck!

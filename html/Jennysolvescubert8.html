@@ -1,0 +1,122 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Jenny solves the equation x cubed=8</title>
+</head>
+
+<body>
+
+<p align="center"><font color="#800080" size="5"><b>Jenny solves the equation x<sup>3</sup>
+= 8/Chapter 8</b></font></p>
+<p align="left"><font size="3">Jenny had solved quadratic equations at least 6
+ways (see her on video doing one with Don). When he asked her to solve x</font><font size="2"><sup><b>3</b></sup></font><font size="3">
+= 8, she did this, not surprisingly:</font></p>
+
+<p align="left">&nbsp;Jenny solved for x:&nbsp;&nbsp;<font size="3"> x = 8/x</font><font size="2"><b><sup>2</sup></b></font><font size="3">
+, then used <i>Mathematica </i>to iterate the right side.</font></p>
+
+<p>g[x_]:=8<b>/</b>x<b><font size="2"><sup>2</sup></font></b></p>
+<p>N[NestList[g,<font color="#FF0000"><b>5</b></font>,10],10]&nbsp;&nbsp; (start
+with <b><font color="#FF0000">5</font><font color="#000000">,</font></b><font color="#000000" size="3">
+do 10 iterations)</font></p>
+<p>{5.000000000,&nbsp;</p>
+<p>0.3200000000, 78.12500000,&nbsp;</p>
+<p>0.001310720000, 4.656612873×10<sup>6</sup>,<sup>&nbsp;</sup></p>
+<p>3.<font size="3">689348815×10<sup>-</sup></font><font size="2"><sup><b>13</b></sup></font><font size="3">,<sup>
+</sup>5.877471754×10</font><font size="2"><sup><b>25</b></sup></font><font size="3">,<sup>&nbsp;</sup></font></p>
+<p><font size="3">2.315841785×10<sup>-</sup></font><font size="2"><sup><b>51</b></sup></font><font size="3">,&nbsp;<sup>
+</sup>1.491668146×10</font><font size="2"><sup><b>102</b></sup></font>,<font size="3"><sup>&nbsp;</sup></font></p>
+<p><font size="3">3.595386270×10<sup>-</sup></font><font size="2"><sup><b>204</b></sup></font>,&nbsp;<font size="3"><sup>
+</sup>6.188692095×10</font><font size="2"><sup><b>407</b></sup></font><sup><font size="3">}</font></sup></p>
+<p><font size="3"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...-&gt;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...-&gt; </sup></font><font color="#000000" size="3">+<b><font FACE="Mathematica1Mono">¥</font></b></font></p>
+<p>0.32 is the result of the <b>1</b>st iteration, and the <b>10</b>th iteration
+is 6.188...<font size="3">×10</font><font size="2"><sup><b>407</b></sup></font><font size="3">
+. So the odd iteration numbers form an <font color="#FF0000"><b>infinite
+sequence</b></font> that <b><font color="#800080">converges</font></b> to <b>0</b>
+and the even iteration numbers form an <b><font color="#FF0000">infinite
+sequence</font><font color="#000000"> </font></b><font color="#000000">that</font>
+<font color="#800080"><b>diverges</b></font> to </font><font color="#000000" size="3">+<b><font FACE="Mathematica1Mono">¥.
+</font><font face="Arial">None of us had seen anything like this!</font></b></font></p>
+<p align="left">We then solved the equation <font size="3"> x</font><font size="2"><sup><b>3</b></sup></font><font size="3">
+= 8 </font>in <i>Mathematica</i></p>
+<p>NSolve[x^3<font FACE="Mathematica1Mono">Š</font>8,x]</p>
+<p>{{x<font FACE="Mathematica1Mono">®</font>-1.-1.73205 <font FACE="Mathematica1Mono"><b>ä</b></font>},{x<font FACE="Mathematica1Mono">®</font>-1.+1.73205
+<font FACE="Mathematica1Mono"><b>ä</b></font>},{x<font FACE="Mathematica1Mono">®</font>2.}}
+</p>
+<p>or in terms of <font FACE="Mathematica1Mono" size="4"><b>ã</b></font></p>
+<p>N[2*<font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font face="Arial">^</font>(4*<font FACE="Mathematica1Mono"><b>ä</b></font>*<font FACE="Mathematica1Mono">p</font>/3)
+] = -1.-1.73205 <font FACE="Mathematica1Mono"><b>ä</b></font></p>
+<p>N[2*<font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font face="Arial">^</font>(2*<font FACE="Mathematica1Mono"><b>ä</b></font>*<font FACE="Mathematica1Mono">p</font>/3)
+] = -1.+1.73205 <font FACE="Mathematica1Mono"><b>ä</b></font></p>
+<p>N[2*<font FACE="Mathematica1Mono" size="4"><b>ã</b></font><font face="Arial">^</font>(0*<font FACE="Mathematica1Mono"><b>ä</b></font>*<font FACE="Mathematica1Mono">p</font>/3)
+] = 2.</p>
+<p>&nbsp;</p>
+<p>Then Don showed them how to plot the three roots of 8 in the complex plane
+using <i>Mathematica</i>:</p>
+<p>ListPlot[Map[{Re[#],Im[#]}&amp;,x/.Solve[x<font size="2"><b><sup>3</sup></b></font><font size="3">==</font>8]],PlotRange<font FACE="Mathematica1Mono">®</font>2.1,AspectRatio<font FACE="Mathematica1Mono">®</font>Automatic,</p>
+<p><font size="3">PlotStyle<font FACE="Mathematica1Mono">®</font>PointSize[0.03]]</font></p>
+<p align="center"><img border="0" src="../images/cubrt8mathca.JPG" width="577" height="535"></p>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">This started some nice discussions with Jenny and John,
+also a 6th grader, about <b style="mso-bidi-font-weight:normal">e</b> and <b style="mso-bidi-font-weight:normal">i
+</b>and<b style="mso-bidi-font-weight:
+normal"> </b><b style="mso-bidi-font-weight: normal; font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(</b><span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:18pt;
+ height:15pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+</span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1340804655">
+ </o:OLEObject>
+</xml><![endif]-->
+<b style="mso-bidi-font-weight:normal">S</b><b style="mso-bidi-font-weight: normal; font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">qrt
+3)*</b><b style="mso-bidi-font-weight:normal">i . </b>Can you predict, as John
+did, the roots of the equation </span><span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">x</span><b style="mso-bidi-font-weight: normal; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -2.0pt; mso-text-raise: 2.0pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><span style="font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -2.0pt; mso-text-raise: 2.0pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-bidi-font-weight: normal"><font size="2"><sup>3</sup></font></span></b><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span>=
+125 ? See ch. 11 to graph <b style="mso-bidi-font-weight:normal">i</b> in the
+Argand plane and the possibility of </span><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">e</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"> to imaginary powers.</span></p>
+
+<p align="left"><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Also
+see <a href="pointson(1+i)^n.html">graphs of complex numbers</a>, and </span><b><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><a href="i^i.html"><font size="4">i</font><sup><font size="3">i</font></sup><font size="2"><sup><sup>i...</sup></sup></font></a></span></b></p>
+
+</body>
+
+</html>

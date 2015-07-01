@@ -1,0 +1,374 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>the Dottie number</title>
+</head>
+
+<body>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt">Don and his students Jay, Chris, and
+Elizabeth find a new number- the Dottie number<sup> 1<o:p>
+&nbsp;
+</sup></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><font size="2"><span style="mso-bidi-font-weight: normal"><sup>&nbsp;by
+Don Cohen</sup></span></font><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt"><sup></o:p>
+</sup></span></b></p>
+<p class="MsoNormal">It all started like this: <b style="mso-bidi-font-weight:
+normal"><span style="color:blue">Jay</span></b>, a 10<sup>th</sup> grader, put
+the following into a <span style="font-family:&quot;Times New Roman&quot;">TI-84
+Plus</span> calculator: cos(cos(cos(2/5)))= <span style="color:black">0.9998477415</span>.
+Don’s first reaction was hmmmm, that’s interesting. And that started Don
+working very hard on what was happening. Don and Jay starting looking at results
+in radians and degrees.<span style="font-family:&quot;Times New Roman&quot;"></o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">On
+the TI-84 Plus, in <span style="color:red">degree</span> mode:<o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black">cos(2/5)
+= <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>0.9999756307<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black">cos(cos(2/5))
+= <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>0.9998477026<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black">cos(cos(cos(2/5)))
+= 0.9998477415</span><o:p>
+</o:p>
+<span style="font-family:&quot;Times New Roman&quot;"></o:p>
+</span></p>
+<p class="MsoNormal" style="margin-left:81.0pt;text-indent:-81.0pt">In <i style="mso-bidi-font-style:normal">Mathematica</i>
+when Don put in N[Cos[Cos[Cos[2/5]]],10] he got <span class="MathematicaFormatStandardForm">0.8225159256</span>,
+not<span style="mso-spacerun:yes">&nbsp; </span><span style="color:black">0.9998477415</span><span style="font-family:&quot;Times New Roman&quot;;color:black">
+</span><span style="color:black">as above. Later, </span><b style="mso-bidi-font-weight:
+normal"><span style="color:blue">Chris</span></b><span style="color:black">,
+another of Don’s students, said we should use the Degree as below, then the
+outputs agreed.</span><o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">In
+<i>Mathematica</i></span></b><span style="font-size:14.0pt"> <b style="mso-bidi-font-weight:normal">in
+<span style="color:red">degree</span> mode:</b><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">N[Cos[2/5
+Degree],10] =<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>0.9999756307<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">N[Cos[Cos[2/5
+Degree] Degree],10] =<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span><span style="color:black">&nbsp; 0.9998477026<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">N[Cos[Cos[Cos[2/5
+Degree] Degree] Degree],10]<span style="font-family:&quot;Times New Roman&quot;">
+= </span><span class="MathematicaFormatStandardForm">0.9998477415</span><span style="font-family:
+&quot;Times New Roman&quot;"><o:p>
+</o:p>
+</span><span style="font-family:&quot;Times New Roman&quot;"></o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">On
+a TI-84 Plus, in <span style="color:#993300">radian</span> mode:</span><o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black" class="MathematicaSelectionText">cos
+(2/5) = <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>0.9210609940</span><o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black" class="MathematicaSelectionText">cos
+(cos (2/5)) = <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>0.6049756873</span><o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="color:black" class="MathematicaSelectionText">cos
+(cos (cos (2/5))) = 0.8225159256</span><span style="color:black"><o:p>
+</o:p>
+</span><span style="font-family:&quot;Times New Roman&quot;;color:fuchsia"></o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">In
+<i>Mathematica </i><span style="mso-bidi-font-style:italic">(</span>angle in <span style="color:#993300">radians</span><span style="mso-bidi-font-style:italic">)</span>:<o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-spacerun: yes; color: fuchsia">&nbsp;</span><span class="MathematicaSelectionText">N[Cos[2/5],10]
+= <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes">&nbsp;
+</span>0.9210609940<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaSelectionText">N[Cos[Cos[2/5]],10]=
+<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes">
+</span>0.6049756873 <o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaSelectionText">N[Cos[Cos[Cos[2/5]]],10]=
+<span style="mso-spacerun:yes">&nbsp;</span></span><span class="MathematicaFormatStandardForm">0.8225159256</span><span class="MathematicaSelectionText"><o:p>
+</o:p>
+</span><span style="font-family:&quot;Times New Roman&quot;" class="MathematicaSelectionText"></o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">In
+<i>Derive </i><span style="mso-bidi-font-style:italic">(</span>angle in <span style="color:#993300">radians</span><span style="mso-bidi-font-style:italic">)</span>:</span><span style="font-size:14.0pt;font-family:
+&quot;Times New Roman&quot;"><o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal">COS(2/5) = <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes">&nbsp;&nbsp;
+</span>0.921060994</p>
+<p class="MsoNormal">COS(COS(2/5)) = <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun: yes">
+</span>0.6049756872</p>
+<p class="MsoNormal">COS(COS(COS(2/5))) = 0.8225159256</p>
+<p class="MsoNormal">So finally, there was agreement using the calculator and 2
+computer programs, as there should be, and different answers between radians and
+degrees as there should be, because the radian is the larger unit, 1 radian
+&#8776; 57º</p>
+<p class="MsoNormal">Don even tried the following in <i style="mso-bidi-font-style:
+normal">Mathematica</i></p>
+<p class="MsoNormal">N[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[Cos[</p>
+<p class="MsoNormal">Cos[2/5]]]]]]]]]]]]]]]],10], to get 0.7385837973</p>
+<p class="MsoNormal"><b><font color="#800000" size="4">An example of iterating a
+function:</font></b><span style="font-family:&quot;Times New Roman&quot;"></o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">Don
+realized this is a sequence of <font color="#FF0000"><b>iterations,</b></font>
+also called feedback, which he used in Chapter 8 in
+his Calculus books to solve a quadratic equation<o:p>
+ like&nbsp;</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>x<sup>2</sup> – 5x +6 = 0</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-tab-count:6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">}</span></b><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>add 5x and <span style="position:relative;top:-2.0pt;mso-text-raise:2.0pt">-</span>6
+to both sides</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>x<sup>2 </sup><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>= 5x - 6<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt">}</span></b><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>divide both sides by x</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="mso-tab-count:4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b style="mso-bidi-font-weight:normal"><span style="color:#993300"><span style="mso-spacerun:yes">&nbsp;</span>x
+= 5 – 6/x<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">Now
+we’re going to get an infinite sequence by iterating the function <b style="mso-bidi-font-weight:normal"><span style="color:#993300">5
+– 6/x</span></b>.<span style="mso-spacerun:yes">&nbsp; </span>If we put <font color="#0000FF"><b>4</b></font>,
+say, in for x we get<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">5 – 6/<font color="#0000FF"><b>4</b></font>
+= 5 – 1 ½ = <font color="#0000FF"><b>3 ½</b></font></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">So
+our sequence starts with <span style="color:blue"><b>4, 3 ½,</b></span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">The
+we’ll put the output <font color="#0000FF"><b>3 ½</b></font> in for x (feeback),
+to get <span style="color:maroon"><span style="mso-spacerun:yes">&nbsp;</span><b style="mso-bidi-font-weight:normal">5
+– 6/(</b></span><b><font color="#0000FF">3 ½</font></b><b style="mso-bidi-font-weight:normal"><span style="color:maroon">)</span></b>
+= 5 – 6/(<font color="#0000FF"><b>7/2</b></font>) = 5 – 12/7 = 5 - 1 5/7 =<font color="#0000FF"><b>
+3 2/7</b></font>. Our sequence now looks like this: <span style="color:blue"><b>4,
+3 ½, 3 2/7,</b><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">Now
+take the output <font color="#0000FF"><b>3 2/7 </b></font>and put that in for x
+in <b style="mso-bidi-font-weight:
+normal"><span style="color:#993300">5 – 6/(</span></b><span style="color:blue"><b>3
+2/7</b></span><b style="mso-bidi-font-weight:normal"><span style="color:maroon">)
+</span></b>and so on. <b style="mso-bidi-font-weight:normal"><span style="color:red">Using
+a calculator one can do this easily by doing 5-6/ANS<span style="mso-spacerun:yes">&nbsp;
+</span>every time after putting in </span><font color="#0000FF">4</font><span style="color:red">
+to begin with.</span></b> This infinite sequence approaches 3 as the limit,
+which is one of the roots of the original quadratic equation!<o:p>
+</o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">In <i style="mso-bidi-font-style:normal">Mathematica</i>
+Don found the command <font color="#800000"><b> NestList</b></font> will do the same thing as above, so we define the
+function, <b style="mso-bidi-font-weight:normal"><span style="color:#993300">5
+– 6/x </span></b>, <o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaFormatStandardForm">f[x_]:=</span><b style="mso-bidi-font-weight:normal"><span style="color:#993300">5
+– 6/x</span></b></o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">then
+use the command <font color="#800000"><b> Nestlist</b></font> <o:p>
+</o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><font color="#800000"><b> Nestlist</b></font><span class="MathematicaFormatStandardForm">[f,4,2]
+which says start with 4 in for x in the function, and do 2 iterations to get {4,7/2,23/7}<o:p>
+</o:p>
+</span></o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">To
+get decimals to 10 digits, use<o:p>
+ N[&nbsp; ,&nbsp; ,&nbsp;&nbsp;&nbsp; ],10]</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaFormatStandardForm">N[</span><font color="#800000"><b>Nestlist</b></font><span class="MathematicaFormatStandardForm">[f,4,2],10]<o:p>
+ =</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaFormatStandardForm">{4.000000000,
+3.500000000, 3.285714286}<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="MathematicaFormatStandardForm">Don
+needed to see what was happening with iterating cos(x), so he figured out <br>how to make a graph with the
+commands below:<o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal">f[x_]:=Cos[x]</o:p>
+</p>
+<p class="MsoNormal">N[<font color="#800000"><b>Nestlist</b></font>[f,2/5,40],10]</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">{0.4000000000,
+0.9210609940,0.6049756873, 0.8225159256, 0.6803795416,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7773340097,
+0.7127859455, 0.7565429620, 0.7272133023,
+0.7470298706,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">&nbsp;0.7337101939,
+0.7426950635, 0.7366486303, 0.7407241955, 0.7379800489,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7398290799,
+0.7385837973, 0.7394227462, 0.7388576709, 0.7392383354,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7389819257,
+0.7391546511, 0.7390383033, 0.7391166776, 0.7390638842,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7390994466,0.7390754914,0.7390916280,0.7390807582,0.7390880802,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7390831481,
+0.7390864704, 0.7390842324, 0.7390857400, 0.7390847245,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7390854085,
+0.7390849478, 0.7390852581, 0.7390850491, 0.7390851899,</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">0.7390850950}</o:p>
+</p>
+<p class="MsoNormal"><font color="#800000"><b>ListLinePlot</b></font>[%,PlotRange<span style="font-family:Mathematica1Mono;
+mso-bidi-font-family:Mathematica1Mono">®</span>{.3,.95}] ;&nbsp; PlotRange
+tells the computer to go from&nbsp;</p>
+<p class="MsoNormal">.3 to .95 on the y-axis; the resultant graph of the 40
+iterations is:</p>
+<p class="MsoNormal" align="center"><o:p>
+ &nbsp;<img border="0" src="../images/griterdottie.JPG" width="279" height="182"></o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">Don
+decided he didn’t want to see all the output numbers, when he did many
+iterations, like 200 in the examples below, <font color="#008000"><b> then only look at the last
+one</b></font>.</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">To
+do this in
+the examples below, Don used the <font color="#800000"><b> Take</b></font> command.</p>
+<p class="MsoNormal">f[x_]:=Cos[x]<span style="mso-tab-count:3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>-defines the function f = cos[x]<o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><font color="#800000"><b>Take</b></font>[N[NestList[f,2/5,200],10],<b><font color="#800000">-1</font></b>]<span style="mso-spacerun:yes">&nbsp;&nbsp;</span>
+says start with 2/5 in for x in the function f, do 200 iterations, get
+the outputs to10 decimal digits, then show us only the last output number with <font color="#800000"><b>Take</b></font>
+and <font color="#800000"><b>-1</b></font>.
+(Remember the starting number is in radians, except where it says Degree).<o:p>
+</o:p>
+</p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none">So
+here we go with different starting numbers <b><font color="#FF0000">in red</font></b>:</p>
+<p class="MsoNormal">f[x_]:=Cos[x]
+
+<br>Take[N[NestList[f,<font color="#FF0000"><b>2/5</b></font>,200],10],-1]
+<br>{<b>0.7390851332</b>}</p>
+<p class="MsoNormal">f[x_]:=Cos[x]<br>Take[N[NestList[f,<font color="#FF0000"><b>45*(Pi/180)</b></font>,200],10],-1]<br>
+{<b>0.7390851332</b>}
+
+<p class="MsoNormal">f[x_]:=Cos[x]<br>Take[N[NestList[f,<font color="#FF0000"><b>4*(Pi/180)</b></font>,200],10],-1]<br>
+{<b>0.7390851332</b>}
+<p class="MsoNormal">f[x_]:=Cos[x]l<br>Take[N[NestList[f,<font color="#FF0000"><b>(2/5)
+Degree</b></font>,200],10],-1]<br>
+{<b>0.7390851332</b>}</p>
+
+<p class="MsoNormal">f[x_]:=Cos[x]
+<br>Take[N[NestList[f,<font color="#FF0000"><b>Pi/4</b></font>,200],10],-1]<br>{<b>0.7390851332</b>}</p>
+
+<p class="MsoNormal">f[x_]:=Cos[x]<br>Take[N[NestList[f,<b><font color="#FF0000">0</font></b>,200],10],-1]<br>{<b>0.7390851332</b>}
+</p>
+<p class="MsoNormal">f[x_]:=Cos[x]<br>
+Take[N[NestList[f,<b><font color="#FF0000">Pi/2</font></b>,200],10],-1]<br>{<b>0.7390851332</b>}</p>
+<p class="MsoNormal">
+f[x_]:=Cos[x]<br>Take[N[NestList[f,<b><font color="#FF0000">-500 Degree</font></b>,200],10],-1]<br>{<b>0.7390851332</b>}
+<p class="MsoNormal">&nbsp;f[x_]:=Cos[x]<br>Take[N[NestList[f,<b><font color="#FF0000">.001</font></b>,1000],10],-1<br>{<b>0.739085</b>}<span class="MathematicaSelectionText"><o:p>
+</o:p>
+</span></p>
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-size:14.0pt" class="MathematicaSelectionText">So
+no matter what number you start with, you get the same answer for the
+limit of the infinite sequence, </span><span style="font-size:14.0pt" class="MathematicaSelectionText"><font size="3"><b>and
+that is</b></font><b style="font-size: 14.0pt"> </b></span><font size="3"><b style="mso-bidi-font-weight:normal">0.7390851332…</b><span class="MathematicaSelectionText"><o:p>
+</span></font><span style="font-size:18.0pt" class="MathematicaSelectionText">
+</o:p>
+</span></p>
+<p class="MsoNormal">On <st1:date Year="2009" Day="24" Month="4">
+24 April, 2009</st1:date>
+, <font color="#0000FF"><b>Jay </b></font>and <b><font color="#0000FF">Don</font></b>
+discovered the new number. It was Jay’s idea to Google 0.7390851332… One of
+the links was to <a href="http://www.research.att.com/~njas/sequences/index.html?q=.7390851332&amp;language=english&amp;go=Search">The
+Encyclopedia of Integer Sequences</a> where much information is given about this
+number.</p>
+<p class="MsoNormal">On <st1:date Year="2009" Day="25" Month="4">
+25 April, 2009</st1:date>,
+<font color="#0000FF"><b>E</st1:place>lizabeth</st1:City></b></font>, after Don went through with her what Jay, Chris, and he had done
+above, found on her TI-84 Plus calculator<span style="mso-spacerun:yes">&nbsp;</span></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:14.0pt;color:#993300">cos(0.7390851332) =
+0.7390851332<o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-size:14.0pt;color:#993300"><b style="mso-bidi-font-weight:
+normal">W</b><b style="mso-bidi-font-weight: normal; font-size: 14.0pt; color: #993300">ow,
+it works</b><b style="mso-bidi-font-weight:
+normal">!!!<o:p>
+</o:p>
+ </b>
+</span><b style="mso-bidi-font-weight:
+normal"><span style="font-size:14.0pt;color:#993300"></o:p>
+</span></b></p>
+<p class="MsoNormal"><span style="font-size:14.0pt;color:#993300"><b style="mso-bidi-font-weight:normal">The
+graph Don made below, </b><b style="mso-bidi-font-weight: normal; font-size: 14.0pt; color: #993300">i</b><b style="mso-bidi-font-weight:normal">s in
+</b> </span><span style="font-size:14.0pt;font-family:-webkit-monospace;
+color:black" class="apple-style-span">Eric Weisstein's World of Mathematics
+under: <a href="http://mathworld.wolfram.com/DottieNumber.html">Dottie number</a>.<span style="mso-spacerun:yes">&nbsp;
+</span></span><span style="font-size:14.0pt;color:black" class="apple-style-span">The
+point of intersection of<span style="mso-spacerun:yes">&nbsp; </span>y = cos(x)
+and y=x, <span style="mso-spacerun:yes">&nbsp;</span>gives this number,
+0.739085… the unique solution of the equation x=cos(x).<o:p>
+</o:p>
+</span><span style="font-size:14.0pt;font-family:-webkit-monospace;
+color:black" class="apple-style-span">&nbsp;</o:p>
+</span></p>
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:14.0pt;color:#993300"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:321.75pt;height:180pt'>
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image003.png"
+  o:title="cosx=x"/>
+</v:shape><![endif]-->
+<img border="0" src="../images/Dottie2.jpg" v:shapes="_x0000_i1025" width="429" height="240"><o:p>
+ &nbsp;
+</span></b></p>
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-size: 14.0pt; mso-bidi-font-weight: normal"><font color="#FF0000"><b>Great
+work <u> Jay</u> (who started the whole thing and took the giant step of
+googleing 0.7390851332), and <u>Chris</u> (who straightened out Don with how
+to write the degrees), and <u> Elizabeth</u> (who thought of finding the<br>cos
+(0.7390851332) and got 0.7390851332 on her calculator)!</b></font></span></p>
+<p class="MsoNormal" align="center" style="text-align:center"><span style="font-size: 14.0pt; color: #993300; mso-bidi-font-weight: normal">What
+other questions can you ask now?</span><b style="mso-bidi-font-weight:
+normal"><span style="font-size:14.0pt;color:#993300"></o:p>
+</span></b></p>
+<p class="MsoNormal"><sup>1 </sup>This number was named by <span style="color:black" class="apple-style-span">Samuel
+R. Kaplan in 2007</span><o:p>
+
+<hr>
+<b><font face="Arial"><a href="http://www.mathman.biz/html/discover.html"><font size="4">To
+other discoveries</font></a><font size="4"><br>
+</font><font color="#ff0000"><font size="4">To order</font><a href="https://www.mathman.biz/html/order.html"><font size="4"> Don's materials</font></a><font size="4"><br>
+</font><a href="http://www.mathman.biz"><font size="4">Mathman home</font></a></font></font></b>
+
+</body>
+
+</html>

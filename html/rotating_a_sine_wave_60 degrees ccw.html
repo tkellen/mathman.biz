@@ -1,0 +1,209 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Rotating a sine wave 60 gegrees ccw?</title>
+</head>
+
+<body>
+
+<p align="center"><b>Can we rotate a sine wave 60 degrees counterclockwise?</b><br>
+by Don Cohen, Shaleen Agrawal (age 14), &amp; Lori Johnson Morse<br>
+<br>
+It all started when Don asked Shaleen, to work with sine waves. He 
+graphed the sine wave using the unit circle, then Don asked Shaleen to change 
+the amplitude, to double the # of waves in 360o and finally to shift the sine 
+wave 60o to the left , then write the equation for each below.<br>
+<br>
+<br><img src="../images/shaleen%20graphs.jpg" width="624" height="487">
+<br>
+<br>
+<font color="#CC0066">Then Shaleen asked Don if we could rotate the sine wave 60<sup>o</sup> ccw!</b></font><br>
+<br>
+A geat question! Don tried copying the sine wave on tracing paper, then with a protractor, 
+rotated the sine wave 60o ccw. He had the answer, but no points or equation. 
+Shaleen on the other hand did the rotation by hand as we’ll see later. <br>
+
+
+Don had never done this, but had rotated parabolas and ellipses in the Japanese 
+version of his book Changing Shapes With Matrices. He figured he could do this.<br>
+<br>
+He called Wolfram support for help in how to write the matrix product. The 
+problem, as pointed out by a physics teacher and parent of one of Don’s 
+students, was that {x, sin[x]} was not a function (after rotating it &#960;/3), so we 
+had to use a parametric plot. With Wolfram support, Don was able to come up with 
+the graph for the rotated sine wave.<br>
+<br><p align="left">
+v = {t, Sin[t]}<font color="#CC0066"> the sine wave matrix to be rotated</font><br>
+r = {t, 0} <font color="#CC0066">the x- axis to be rotated</font><br>
+w = {{Cos[&#960;/3], -Sin[&#960;/3]}, {Sin[&#960;/3], Cos[&#960;/3]}}<font color="#CC0066"> the 60 degree rotation ccw 
+matrix</font><br>
+<br>
+ParametricPlot[{{w.r}, {v}, {w.v}}, {t, 0, 2&#960;}, AspectRatio -&gt; Automatic,<br>
+PlotStyle -&gt; {Thick}] <font color="#CC0066">rotates the sine wave and axes, with the parametric plot, 
+makes the scale on the axes the same, and plots it thicker than normal.<br>
+</font>
+<br>
+The result was the graph below.<br>
+<br>
+
+
+<p align="center"><img align="center" src="../images/rotatesinx60.jpg" width="360" height="356"></p>
+<br>
+
+<br>
+When Lori Johnson Morse (www.mathheadinc.com), arrived from Kansas City, MO with 
+her husband Joe, Don asked Shaleen to show her how he rotated the sine wave by 
+hand and this is how she understood it: Shaleen first rotated the x-axis 60 
+degrees or what he thought was 60 degrees. Lori noticed that the rotated x-axis 
+had a slope of 1/1 so the axis and the sine graph was actually rotated 45 
+degrees. </p>
+<p align="center">
+<img border="0" src="../images/ShaleenRotatedTheSineWave.png" width="492" height="383"><br>
+&nbsp;</p>
+<p align="left">This ‘mistake’ wasn’t a problem because Shaleen’s method would work for any 
+angle up to 90 degrees. He was probably so full of excitement that he just 
+didn’t notice, which is fine! At any rate, after rotating the x-axis, Shaleen, 
+translated the x-values vertically to the rotated x-axis (see the blue arrow). 
+Then, using the y-values from the original sine (and cosine) curve, plotted 
+those the same vertical distance but perpendicular to the rotated x-axis (see 
+the orange arrow), at each of the corresponding, rotated x-coordinates. <br>
+<br>
+Now this is great work because Shaleen did not use any of the usual techniques 
+(rotation matrices, for example) for rotating graphs. He later rotated a log 
+function 60 degrees as well with his method!</p>
+<p align="left">&nbsp;</p>
+<p align="left"><br>
+
+Don rotated the sine wave using the rotation matrix, written in <i>Mathematica</i> as 
+<b><font size="4">{{Cos[&#960;/3],-Sin[&#960;/3]},{Sin[&#960;/3],Cos[&#960;/3]}}</font></b> and gave him the <b>new X</b> and <b>new Y</b> for 
+the rotated sine wave.</p>
+<p align="center">&nbsp;</p>
+
+<p align="center">.<img border="0" src="../images/dongeteqfor60drotsine.jpg" width="666" height="762"></p>
+<p align="center">
+<img border="0" src="../images/donrot60ccwgeteqp2.jpg" width="974" height="1249"><br>
+He added equation 5 and equation 2, and substituted (Sqrt[3] y + x)/2 from equation 4, 
+in for t in the next to last equation to get the final x-y Cartesian equation 
+for the rotated sine wave</p>
+<p align="center"><br>
+<b><font color="#CC0066" size="4">[y - x*Sqrt[3] == 2 Sin[( y*Sqrt[3] + x)/2]</font></b></p>
+<p align="center"><br>
+Yeh!! Now the next question, after trying various substitutions for x Don was 
+unable to get an appropriate y-coordinate, because it is not a function. This is 
+where Lori came to the rescue. She made a ContourPlot of Don's equation.<br>
+<br>
+<img border="0" src="../images/lori01SineRotCPlot.jpg" width="528" height="532"><br>
+<br>
+It looks great!<br>
+<br>
+
+Once Don used a ParametricPlot to graph the function, he wanted to 
+know if there was a way to plot this graph with one equation, the one he derived above: <br>
+y - x*Sqrt[3] == 2 Sin[(y*Sqrt[3]&nbsp; + x)/2] <br>
+He asked Lori to verify his work. She did and it seemed to be right but that 
+wasn’t enough. Don wanted to verify this equation another way. He wanted to know 
+if the rotated x-y values make true statements if substituted into his new Cartesian 
+equation. And since most mathematical processes are reversible, rotating the new 
+sine wave -60 or 60 degrees clockwise would put the sine function into its 
+original position. Neither Don nor Lori wanted to do either of these by hand!<br>
+<br>
+The question is how to do that in Mathematica! She had too much fun ‘working’ 
+for Don: making videos of&nbsp; Don and his students, taking pictures with his camera 
+and hers, working with his students, rummaging through his bookshelves, etc. So, 
+Lori had to do this when she got back to Kansas City.<br>
+<br>
+Rotating the graph back to the original position <b>should</b> be the easiest thing to 
+do. So, she generated enough points for a smooth, rotated curve, applied a 
+rotation matrix of -60 degrees to generate original points, then plotted those. 
+Here are the results:<br>
+<br>
+This code generates the rotated points:<br>
+<br>Table[N@RotationMatrix[Pi/3].{t,Sin[t]},{t,-2Pi,2Pi,Pi/24}]
+
+</font>
+<p align="center">
+<br>
+Here’s the plot:<br>
+<img border="0" src="../images/lorilistlplotRotPts.jpg" width="684" height="604"><br>
+<br>
+<br>
+<br>
+<br>
+This code below, rotates the points back to their original position as the 
+following plot shows:<br>
+<br>
+<img border="0" src="../images/loriSineRotToOrigPos.jpg" width="692" height="427"><br>
+So that <b>looks</b> as if it works, but a mathematical confirmation would be nice 
+(finding pairs of numbers that work). <br>
+<br>
+<br>
+<br>
+One problem with an equation like&nbsp;&nbsp;
+y - x*Sqrt[3] == 2 Sin[(y*Sqrt[3]&nbsp; + x)/2]&nbsp; is, that it is 
+<b><font color="#0000FF">transcendental </font></b>and cannot be solved using the methods for solving 
+<b><font color="#0000FF">algebraic 
+equations</font></b>: addition, subtraction, multiplication, division, and integer (or 
+rational) root extraction. Also, because the equations contains two variables, 
+there are many, many solutions, so which solution should they try to find? AND 
+yet another problem is that one value could be substituted in for one variable 
+in order to find the other but which values would work best?<br>
+<br>
+Don had chosen a value from the plot to substitute for x, and then chose to 
+solve for y. Now for the technical part. Lori tried the Mathematica functions 
+she already knew: Solve[], NSolve[], Reduce[], and FindRoot[], without success. 
+Then there was FindInstance[]. Given an equation, FindInstance will find at 
+least one solution but that may not be the solution needed. Lori was able to 
+find a solution for when x = -0.226401 but it didn’t match the points on the 
+graph. <br>
+<br>
+<img border="0" src="../images/loriRotSine4pts.jpg" width="260" height="151"><br>
+<br>
+FindInstance [y - 3 x == 2 Sin[(3 y + x)/2] , {y}, Reals] /. x -&gt; -.226401<br>
+<br>
+{{y-&gt; 1.12537}}<br>
+<br>
+Oh! There are three y-values that correspond when x = -0.226401, so Lori told 
+FindInstance[] to find three solutions. The third solution matches the above 
+data:<br>
+<br>
+<br>
+FindInstance [y - 3 x == 2 Sin[(3 y + x)/2] , {y}, Reals, 3] /. x -&gt;
+<font color="#FF0000">-0.226401</font><br>
+<br>
+{{y -&gt; -2.19718}, {y -&gt; 1.12537}, {y -&gt;<font color="#FF0000">1.33991</font>}}<br>
+<br>
+In the midst of relating all this to Don, Lori realized that she probably should 
+have started by substituting the y-value and solving for x. That worked better. 
+Without indicating that multiple solutions should be found, FindInstance[] found 
+the desired solution the first time:<br>
+<br>
+<br>
+FindInstance [y - 3 x == 2 Sin[(3 y + x)/2] , {x}, <br>
+Reals] /. y -&gt; 1.33991<br>
+<br>
+FindInstance [y - 3 x == 2 Sin[(3 y + x)/2] , {x}, <br>
+Reals] /. y -&gt; 2.24681<br>
+<br>
+FindInstance [y - 3 x == 2 Sin[(3 y + x)/2] , {x}, <br>
+Reals] /. y -&gt; 2.7207<br>
+<br>
+{{x -&gt; -.226401}}<br>
+<br>
+{{x -&gt; 0.297194}}<br>
+<br>
+{{x -&gt; 1.5708}}<br>
+<br>
+Lori loved this challenge. New questions arose: Why did FindInstance[] find 
+solutions that did not seem to relate to the rotated sine graph? How are the 
+complex solutions related to the equation when ‘Reals’ is not indicated as an 
+option in FindInstance[]? <br>
+<br>
+This was a great learning experience for Don, Shaleen, and Lori, and Shaleen was 
+also able to find the Cartesian equation for the rotated sine wave.<br>
+<br>
+&nbsp;</p>
+
+</body>
+
+</html>

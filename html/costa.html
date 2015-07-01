@@ -1,0 +1,301 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Costa, a 5th grader, finds a pattern while iterating a function</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="4">Costa, a 5th grader, finds a pattern while iterating a function</font></b></p>
+
+<p>Costa started iterating the function 5 + x/2 putting 12 in for x.&nbsp; He
+got 5+ 12/2 = 11, then put 11 in for x to get&nbsp; 5+ 11/2 = 10.5 , and so on.
+He found the infinite sequence</p>
+
+<p align="center"><font color="#FF00FF" size="4"><b>12, 11, 10.5, 10.25, 10.125,
+10.0625, ... </b></font></p>
+
+<p align="left">He saw that the fractional part of these numbers were being
+divided by 2 each time! Don wrote these as </p>
+
+<p align="center"><font color="#FF00FF" size="4"><b>10+2, 10+1, 10+1/2, 10+1/4,
+10+1/8, 10+1/16, ...</b></font></p>
+
+<p align="center"><b><font color="#FF00FF" size="4">or 10+1/2<sup>n</sup></font></b>&nbsp;
+and as n-&gt;<span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">¥,
+</span><font size="3" color="#000000">1/2<sup>n</sup> -&gt; 0, so </font></p>
+
+<p align="center"><b><font color="#FF00FF" size="4">10+1/2<sup>n</sup></font></b>
+-&gt; <font size="4"><b>10</b>,&nbsp; the limit of this sequence.</font></p>
+
+<p align="left">Costa then looked at&nbsp; 6 + x/2 and correctly predicted all
+numbers would form sequences that go to 12.</p>
+
+<p align="left">Now Costa is working on 6 + x/3 and predicted it would go to 18.
+In Mathematica he tried&nbsp;</p>
+
+<p class="MsoNormal"><b><span style="mso-bidi-font-family:&quot;Courier New&quot;">f[x_]=6+x/3</span><o:p>
+</o:p>
+</b><o:p>
+</o:p>
+</p>
+<p class="MsoNormal"><b><span style="mso-bidi-font-family:&quot;Courier New&quot;">N[NestList[f,18,6],20]</span><o:p>
+</o:p>
+</b></p>
+<p class="MsoNormal">{18.000000000000000000, 12.000000000000000000,
+10.000000000000000000, 9.3333333333333333333, 9.1111111111111111111,
+9.0370370370370370370, 9.0123456790123456790}&nbsp; Which showed it was not
+going to 18. 9 maybe? He is working on this.</p>
+<p class="MsoNormal">He then tried this function: <b><span style="mso-bidi-font-family:&quot;Courier New&quot;">f[x_]=6+x/10
+</span></b>and got<b><span style="mso-bidi-font-family:&quot;Courier New&quot;"><o:p>
+</o:p>
+<o:p>
+</o:p>
+</span></b></p>
+<p class="MsoNormal">{18.000000000000000000, 7.8000000000000000000,
+6.7800000000000000000, 6.6780000000000000000, 6.6678000000000000000,
+6.6667800000000000000, 6.6666780000000000000}. They had a discussion about what
+6.6666780000000000000 was getting close to. That started Don working with Costa
+on changing an infinite repeating decimal to a fraction.</p>
+<p class="MsoNormal"><font color="#FF00FF">In the meantime, Don worked on this
+himself, using Costa's idea. For 6 + x/3, starting with 8 (smaller than 9) in
+for x, Don got&nbsp; 8, 8 2/3, 8 8/9, 8 26/27,... or</font></p>
+<p class="MsoNormal"><font color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4">
+</font><b><font size="3">9 -1, 9 -1/3, 9 - 1/9, 9 - 1/27,..., 9 - 1/3</font></b><sup><b><font size="3">n</font></b><font size="4">&nbsp;</font></sup>
+and n-&gt;<span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">¥,
+</span><font size="3" color="#000000">1/3<sup>n</sup> -&gt; 0, so&nbsp; </font></font></p>
+<p class="MsoNormal" align="center"><span style="mso-text-raise: -17.0pt; font-size: 12.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font color="#FF00FF"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:195.75pt;
+ height:70.5pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:195.75pt;
+ height:70.5pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1116597962">
+ </o:OLEObject>
+</xml><![endif]-->
+</font></span><span style="font-size:12.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><span style="mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:96pt;
+ height:33.75pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="../images/costa.1.gif" v:shapes="_x0000_i1025" width="128" height="45"></span>
+</span></p>
+<p class="MsoNormal" align="center"><span style="mso-text-raise: -14.0pt; font-size: 12.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">One
+reads the above statement as <font color="#FF00FF"><b>&quot;the limit of&nbsp; 9
+- 1/3<sup>n</sup> as n goes to infinity, equals 9&quot;</b></font></span><span style="font-size:12.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1116598900">
+ </o:OLEObject>
+</xml><![endif]-->
+</span></p>
+<p class="MsoNormal" align="left"><font color="#FF00FF"><span style="font-size: 12.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Starting
+with 12 (larger than 9) in for x, Don got <b>12, 10, </b></span><b>9 +1/3, 9 +
+1/9, 9 + 1/27,..., 9 + 1/3<sup>n </sup>,&nbsp;</b> and ignoring the 12 and 10,
+as n-&gt;<span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Arial; mso-hansi-font-family: Arial">¥,
+</span><font size="3" color="#000000">1/3<sup>n</sup> -&gt; 0, so&nbsp; </font></font></p>
+<p class="MsoNormal" align="center"><span style="mso-text-raise: -17.0pt; font-size: 12.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font color="#FF00FF"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:111pt;
+ height:39.75pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:111pt;
+ height:39.75pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1116598438">
+ </o:OLEObject>
+</xml><![endif]-->
+<!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:111pt;
+ height:39.75pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<span style="mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:96pt;
+ height:33.75pt' o:ole="">
+ <v:imagedata src="file:///C:/DOCUME~1/mathman/LOCALS~1/Temp/msoclip1/01/clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+<img src="../images/costa.2.gif" v:shapes="_x0000_i1025" width="128" height="45"></span></font>
+</span></p>
+
+<p class="MsoNormal" align="left"><span style="mso-text-raise: -17.0pt; font-size: 12.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1116598705">
+ </o:OLEObject>
+</xml><![endif]--></span>For 6 + x/3 Costa realized that each number would go to
+9 or (6*3)/2; as found in <i>Mathematica</i> for 6+x/10 above, each number goes
+to 6.666... or 6 2/3. So it was Costa's job to find the number to divide 6*10 by
+to get 6 2/3. He found this to be 9 and wrote 6*10/9. The Don asked him to
+generalize what a + x/b would go to. He realized that the number he divides by
+is 1 less than b, so he wrote this as a*b/(b-1).</p>
+
+<p class="MsoNormal" align="center"><b><font size="4" color="#FF00FF">Fine job
+Costa!</font></b></p>
+
+<hr>
+<a href="http://www.mathman.biz/html/discover.html"><font size="4">To
+other discoveries</font></a><br>
+<font color="#ff0000"><font size="4">To order</font><a href="https://www.mathman.biz/html/order.html">
+<font size="4">Don's materials</font></a><br>
+<a href="http://www.mathman.biz"><font size="4">Mathman home</font></a></font>
+
+</body>
+
+</html>

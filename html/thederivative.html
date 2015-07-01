@@ -1,0 +1,1161 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>The Derivative</title>
+<meta name="Microsoft Border" content="none">
+</head>
+
+<body>
+
+<p align="center"><span style="position:relative;top:8.0pt;mso-text-raise:
+  -8.0pt"><b>&nbsp; </b></span><b><font size="5" color="#800080">The Derivative/Chapter 14</font></b></p>
+<p align="left"><b>The derivative</b>, or &quot;rate of change&quot;, is used to
+describe how quickly quantities change. Historically, it helped deal with
+problems of how a pendulum swings, how planets (as well as space satelllites)
+move in their orbits, the velocity of a cannon shell, car, light, and electrons
+in a wire.</p>
+<p align="left">Both the derivative and the integral involve infinite sequences
+and infinite series and their limits. The derivative deals with an <b><font color="#FF0000">infinite
+sequence</font></b> of slopes of secant lines approaching the tangent to a
+curve; the integral deals with an <font color="#FF0000"><b>infinite
+series</b></font> of areas under a curve, which in turn involves <font color="#FF0000"><b>infinite&nbsp;
+sequences</b></font>.&nbsp;&nbsp;&nbsp;</p>
+<table border="1" width="100%" height="331">
+  <tr>
+    <td width="69%" height="325"><p class="12pthelvetica"><b style="mso-bidi-font-weight:normal">1.
+      Slope,
+      rate and ratio</b>. We started graphing in chapter 1 but the bulk of it is
+      in chapter 6; the graphing is important because the derivative can best be
+      shown this way. Let's look at the graph of 2<span style="font-size:14.0pt;
+  mso-bidi-font-size:10.0pt">x</span> = <span style="font-size:14.0pt;
+  mso-bidi-font-size:10.0pt">y</span>. Notice that if you go one unit to the</p>
+      <p class="12pthelvetica">&nbsp;right, you go up 2 units. This ratio
+      of&nbsp; <img border="0" src="../images/2over1.JPG" width="24" height="43">&nbsp;<span style="position: absolute; left: 404; top: 610">
+      </span><b><span style="position:relative;top:8.0pt;mso-text-raise:
+  -8.0pt">,</span></b><span style="position:relative;top:8.0pt;mso-text-raise:
+  -8.0pt"><b> </b>or<b>&nbsp;</b></span> &nbsp;<img border="0" src="../images/riseoverrun.JPG" width="40" height="36">&nbsp;&nbsp;
+      or&nbsp;</p>
+      <p class="12pthelvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/diffyoverdiffx.JPG" width="130" height="43">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      is called <b style="mso-bidi-font-weight:normal">the slope of the graph.</b>
+      &nbsp;</p>
+      <p class="12pthelvetica">
+      The idea&nbsp;of slope appears in many contexts; for example, the slope of
+      a
+      ramp (see Alec's work later), the pitch of a roof (which is <span style="position:relative;top:8.0pt;mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shape
+   id="_x0000_i1029" type="#_x0000_t75" style='width:15pt;height:22pt' o:ole="">
+   <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image005.wmz"
+    o:title=""/>
+  </v:shape><![endif]-->1/2 </span>the slope of the roof), and
+      the gradient of a road. If you were measuring the time an ant moved along
+      the ground, you might let the <span style="font-size:14.0pt;
+  mso-bidi-font-size:10.0pt">x</span>-axis represent the time and the <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>-axis
+      represent the distance travelled by the ant. Then the slope of this graph,&nbsp;2,</p>
+    </td>
+    <td width="31%" height="325">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="../images/gr2x=y.JPG" v:shapes="_x0000_i1025" width="153" height="237"></td>
+  </tr>
+</table>
+<p class="12pthelvetica">would represent the average rate of speed,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img border="0" src="../images/distdivbytime.JPG" width="79" height="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of the ant, say 2 centimeters per
+second. This idea of rate or ratio is used in many ways; for example-- interest
+rates,</p>
+<p class="12pthelvetica">(# of dollars per 100 dollars, the word &quot;per&quot;
+means &quot;divided by&quot;- 6% means 6/100), exchange rate, inflation rate, discount rate,
+pressure in tires (lbs. per sq. in.), typing speed, film speed, shutter speed,
+wind speed, population density (# of people per sq. km.), density of materials
+(mass per unit volume- g/cc), cost of food in price per g), frequency of
+electromagnetic radiation (hertz or cycles per second), speed of light, speed of
+sound, pollution rate (parts per million), postal rates, shipping rates, rpm
+(revolutions per minute of a car engine or turntable), pulse rate (beats per
+minute), crop yield (bu. per hectare), flow of a stream or blood,
+signal-to-noise ratio, gear ratios, trig ratios (sine, cosine, tangent),
+probability of an event, batting averages, e.r.a., and growth rates, just to
+mention a few.</p>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 4.0pt 0in 4.0pt; margin-left: 4.0pt" width="971">
+  <tr style="mso-yfti-lastrow:yes">
+    <td width="146" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in">
+      <p class="12pthelvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+      <img border="0" src="../images/table2x=y.JPG" width="81" height="163"></o:p>
+      </p>
+    </td>
+    <td width="789" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in">
+      <p class="12pthelvetica">The other thing we can say about the graph and
+      data of the ant is that the distance the ant travels is a function of
+      time. Of course we won't get<span style="mso-spacerun:yes">&nbsp; </span>a
+      nice simple graph from real data. We talked about functions or guess the
+      rule, in chapter 6. We should also look at the <font color="#FF0000"><b> differences</b></font> in the
+      y-numbers.
+      The <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>-number
+      goes up by 2 as the <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span>-number
+      goes up by 1, which shows up as the slope on the graph!
+      </p>
+    </td>
+  </tr>
+</table>
+<p align="left"><b>2. Linear graphs and their slopes</b>
+<p align="left">See graphs and slope on map
+<p align="left">&nbsp;
+<p align="left">&nbsp;<hr>
+<p align="left"><b>3. Alec finds the slope of a wheelchair-access ramp</b></p>
+<p align="center"><img border="0" src="../images/slopeoframp.JPG" width="732" height="210"></p>
+<hr>
+<p class="12pthelvetica"><b style="mso-bidi-font-weight:normal">4. Stories
+from graphs</b>-The following are problems from &quot;The Language of Functions
+and Graphs&quot; published by The Shell Centre for Mathematical Education,
+University of <st1:place>
+Nottingham</st1:place>
+. They lead into the following problem of the derivative very nicely. Choose the
+best graph to describe each of the situations listed below. Copy the <b style="mso-bidi-font-weight:normal"><o:p>
+</o:p>
+</b></p>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 4.0pt 0in 4.0pt; margin-left: 4.0pt" width="971" height="1035">
+  <tr>
+    <td width="551" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="514">
+      <p class="12pthelvetica">graph and label the axes clearly with the
+      variables shown in brackets. If you cannot find the graph you want, then
+      draw your own version and explain it fully.</p>
+      <p class="12pthelvetica">1) The weightlifter held the bar over his head
+      for a few unsteady seconds, and then with a violent crash he dropped it.
+      (height of bar/time)</p>
+      <p class="12pthelvetica">2) When I started to learn the guitar, I
+      initially made very rapid progress. But I have found that the better you
+      get, the more difficult it is to improve still further.
+      (proficiency/amount of practice)</p>
+      <p class="12pthelvetica">3) If schoolwork is too easy, you don't learn
+      anything from doing it. On the other hand, if it is so difficult that you
+      cannot understand it, again you don't learn. That is why it is so
+      important to pitch work at the right level of difficulty (educational
+      value/difficulty of work)</p>
+    </td>
+    <td width="384" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="514">
+      <p class="12pthelvetica">&nbsp;</p>
+      <p class="12pthelvetica">&nbsp;&nbsp; <img border="0" src="../images/storiesfromgraphs.JPG" width="308" height="432"><span style="display:none;mso-hide:all"><o:p>
+      </o:p>
+      </span></p>
+      <p class="12pthelvetica" align="right" style="text-align:right"><span style="mso-spacerun:yes">&nbsp;</span><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filloke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:179pt;
+   height:253.5pt' fillcolor="window">
+   <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.png"
+    o:title="p276"/>ed="f" stroked="f">
+   <v:str
+  </v:shape><![endif]-->
+      </p>
+    </td>
+  </tr>
+  <tr style="mso-yfti-lastrow:yes">
+    <td width="953" colspan="2" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="521">
+      <p class="12pthelvetica">4) When jogging, I try to start off slowly, build
+      up to a comfortable speed and then slow down gradually as I near the end
+      of a session. (distance/time)</p>
+      <p class="12pthelvetica"><o:p>5) &quot;In general, larger animals live longer
+      than smaller animals and their hearts beat slower.<span style="mso-spacerun:yes">&nbsp;
+      </span>With twenty-five million heartbeats per life as a rule of thumb, we
+      find that the rat lives for only three years, the rabbit seven and the
+      elephant and whale even&nbsp;longer. As respiration is coupled with
+      heartbeat--usually one breath is taken every four heartbeats--the rate of
+      breathing also decreases with increasing size. (heart rate/life span)
+      </p>
+      <p class="12pthelvetica">6) As for 5, except the variables are (heart
+      rate/breathing rate)</p>
+      <p class="12pthelvetica"></o:p>
+      </p>
+      <p class="12pthelvetica">Now make up three stories of your own to
+      accompany three of the remaining graphs. Pass your stories to your
+      neighbor. Can they choose the correct graphs to go with the stories?
+    </td>
+  </tr>
+</table>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 4.0pt 0in 4.0pt; margin-left: 4.0pt" height="414">
+  <tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
+    <td width="522" valign="top" style="width: 261.0pt; padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="414">
+      <p class="12pthelvetica"><o:p>Jonathan's Mom wrote: &quot;Jonathan suggested a
+      story about tornadoes and low pressure areas; we ended up with the graph
+      at the right:<o:p>
+      </o:p>
+      </p>
+      <p class="12pthelvetica"><o:p>
+      &nbsp;</o:p>
+      </p>
+      <p class="12pthelvetica">&nbsp;
+      </p>
+      <p class="12pthelvetica">note: we didn't know if this 'jives' with
+      scientific fact, but we had fun with the discussion.&quot;<o:p>
+      </o:p>
+      </p>
+    </td>
+    <td width="414" valign="top" style="width: 207.0pt; padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="414">
+      <p class="12pthelvetica" align="center" style="margin-right:-4.0pt;text-align:
+  center">&nbsp;</p>
+      <p class="12pthelvetica" align="center" style="margin-right:-4.0pt;text-align:
+  center"><img border="0" src="../images/jonstornado.JPG" width="268" height="311"></p>
+    </td>
+  </tr>
+</table>
+<p align="center">&nbsp; <img border="0" src="../images/numberforslope.JPG" width="465" height="221"></p>
+<p><font size="3" color="#000000">&nbsp;</font><a href="deriv_ans.html">Check the answers</a> to the <b>stories
+from graphs</b>, and the <b> numbers for the slopes above</b>.</p>
+<p align="left">&nbsp;</p>
+<table border="1" width="98%">
+  <tr>
+    <td width="51%">
+<p class="12pthelvetica"><b style="mso-bidi-font-weight:normal">5. Use
+your pencil to approximate the&nbsp;slope of the tangent to various&nbsp;curves, at certain
+points:<o:p>
+</o:p>
+</b>
+      <p>Now comes the big change. We've been&nbsp;finding the slopes
+of straight lines, now&nbsp;the<span style="position: absolute; left: 566; top: 4085">&nbsp;</span> question is what is the slope of a&nbsp;
+<br> curved line?
+<brp class="12pthelvetica">
+      <p>Well it changes, right? So what we do is find&nbsp;the slope
+of the straight line that touches the&nbsp;curve at one point or we say is tangent to
+the&nbsp;curve at that point.</p>
+      <p class="12pthelvetica"><o:p>Shown at the right is the graph of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y
+</span>= <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span><sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup>.
+Put&nbsp;your pencil (the dark line) next to the curve at various points and try to
+approximate the slopes&nbsp;of these lines. At (1,1) the slope is about 2.<b style="mso-bidi-font-weight:normal"><o:p>
+</o:p>
+</b>
+</p>
+<p class="12pthelvetica"><b style="mso-bidi-font-weight:normal"><o:p>
+ &nbsp;</o:p>
+</b></p>
+<p class="12pthelvetica">At the right is the graph of the <span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt">x</span>-coordinate of the&nbsp;point above vs the
+approximate slope of the tangent&nbsp;line at that point. So at (1,1) the slope is
+about 2, so&nbsp;we plot the point (1,2). Plot more points on this graph.</p>
+<p class="12pthelvetica"><o:p>
+ &nbsp;</o:p>
+</p>
+<span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">What
+do you notice?</span>
+      <p>&nbsp;</td>
+    <td width="49%">&nbsp; <img border="0" src="../images/slopepencil.JPG" width="302" height="649">
+    </td>
+  </tr>
+</table>
+<table border="1" width="98%">
+  <tr>
+    <td width="50%">&nbsp; <img border="0" src="../images/sloppentanx2.JPG" width="440" height="869"></td>
+    <td width="50%">&nbsp; <img border="0" src="../images/sloppentanlnx.JPG" width="434" height="507"></td>
+  </tr>
+</table>
+<table border="1" width="98%">
+  <tr>
+    <td width="50%"><img border="0" src="../images/sloppentansinx.JPG" width="460" height="708"></td>
+    <td width="50%">&nbsp;<img border="0" src="../images/sloppentancosx.JPG" width="446" height="708"></td>
+  </tr>
+</table>
+<p align="left">&nbsp;</p>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 4.0pt 0in 4.0pt; margin-left: 4.0pt" width="903" height="670">
+  <tr style="mso-yfti-lastrow:yes">
+    <td width="642" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="670">
+      <p class="12pthelvetica"><font size="2"><b style="mso-bidi-font-weight:normal">6.
+      Using
+      the computer/calculator</b><b style="mso-bidi-font-weight:normal"> to
+      &quot;zoom in&quot; on a curve at a point and then finding the slope of
+      the tangent to the curve at that point.<o:p>
+      </o:p>
+      </b></font></p>
+      <p class="12pthelvetica"><b style="mso-bidi-font-weight:normal"><font size="2"><o:p>
+      </font><font size="3">&nbsp;</font></b><font size="3">At the right are pictures of a computer screen in <i style="mso-bidi-font-style:normal">Derive</i>,
+      reduced in size, starting with the graph of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>=<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span></font><b><span style="mso-bidi-font-size: 10.0pt"><font size="2"><sup><sup>2</sup></sup></font></span>
+      </b><font size="3">
+      with the cross at the point (1,1) and a scale of <span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">x</span>:1, <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>:1.Each
+      dot is 1 unit apart vertically and horizontally. We then &quot;zoom
+      in&quot; on the graph, at the point (1,1). What does &quot;zooming
+      in&quot; essentially do? It changes the scale on the axes. <o:p>
+      </o:p>
+      </font></p>
+      <p class="12pthelvetica"><font size="3">The second graph shows the same
+      curve, again centered at (1,1), but the scale is <span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">x</span>:0.2, <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>:0.2&nbsp;</font></p>
+      <p class="12pthelvetica"><font size="3">The third graph ends up 0.02 of a
+      unit apart . Notice what happens. In this small portion of the graph, the
+      curve looks like a straight line, as far as the eye can see! The slope of
+      this line then is essentially the <b style="mso-bidi-font-weight:normal">slope
+      of the curve </b>or the slope of the line tangent to the curve at the
+      point (1,1). Using the dots on the screen, we can find the <font color="#FF0000"><b>slope
+      of this line, which is 2</b></font>,<span style="mso-spacerun:yes">&nbsp; </span>the
+      slope of the tangent to the curve at (1,1).<o:p>
+      </o:p>
+      </o:p>
+      </font></p>
+      <p class="12pthelvetica"><font size="3">We can then do the same thing at
+      various points on the curve <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">y</span>=<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt"><b><sup>2</sup></b></span><span style="mso-spacerun:yes">&nbsp;</span>and
+      try to find a rule relating the <span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">x-</span>coordinate of the point to the slope of the tangent to the
+      curve at that point. This rule you find will be the derivative of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt"><b><sup>2</sup></b></span><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt">.
+      </span>I think this idea makes the derivative, which I used to think was a
+      difficult concept, into something very simple.<o:p>
+      Fill in the table below, then write a rule:</font>
+      </p>
+    </td>
+    <td width="227" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in" height="670">
+      <p class="12pthelvetica" align="right" style="text-align:right"><img border="0" src="../images/zoomx2.gif" width="222" height="716"><o:p>
+      </o:p>
+    </td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="../images/derx2table.JPG" width="349" height="229">
+<br>
+what do you get for the rule?
+<p align="left">&nbsp;<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; mso-table-layout-alt: fixed; mso-padding-alt: 0in 4.0pt 0in 4.0pt; margin-left: 4.0pt" width="900">
+  <tr style="mso-yfti-irow:0;mso-yfti-lastrow:yes">
+    <td width="609" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in">
+      <p class="12pthelvetica"><o:p>We'll do one more example of the zooming in on a curve, then we'll see how
+      we can do this without the computer. This is exciting!<o:p>
+      </o:p>
+      </p>
+      <p class="12pthelvetica"><o:p>
+      At the right are 3 computer screens in <i style="mso-bidi-font-style:normal">Derive</i>
+      with part of the graph of<span style="mso-spacerun:yes">&nbsp; </span><span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">y</span><span style="font-size:10.0pt"> = <span style="position:relative;
+  top:5.0pt;mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1026" type="#_x0000_t75" style='width:48pt;
+   height:19pt' o:ole="">
+   <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.wmz"
+    o:title=""/>
+  </v:shape><![endif]-->
+      </span><!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1026"
+    DrawAspect="Content" ObjectID="_1331319320">
+   </o:OLEObject>
+  </xml><![endif]-->
+      <img border="0" src="../images/zoomsqrt25-x2.JPG" width="70" height="36"><span style="mso-spacerun:yes">&nbsp;</span></span>,
+      or part of the top half of the circle <span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">x</span><sup><span style="font-size:10.0pt;position:relative;
+  top:-2.0pt;mso-text-raise:2.0pt">2</span></sup><span style="mso-spacerun:yes">&nbsp;</span>+
+      <span style="font-size:14.0pt;mso-bidi-font-size:
+  10.0pt">y</span><sup><span style="font-size:10.0pt;position:relative;
+  top:-2.0pt;mso-text-raise:2.0pt">2</span></sup><span style="mso-spacerun:yes">&nbsp;</span>=
+      25 whose center is at (0,0) with a radius of 5 units. We then zoom in on
+      that curve at the point (3,4).&nbsp;</p>
+      <p class="12pthelvetica">The second screen picture is of the same curve,
+      with the cross still at (3,4), but the scale is 0.2 this time.</p>
+      <p class="12pthelvetica">&nbsp;</p>
+      <p class="12pthelvetica"><o:p>
+      &nbsp;</o:p>
+      The third screen picture is of the same curve, with the cross still at
+      (3,4), but the scale is 0.01 this time.<o:p>
+      </o:p>
+      </o:p>
+      </p>
+      <p class="12pthelvetica">What do you get for the slope of this
+      &quot;straight&quot; section of the curve? <o:p>
+      </o:p>
+      <font size="3"><sup>-</sup></font>3/4</o:p>
+      </p>
+      <p class="12pthelvetica">How is the slope related to the coordinates of
+      the point?<o:p>
+      </o:p>
+      </o:p>
+      </p>
+      <p class="12pthelvetica">Could you predict the slope of this curve at the
+      point (4,3)?<o:p>&nbsp; <font size="3"><sup>-</sup></font>4/3 , yes.</o:p>
+      </p>
+      <p class="12pthelvetica">Would you predict the slope of the tangent to the
+      circle at the point (<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x,y</span>)?<o:p>
+      </o:p>
+      </o:p>
+    </td>
+    <td width="255" valign="top" style="padding-left: 4.0pt; padding-right: 4.0pt; padding-top: 0in; padding-bottom: 0in">
+      <p class="12pthelvetica"><o:p>
+      &nbsp;</o:p>
+      </p>
+      <p class="12pthelvetica" align="center" style="text-align:center"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+      </span><!--[if gte vml 1]><v:shape id="_x0000_i1025"
+   type="#_x0000_t75" style='width:154.5pt;height:529pt' fillcolor="window">
+   <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image003.png"
+    o:title="p282"/>
+  </v:shape><![endif]-->
+      <img border="0" src="../images/zoomcir.gif" width="191" height="652"><o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<pre>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&nbsp;</pre>
+<pre>The slope of tangent at any point on a circle (the derivative, written as f'(x) or y' or dy/dx)</pre>
+<pre>	</span><font face="Arial"><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium">x</span><b><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font size="2"><sup>2</sup></font></span></b><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font size="2"><b><sup> </sup></b></font></span><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium">+ y</span><b><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"><font size="2"><sup>2</sup></font></span></b><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium"> = 25</span></font></pre>
+<span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
+<pre>				do implicit differentiation</pre>
+<pre>	2x + 2ydy/dx = 0</pre>
+<pre>				solve for dy/dx</pre>
+<pre>	dy/dx = -x/y	does this agree with what you found above?</pre>
+<hr>
+</span><b>Suppose you don't have a computer to &quot;zoom in&quot; on the curve&nbsp;x<font size="2"><sup>2</sup></font>,
+can you do this?&nbsp;SURE!</b> Let's&nbsp;look at the slope of the secant line AB
+from A at (3,3<i><b><font size="2"><sup>2</sup></font></b><font size="3">) </font></i><font size="3">to
+B (3.0001, 3.0001</font><font size="2"><sup><b>2</b></sup></font><font size="3">).</font><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; "><br>
+<center><img src="../images/zoom3001.gif" width="539" height="330"></span></center>
+<p>The slope of the secant line approaches the slope of the tangent line (in
+red) and approaches 6 (above it comes out to be 6.0001</p>
+<p>Zoom in on other points like (1,2) and (2,4), and some others, and make a
+table like this:</p>
+<p><br>
+x-coordinate&nbsp;&nbsp;&nbsp;&nbsp; slope of tangent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6</p>
+<p>Find a rule for these pairs of numbers; this will be the derivative of x<font size="2"><b><sup>2</sup></b></font>
+.</p>
+<hr><b>7. Derivatives as done in textbooks</b>
+<p>A few of words about Ian, who started working with me in 3rd grade, through
+HS. From Feb. 1982 to Feb. 1983 Ian went through a very prodigious period of
+mathematical discovery (not to diminish his earlier and now I can say, his later
+work). He told me he was doing things in his calculus class like using the
+properties of the Nautilus shell, that of constant ratio of distances from the
+center and constant angle (as Yao</st1:place>
+</st1:City>
+ did in chapter 6), to show it is a logarithmic curve. He also made a Chinese
+Ring Puzzle in his calculus class and gave it to me as a gift. In his last year
+of HS he asked if he could teach with me in my summer classes! Needless to say I
+was very pleased and honored to have him do that.</p>
+<p>In January of 1982, at age 11, upon my suggestion, he started reading W. W.
+Sawyer's &quot;What is Calculus About?&quot;. During this year he figured out
+the derivative of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;letter-spacing:.5pt">x</span><sup><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;position:relative;top:-1.0pt;
+mso-text-raise:1.0pt;letter-spacing:.5pt">n</span></sup><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>and
+discovered the fundamental theorem of the calculus (see below). He did some work
+on Maclaurin's Theorem, as well as his work on the binomial theorem and Pascal's
+triangle (in chapter 9 on the Map). My role as the teacher was one of giving a
+few suggestions. I always felt I was not really teaching Ian much at all, but
+providing an atmosphere in which he could &quot;learn to learn&quot; as he put
+it. He was always raising questions, pondering the mathematics. I dare say,
+through about age 14, Ian spent more time thinking about mathematics than 90% of
+us do in our lifetime, combined! I think I learned a lot from him also. Although
+Ian is an unusual young man, I have worked with many others, including girls,
+who are capable of much more than I ever thought possible. If we believe young
+people can do great things, they will do it -- I am convinced of that. But I am
+also convinced there has to be a big change in <b style="mso-bidi-font-weight:normal">how</b>
+this is done with young people. I think all too often curricular changes come
+from textbook salesmen and college professors, neither of whom have ever worked
+with young people (this is changing some). There is rarely a student comes to me
+saying I figured this or that out. A classic case is derivatives and integrals;
+young people can see patterns and can figure out patterns- see below how this
+works. That's why what Bob Davis did in the 60's and 70's was so important,
+because he did it with young people and showed me the way! Get hold of <st1:City>Robert B. Davis</st1:place>' books -Discovery and Explorations in Mathematics- in the bibliography. Ian
+went on to Oberlin College for his B.A. and received a Ph.D. in Mathematics at
+The University of Chicago.</p>
+<p class="12pthelvetica">At some point when Ian was 11 years old, he and I went
+through the following discussion to get the derivative of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span><sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup>,
+which is the slope of the tangent to the curve <span style="font-size:14.0pt;
+mso-bidi-font-size:10.0pt">y</span>=<span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt">x</span><sup><span style="font-size:10.0pt;position:relative;
+top:-2.0pt;mso-text-raise:2.0pt">2</span></sup><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>at
+any point (<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x, x</span><sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup>).<span style="mso-spacerun:yes">&nbsp;
+</span>This then led to the derivative of <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;letter-spacing:1.4pt">x</span><sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt;
+letter-spacing:1.4pt">n</span></sup><span style="mso-spacerun:yes">&nbsp;</span>and
+other functions.We found the slopes of the curves above in 2 ways, by putting
+our pencil next to the curve and approximating the slopes of these lines, then
+we zoomed in on the graph at certain points and calculated the slope of a line
+very close to the tangent to the curve.</o:p>
+</p>
+<p class="12pthelvetica">Now our strategy will be to find the slopes of lines
+from point A, to points to the right of it on the curve, like B, then from A to
+C and so on, getting closer and closer to point A. We will get an <font color="#FF0000"> <b style="mso-bidi-font-weight:normal">infinite</b>
+ <b>
+sequence</b></font> of slopes of secant lines, which will approach the slope of the tangent. The
+limit of this sequence will be the slope of the tangent to the curve at the
+point A.</p>
+<p align="center"><img border="0" src="../images/slopetanp284.JPG" width="669" height="210"></p>
+<p align="center">&nbsp;</p>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><font color="#0000FF"><b>The scales on the following graphs will be distorted in
+order to show the straight lines clearly.</b></font> Once we do one of these <b><font color="#FF0000"> infinite
+sequences</font></b> of slopes, the rest of them will be easy, because there will be
+patterns, as usual, which will make it possible to predict others.</span></p>
+<table border="1" width="95%" height="422">
+  <tr>
+    <td width="50%" height="109">The first problem will be to find the slope of
+      the tangent to the curve<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">
+      y </span>=<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt"> x</span><sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup><span style="mso-spacerun: yes; font-size: 10.0pt">&nbsp;</span>at
+      the point (1,1<sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;
+mso-text-raise:2.0pt">2</span></sup>), shown below.</td>
+    <td width="50%" height="109">The slope of the line from the point (1,1<sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup>)
+      to (2,2<sup><span style="font-size:10.0pt;position:relative;top:-2.0pt;
+mso-text-raise:2.0pt">2</span></sup>) is the diff in y's/diff in x's
+      <p align="center">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex21-12new.JPG" width="273" height="74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="50%" height="301">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex2tan1-12.JPG" width="252" height="266"></td>
+    <td width="50%" height="301">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex2112-222.JPG" width="279" height="295"></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="1" width="92%" height="483">
+  <tr>
+    <td width="51%" height="59">&nbsp; <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">Now we'll find the slope of the straight line from (1,
+      1</span><sup><span style="font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;position:relative;
+top:-2.0pt;mso-text-raise:2.0pt;letter-spacing:1.3pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA">2</span></sup><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">) to (1<span style="position:relative;top:8.0pt;mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:13pt;
+ height:21pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+      </span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1336466346">
+ </o:OLEObject>
+</xml><![endif]--></span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1/2</span><span style="font-size:10.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span>,</span><span style="font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">1<span style="position:relative;top:8.0pt;
+mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:19pt;height:22pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image003.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+      </span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1336466347">
+ </o:OLEObject>
+</xml><![endif]-->
+      1/2)<sup><b><font size="2">2</font></b></sup>)</span></td>
+    <td width="49%" height="59">&nbsp; <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">Now we'll find the slope of the straight line from (1,
+      1</span><sup><span style="font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;position:relative;
+top:-2.0pt;mso-text-raise:2.0pt;letter-spacing:1.3pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA">2</span></sup><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">) to (1<span style="position:relative;top:8.0pt;mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:13pt;
+ height:21pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+      </span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1336466346">
+ </o:OLEObject>
+</xml><![endif]--></span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">1/3</span><span style="font-size:10.0pt;font-family:Arial;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span>,</span><span style="font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">(</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">1<span style="position:relative;top:8.0pt;
+mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ style='width:19pt;height:22pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image003.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+      </span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1336466347">
+ </o:OLEObject>
+</xml><![endif]-->
+      1/3)<sup><b><font size="2">2</font></b></sup>)</span></td>
+  </tr>
+  <tr>
+    <td width="51%" height="288">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex21-1&amp;12.JPG" width="260" height="282"></td>
+    <td width="49%" height="288">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex21-1&amp;13d.JPG" width="260" height="282"></td>
+  </tr>
+  <tr>
+    <td width="51%" height="118">&nbsp;&nbsp; <img border="0" src="../images/slopex21-112-2212NOs.JPG" width="392" height="92"></td>
+    <td width="49%" height="118">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="../images/slopx21-112-2213Nos.JPG" width="348" height="85"></td>
+  </tr>
+</table>
+<p align="center">&nbsp;</p>
+<table border="1" width="94%" height="471">
+  <tr>
+    <td width="53%" height="465">In finding the slope of the tangent to the
+      curve y=x<font size="2"><b><sup>2</sup></b></font> at the point (1,1<font size="2"><b><sup>2</sup></b></font>)
+      we found the slopes of the lines from (1, 1<font size="2"><b><sup>2</sup></b></font>)
+      to (2,2<font size="2"><b><sup>2</sup></b></font>); then (1,1<font size="2"><b><sup>2</sup></b></font>)
+      to <b>(</b>1 1/2, (1 1/2)<font size="2"><b><sup>2</sup></b></font><b>)</b>,
+      then from (1,1<font size="2"><b><sup>2</sup></b></font>) to <b>(</b>1 1/3,
+      (1 1/3)<font size="2"><b><sup>2</sup></b></font><b>), </b>and the slopes
+      we got were 3, 2 +1/2, 2 + 1/3. The picture at the right shows the line
+      from (1,1<font size="2"><b><sup>2</sup></b></font>) to <b>(</b>1 1/4,
+      (1+1/4)<font size="2"><b><sup>2</sup></b></font><b>), </b>which turns out
+      to be&nbsp;
+      <p><img border="0" src="../images/slopex21-1&amp;14f.JPG" width="261" height="79"></p>
+      <p>which is not surprising!</td>
+    <td width="47%" height="465">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="../images/slopex21-1&amp;14e.JPG" width="359" height="376"></td>
+  </tr>
+</table>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">Let <b style="mso-bidi-font-weight:normal">h</b> be how
+much we add to the </span><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">x</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">-coordinate of our point (1, 1</span><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;position:relative;
+top:-1.0pt;mso-text-raise:1.0pt;letter-spacing:.5pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><font size="2"><b><sup>2</sup></b></font></span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">). We will have <b>h</b></span></p>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">&nbsp;decrease. Using
+the pattern, we can extend this sequence of slopes&nbsp;</span></p>
+<p align="center">&nbsp;<img border="0" src="../images/slopeseqto2+h.JPG" width="529" height="55"></p>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">What's happening as <b>h</b> goes to zero? The limit of
+this <b><font color="#FF0000"> infinite sequence</font></b> of slopes is 2,<span style="mso-spacerun:yes">&nbsp;&nbsp;</span></span></p>
+<p align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">&nbsp;or more formally,</span></p>
+<p align="left"><img border="0" src="../images/slopex2limitat%20x=1.JPG" width="626" height="60"></p>
+<p align="left">The first term is read as the limit of the <font color="#FF0000"><b> infinite sequence</b></font> of
+slopes of secant lines (difference in y's/difference in x's) as <b>h</b>
+approaches zero, equals the slope of the tangent to the curve y=x<b><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="1"><sup>2</sup></font></span></b><font size="2"><span style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+at the point </span></font><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"> (1, 1</span><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;position:relative;
+top:-1.0pt;mso-text-raise:1.0pt;letter-spacing:.5pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><font size="2"><b><sup>2</sup></b></font></span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">) and is equal to 2.</span></p>
+<p align="left"><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">To
+find the slope of the tangent to the curve </span>y=x<b><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="1"><sup>2</sup></font></span></b><font size="2"><span style="font-size: 11.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+at the point </span></font><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">(3, </span><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">3</span><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;position:relative;
+top:-1.0pt;mso-text-raise:1.0pt;letter-spacing:.5pt;mso-ansi-language:EN-US;
+mso-fareast-language:EN-US;mso-bidi-language:AR-SA"><font size="2"><b><sup>2</sup></b></font></span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">), we would get</span></p>
+<p align="left"><img border="0" src="../images/slopex2limitat%20x=3.JPG" width="654" height="66"></p>
+<p class="12pthelvetica">Filling in the table below showing the <span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span>-coordinate
+and the slope of the tangent at that point, looks like this:</p>
+<p class="12pthelvetica"><u><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt">x</span>-coordinate<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>1<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>2<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>4<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5<span style="mso-spacerun:yes">&nbsp; </span>.. 10<span style="mso-spacerun:yes">&nbsp;
+</span>..<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span></u></p>
+<p class="12pthelvetica">slope of tangent<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>2<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>6<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>8<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>10<span style="mso-spacerun:yes">&nbsp; </span>.. 20<span style="mso-spacerun:yes">&nbsp;
+</span>.. 2<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">x</span></p>
+<p class="12pthelvetica"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">In general then, the slope of the tangent<span style="mso-spacerun:yes">&nbsp;
+</span>to the curve </span><span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">y </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">= </span><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">x</span><b><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="2"><sup>2</sup></font></span></b><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&nbsp;
+</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">at the</span><span style="font-size:9.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"> </span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">point <b style="mso-bidi-font-weight:normal">(</b></span><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">x</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">, </span><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">x</span></b><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="2"><sup><b>2</b></sup></font></span><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">) </span></b><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">is</span></p>
+<p class="12pthelvetica"><img border="0" src="../images/slopex2limitat%20x=x.JPG" width="691" height="64"></p>
+<p class="12pthelvetica">So the <font color="#800080"><b>slope of the curve</b></font>
+or <b><font color="#800080">DERIVATIVE of <span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">y </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">= </span><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">x</span><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="2"><sup>2</sup></font></span></font></b><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font color="#800080"><b>&nbsp;
+</b></font></span><font color="#000000" size="3"><span style="mso-spacerun: yes; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">is
+2x</span></font><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">.</span></p>
+<p align="left">Can you predict <span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">the slope of the tangent<span style="mso-spacerun:yes">&nbsp;
+</span>to the curve </span><span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">y </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">= </span><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">x</span><span style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt"><b><font size="2"><sup>3</sup></font></b></span><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&nbsp;
+</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">at the</span><span style="font-size:9.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"> </span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">point <b style="mso-bidi-font-weight:normal">(</b></span><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">x</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">, </span><span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt;font-family:Arial;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA">x</span></b><b style="mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .5pt; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><font size="2"><sup>3</sup></font></b><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">) </span></b><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">?
+Try to see if you are right!</span></p>
+<p align="center"><img border="0" src="../images/thederivative.JPG" width="726" height="228"></p>
+<span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt; font-family: Arial; mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Notice,
+in the definition of the derivative above, h approaches zero, but is never zero.</span>
+<hr>
+<p align="left"><span class="apple-style-span"><b><font color="#008000">[Don had
+Sheri as a 4-6th grader, (search Sheri to see what she did), then she went to University High School. She came back
+as a 12th grader, in the Summer of 2008, to prepare for Calculus. Don worked with her for about
+3 hrs. individually over the last month before school started. Today, a week into her calculus class,
+she told me </font><font color="#0000FF"> &quot;What we did the last 3 weeks (derivatives),&nbsp;the teacher
+did with my class in one day, and I was like the only one in the class that
+understood what she was talking about! It really helped for me to talk with you
+about the problems as I worked on them&quot;</font><font color="#008000">.&nbsp;</font></b></span></p>
+<p align="left"><b> <span class="apple-style-span"> <font color="#008000"> It's been a pleasure working with
+you Sheri, as well as your sister, your mother, 2 aunts, and 2 cousins over the
+years- what a wonderful family!</font></span></b><p align="left"><b>On this day <font size="4">June
+6, 2010</font>,
+Don &amp; Mrs. Cohen met Sheri, on the way out of a restaurant where she was
+working. It was great to see her. She will be a sophomore at the U of Michigan
+in the Fall, loving it, majoring in Neuroscience, and hopes to be a doctor! Her
+sister Amanda whom Don also worked with, will be a senior at the U of CA, San
+Diego, and is planning to go to law school.&nbsp;</b><p align="left"><b>Besides
+seeing his own children, grandchildren and greatgrandchilden grow up, it's also
+a pleasure seeing his students grow up. Especially when he has had their
+children; Jenny helped Don set up his website and Jonathan, has
+helped make his <u>A Map to Calculus</u> clickable! Don feels very fortunate to
+have positively affected so many young people. Mrs. Cohen has been the greatest
+supporter of his work and the love of his life for the last 57 years.]</b>
+
+
+
+<hr>
+
+At age 11,
+Ian realized that he could go down, starting with <span style="font-size:
+14.0pt;mso-bidi-font-size:10.0pt">y</span>= <span style="font-size:14.0pt;
+mso-bidi-font-size:10.0pt;letter-spacing:.4pt">x</span><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;position:relative;top:-1.0pt;
+mso-text-raise:1.0pt;letter-spacing:.4pt"><font size="2"><b><sup>4</sup></b></font></span><span style="mso-spacerun: yes; font-size: 10.0pt">&nbsp;</span>,
+taking the derivative until he got 0, or go up, taking the integral! He used the following notation to show this:
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="position:relative;top:-3.0pt;mso-text-raise:3.0pt">-</span><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">2</span></sup><span style="position:relative;top:-3.0pt;mso-text-raise:3.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        <span style="position:relative;top:8.0pt;
+mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:20pt;
+ height:23pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image001.wmz"
+  o:title=""/>
+</v:shape><![endif]--></span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1025"
+  DrawAspect="Content" ObjectID="_1331405193">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes">x<font size="2"><sup><b>6</b></sup></font>/30</span></p>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="position:relative;top:-3.0pt;mso-text-raise:3.0pt">-</span><span style="font-size:10.0pt;position:relative;top:-2.0pt;mso-text-raise:2.0pt">1</span></sup><span style="position:relative;top:-3.0pt;mso-text-raise:3.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=&nbsp;<span style="mso-spacerun:yes">x<font size="2"><sup><b>5</b></sup></font>/</span><span style="mso-spacerun: yes">5</span><span style="position:relative;
+top:8.0pt;mso-text-raise:-8.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:19pt;height:23pt' o:ole="">
+ <v:imagedata src="file:///C:\DOCUME~1\DONCOH~1\LOCALS~1\Temp\msohtml1\01\clip_image003.wmz"
+  o:title=""/>
+</v:shape><![endif]-->
+        </span><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.2" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1331405194">
+ </o:OLEObject>
+</xml><![endif]-->
+        </p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="12pthelvetica" align="left"><font color="#FF0000">he started here</font> <span style="font-size:14.0pt;
+mso-bidi-font-size:10.0pt">y </span><sup><span style="font-size:10.0pt;
+position:relative;top:-3.0pt;mso-text-raise:3.0pt">0</span></sup><span style="position:relative;top:-4.0pt;mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+<span style="font-size:14.0pt;
+mso-bidi-font-size:10.0pt;letter-spacing:.4pt">x</span><font size="2"><span style="mso-bidi-font-size: 10.0pt"><b><sup><span style="mso-bidi-font-size: 10.0pt; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .4pt">4</span></sup><o:p>
+ </b></span></font><span style="font-size:
+9.0pt;mso-bidi-font-size:10.0pt">
+</o:p>
+</span></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="font-size:10.0pt;position:relative;top:-3.0pt;
+mso-text-raise:3.0pt">1</span></sup><span style="position:relative;top:-4.0pt;
+mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        4<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;letter-spacing:.4pt">x</span><b><span style="mso-bidi-font-size: 10.0pt; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .4pt"><font size="2"><sup>3</sup></font></span></b><span style="font-size:
+9.0pt;mso-bidi-font-size:10.0pt"><o:p>
+        </o:p>
+        </span></p>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="font-size:10.0pt;position:relative;top:-3.0pt;
+mso-text-raise:3.0pt">2</span></sup><span style="position:relative;top:-4.0pt;
+mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        12<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;letter-spacing:.4pt">x</span><b><span style="mso-bidi-font-size: 10.0pt; position: relative; top: -1.0pt; mso-text-raise: 1.0pt; letter-spacing: .4pt"><font size="2"><sup>2</sup></font></span></b><span style="mso-spacerun: yes; font-size: 9.0pt; mso-bidi-font-size: 10.0pt">&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>Ian's notation for the 2nd derivative was <span style="font-size:14.0pt;mso-bidi-font-size:
+10.0pt">y </span><sup><span style="font-size:10.0pt;position:relative;
+top:-3.0pt;mso-text-raise:3.0pt">2</span></sup><span style="position:relative;
+top:-3.0pt;mso-text-raise:3.0pt">'</span><span style="font-size:9.0pt;
+mso-bidi-font-size:10.0pt"><o:p>
+        ,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span><span style="mso-bidi-font-size: 10.0pt"><font size="3">normally
+        written as y&quot;</font></span><span style="font-size:9.0pt;
+mso-bidi-font-size:10.0pt"></o:p>
+        </span></p>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="font-size:10.0pt;position:relative;top:-3.0pt;
+mso-text-raise:3.0pt">3</span></sup><span style="position:relative;top:-4.0pt;
+mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        24<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt;letter-spacing:.4pt">x</span><sup><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;position:relative;top:-1.0pt;
+mso-text-raise:1.0pt;letter-spacing:.4pt">1</span></sup><span style="font-size:
+9.0pt;mso-bidi-font-size:10.0pt"><o:p>
+        </o:p>
+        </span></p>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="font-size:10.0pt;position:relative;top:-3.0pt;
+mso-text-raise:3.0pt">4</span></sup><span style="position:relative;top:-4.0pt;
+mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        24<span style="font-size:14.0pt;mso-bidi-font-size:10.0pt"><o:p>
+        </o:p>
+        </span></p>
+        <p class="12pthelvetica" align="left"><span style="font-size:14.0pt;mso-bidi-font-size:10.0pt">&nbsp;y
+        </span><sup><span style="font-size:10.0pt;position:relative;top:-3.0pt;
+mso-text-raise:3.0pt">5</span></sup><span style="position:relative;top:-4.0pt;
+mso-text-raise:4.0pt">'</span><span style="mso-spacerun: yes; font-size: 14.0pt; mso-bidi-font-size: 10.0pt">&nbsp;</span>=
+        0<span style="font-size:7.0pt;mso-bidi-font-size:10.0pt"><o:p>
+        &nbsp;
+        </span></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<hr><font face="Arial" size="3"><a href="http://www.mathman.biz/html/thomas.html">Thomas,
+an 8th grader, wrote this program on the TI 82 which gives the derivative of a
+monomial.</a></font>
+<hr>
+<p><b>8. Tickertape &amp; other applications of the derivative</b>
+<p align="left">&nbsp;&nbsp;&nbsp;</p>
+<p align="left">&nbsp;&nbsp;&nbsp; Distance, velocity, acceleration...coming</p>
+<p align="left">&nbsp;&nbsp;&nbsp; <b>Maximum pts</b> - <a href="perimeter20.html">see
+area of rectangles with perimeter 20</a> Kelda's work, or on the <font color="#800080"><b>Map</b></font></p>
+<p align="left">&nbsp;&nbsp;&nbsp; <b>Minimum points</b>- <a href="PerofrectofA=36.html">see
+perimeter of rectangles with area of 36</a> Maya's work, or the <font color="#800080"><b>Map</b></font></p>
+<p align="left">&nbsp;</p>
+<hr>
+<p align="left"><b><font size="4">9. Elizabeth asked Don about
+the points of inflexion of a curve</font></b></p>
+<p><font size="3">Don said the points of inflexion are those for which the
+function changes from concave down to concave up or vice-versa,OR the second
+derivative changes signs (from + to - or vice-versa).</font></p>
+<p><font size="3">He imediately made up an function by multipling
+(x+2)*(x-3)*(x-4) to get</font></p>
+<p><font size="3">x</font><b><font size="2"><sup>3</sup></font></b><font size="3"><sup>
+</sup>- 5x</font><b><font size="2"><sup>2</sup></font></b><font size="3"> -2x+24
+= y, which he knew would have roots of, or cross the x-axis at, <sup><b>-</b></sup>2, 3 and 4.</font></p>
+<font SIZE="4">
+<sup>
+<p>Below are the 4 graphs of</p>
+</sup>
+</font>
+<sup>
+<blockquote>
+  <blockquote>
+    <p><font size="3">1.) the function f(x) = </font><font size="3" color="#0000FF"> x</font></sup><font color="#0000FF" size="3"><b><sup><sup>3</sup></sup></b><sup>
+    - 5x<sup><b>2</b></sup></sup></font><sup><font size="3" color="#0000FF"> -2x+24</font></p>
+    <p><font size="3">2.) the derivative of this function f</font></sup><font size="4"><sup><b>'</b></sup></font><sup><font size="3">(x) =</font><font size="3" color="#FF00FF"> 3x</font></sup><b><font size="2" color="#FF00FF"><sup><sup>2</sup></sup></font></b><font size="3" color="#FF00FF"><sup>
+    -10</sup></font><font size="3" color="#FF00FF"><sup>x-2</sup></font></p>
+  <sup>
+  <p><font size="3">3.) the 2nd derivative of the function f</font></sup><font size="4"><b><sup>&quot;</sup></b></font><font size="3"><sup>(x) =
+</sup>
+  <font color="#808000"><sup>6x-10</sup></font><sup>, and
+  finally
+</sup>
+  </font></p>
+  <sup>
+  <p><font size="3">4.) the 3 graphs above, on the same axes</font></p>
+  </blockquote>
+</blockquote>
+</sup>
+<p>Plot[<font color="#0000FF">x<font size="2"><sup><b>3</b></sup></font> -5*x<font size="2"><sup><b>2</b></sup></font>-2*x+24</font>,{x,-3,6},PlotStyle<font FACE="Mathematica1Mono">®</font>{Thickness[0.01]}]</p>
+<p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="../images/Derfx.JPG" width="476" height="308"></p>
+<p><font size="3">Notice, the curve crosses the x-axis at <sup>-</sup>2, 3 and 4. There is
+a relative <font color="#FF0000"><b> maximum</b></font> around -0.2 and a relative
+<b><font color="#FF0000"> minimum</font></b> at about 3.5. Also the
+slope of the original curve is positive from -<font FACE="Mathematica1">¥</font>
+to the relative maximum, is zero there, then the slope is negative as we go
+right, until we come to the relative minimum at about 3.5, then the slope of the
+original curve is positive to +<font FACE="Mathematica1">¥</font>.</font></p>
+<p><font size="3">The <font color="#FF0000" size="3"><b> derivative</b></font> is the slope of the tangent to the curve. When
+the derivative = 0, the original function will have a maximum and/or minimum point,
+because at these points the tangent is horizontal, with slope = 0.</font></p>
+<p>D[<font color="#0000FF">x<font size="2"><sup><b>3</b></sup></font>-5*x<font size="2"><sup><b>2</b></sup></font>-2*x+24</font>,x]
+=<font COLOR="#ff00ff">  f</font><font size="4" color="#FF00FF"><b>'</b></font><font COLOR="#ff00ff">(x) =
+</font><font color="#FF00FF"><sup>-</sup></font><font COLOR="#ff00ff">2-10x+3x</font><b><font size="2" color="#FF00FF"><sup>2</sup></font></b>
+which is the <font COLOR="#ff00ff">first derivative </font>of the original
+function.</p>
+<p>To graph the<font COLOR="#ff00ff"> 1st derivative.</p>
+</font>
+<p>Plot[<font COLOR="#ff00ff">-2-10x+3x<font size="2"><sup><b>2</b></sup></font></font>,{x,-3,6},PlotStyle<font FACE="Mathematica1Mono">®</font>{Thickness[0.01]}]</p>
+<p align="center"><img border="0" src="../images/Derf'x.JPG" width="444" height="281"></p>
+<p><font size="3">Notice that if we set the <font color="#FF00FF">1st derivative</font>
+= 0, we'll find the x-coordinates of the maximum and minimum point of the
+original curve:</font></p>
+<p>NSolve[<font color="#FF00FF"><sup>-</sup>2-10x+3x<font size="2"><sup><b>2</b></sup></font></font><font FACE="Mathematica1Mono">Š</font>0]</p>
+<p>{{x<font FACE="Mathematica1Mono">® </font>-0.1892547876100073}, {x<font FACE="Mathematica1Mono">®
+</font>3.522588120943341}}</p>
+<p>-0.1892547876100073... is the x- coordinate of the relative maximum point of
+the original function and 3.522588120943341 is the x-coordinate of the relative
+minimum point of the original function.</p>
+<p>Now taking the second derivative of the original function (taking the
+derivative of the 1st&nbsp; derivative):</p>
+<p>D[<font color="#FF00FF"><b><sup>-</sup></b>2-10 x+3x<font size="2"><sup><b>2</b></sup></font></font>,x]</p>
+<p><font color="#336600">f''(x)= <b><sup>-</sup></b>10+6x</font></p>
+<p>Plot[<font color="#336600"><b><sup>-</sup></b>10+6*x</font>,{x,-3,6}]</p>
+<p align="center"><img border="0" src="../images/Derf''x.JPG" width="447" height="281"></p>
+<p>Solving this equation,which is the <font color="#808040"><b>2nd derivative</b></font>
+set equal to 0,</p>
+<p>NSolve[<font size="3"><b><sup><font color="#336600">-</font></sup></b></font><font color="#808040"><b>10 +6x</b></font><font FACE="Mathematica1Mono">Š</font>0]</p>
+<p>{{x<font FACE="Mathematica1Mono">®</font>1.6666666666666667`}}</p>
+<p>gives the x-coordinate of the point at which the <font color="#336600"><b>2nd
+derivative</b></font> changes sign, from negative to positive and therefore the
+original function has a point of inflexion at this point when x=1.666... Looking
+at the original function, this is the point at which it changes from concave
+down to concave up.</p>
+<p>Now we'll graph the original function, the first derivative and the 2nd
+derivative:</p>
+<p><font size="3">Plot[{<b><font COLOR="#0000ff">x</font></font><font color="#0000ff" size="2"><sup>3</sup></font><font color="#0000FF" size="3">-5*x</font><font color="#0000ff" size="2"><sup>2</sup></font><font color="#0000FF" size="3">-2*x+24</font></b></font><b><font color="#0000ff" size="2"><sup>3</sup></font><font color="#0000FF" size="3">-5*x</font><font color="#0000ff" size="2"><sup>2</sup></font><font color="#0000FF" size="3">-2*x+24</font></b><font size="3">,
+<b><font color="#FF00FF"><sup>-</sup></font><font COLOR="#ff00ff">2-10x+3x</font></b></font><b><font color="#ff00ff" size="2"><sup>2</sup></font></b><font size="3">,
+<b><sup><font color="#336600">-</font></sup></b><font COLOR="#808000"><b>10+6*x</b></font>}, {x,-3,6}, PlotStyle<font FACE="Mathematica1Mono">®</font>{Thickness[0.011],Thickness[0.011],Thickness[0.011]}]</font></p>
+<p align="center"><img border="0" src="../images/Derfxf'xf''x.JPG" width="592" height="368"></p>
+<p><font size="3"><font FACE="Arial">The </font><font FACE="Arial" COLOR="#0000ff">blue</font><font FACE="Arial">
+graph is the original function <font color="#0000FF">f(x)=</font> </font><font COLOR="#0000a0">x</font></font><font color="#0000a0" size="2"><sup><b>3</b></sup></font><font size="3" COLOR="#0000a0">
+- 5*x</font><font color="#0000a0" size="2"><sup><b>2</b></sup></font><font size="3"><font COLOR="#0000a0">
+- 2*x + 24 </font>, the<font COLOR="#ff00ff"> </font><font COLOR="#800080">purple</font>
+graph is first derivative<font FACE="Courier"> </font><font color="#FF00FF"><font face="Arial">f'(x)=
+</font>x</font></font><b><font face="Arial" color="#FF00FF" size="2"><sup>2</sup></font></b><font size="3"><font color="#FF00FF">-10x-2</font>,
+and the<font COLOR="#808040"> <b>green</b> </font>graph is the second derivative
+<font color="#336600">f''(x) </font>=&nbsp; <b><font COLOR="#808040">6x-10</font></b><font COLOR="#808040">
+</font>The original function crosses the x- axis at <sup><b>-</b></sup>2, 3 and 4 and are the
+roots of the equation set = to 0. The original function has a relative maximum
+where the tangent to the curve is horizontal at x= -0.189, found by setting the
+the first derivative = 0 and solve for x. Notice that the 1st derivative has the point
+(-0.189,0) which confirms this. The original function also has a relative
+minimum where the tangent to the curve is horizontal at x=3.522, and changes
+from negative to positive, and the 1st derivative has a zero (crosses the x-axis
+at (3.522, 0)). The <b>black vertical line</b> shows 3 things: the <font color="#808000"><b>2nd
+derivative</b></font> is zero at x=1.666 and changes from negative to positive
+at this point (1.666,0). The <font color="#FF00FF">1st derivative</font> is at a
+minimum when x=1.66 and <font color="#0000FF">the original function</font> has a
+<font color="#FF0000"><b>
+point of inflexion</b></font> at x=1.666 (it changes from concave down to
+concave up).</font><font SIZE="5">
+<font FACE="Mathematica1Mono"><hr>
+</font>
+ </font>
+<p align="left"><b><font size="4">10. Polar plot of the Nautilus Shell and
+its derivative</font></b></p>
+<p><font size="4"><b>The Nautilus Shell function is</b></font><font SIZE="5">
+ <font color="#0000FF">r = </font> </font><font color="#0000FF"><font FACE="Mathematica1Mono" SIZE="5"><b>ã</b></font><font size="4"><sup>(<font FACE="Mathematica1Mono"><b>q</b></font>*Cot[79.5*<font FACE="Mathematica1Mono"><b>p</b></font>/180])</sup></font></font></p>
+<p>Note: [0.185339.. = Cot(79.5*<b><font face="Mathematica1Mono">p/180)], </font></b><font face="Arial" size="3">so</font></p>
+<p><font size="5"><font color="#0000FF">r =</font> </font><b><font face="Mathematica1Mono" color="#0000FF" size="6">ã</font></b><font color="#0000FF"><font size="4"><sup>0.185339*
+</sup></font></font>
+<font FACE="Mathematica1Mono"><font size="4" color="#0000FF"><sup><b>q</b></sup></font>
+</font><font SIZE="5">
+<p>A Polar Plot graph of the Nautilus Shell in <i>Mathematica</i></p>
+</font>
+<p><font size="4">PolarPlot[</font><font color="#0000FF"><b><font face="Mathematica1Mono" size="6">ã</font></b><font size="4"><sup>0.185339*<b><font face="Mathematica1Mono">q</font></b></sup></font></font><font size="4">,{<font FACE="Mathematica1Mono"><b>q</b></font>,0,6.28}]</font></p>
+<p align="center"><img border="0" src="../images/Nautilusgr.JPG" width="443" height="341"></p>
+<p><font size="5">We'll take the derivative of&nbsp; <font color="#0000FF">r = </font></font><b><font face="Mathematica1Mono" color="#0000FF" size="6">ã</font></b><font size="4" color="#0000FF"><sup>0.185339*<font FACE="Mathematica1Mono"><b>q</b></font></sup></font></p>
+<p><font color="#993366" size="5">r'=</font><font size="5">D[</font><font color="#0000FF"><font FACE="Mathematica1Mono" size="6"><b>ã</b></font><font size="4"><sup>0.185339</sup></font></font><font color="#0000FF" size="4"><sup>*</sup></font><b><font color="#0000FF" size="4"><sup><font FACE="Mathematica1Mono">q</font></sup></font><font size="5">,<font FACE="Mathematica1Mono">q</font></font></b><font size="5">]</font></p>
+<p><font color="#993366"><font size="5">r'</font>
+ <font size="4">
+ =</font>
+<font SIZE="6">
+ </font><font size="4">0.185339*</font><font FACE="Mathematica1Mono" SIZE="6"><b>ã</b></font><sup><font size="4">0.185339*<b><font FACE="Mathematica1Mono">q</font></b></font></sup></font></p>
+<p><font size="4">Note above that the <b><font color="#FF0000">derivative</font></b> of
+</font> <b><font color="#0000FF" size="5">e</font><font color="#0000FF" size="3"><sup><sup><sup>kx</sup></sup></sup></font><font size="4">
+= <font color="#993366">k*</font></font><font color="#993366"><font size="5">e</font><sup><sup><font size="3"><sup>kx</sup></font></sup></sup></font><font size="4" color="#FF00FF">
+</font></b><font size="4">and the <font color="#FF0000"><b>derivative</b></font>
+of </font><b><font size="5">e</font><font size="4"><sup><sup><sup>x</sup></sup></sup>
+=&nbsp; </font><font size="5">e</font><font size="4"><sup><sup><sup>x</sup></sup></sup></font></b><font size="4">, the only function that is the same as its
+derivative!</font></p>
+<p><font size="4">Now we'll graph both <font color="#0000FF"><b>r</b></font> and <font color="#FF00FF"><b>r'</b></font><font color="#000000">:</font></font></p>
+<p><font size="4">PolarPlot[{</font><b><font face="Mathematica1Mono" color="#0000ff" size="6">ã</font></b><font color="#0000FF" size="4"><sup>0.185339*<font FACE="Mathematica1Mono"><b>q</b></font></sup></font><font size="5">,</font><font color="#993366"><font size="4">0.185339*</font><b><font face="Mathematica1Mono" color="#ff00ff" size="6">ã</font></b><sup><font size="4">0.185339*<b><font FACE="Mathematica1Mono">q</font></b></font></sup></font><font size="4">},{<font FACE="Mathematica1Mono"><b>q</b></font>,0,6.28}</font><font size="5">]</font></p>
+<p align="center">&nbsp;</p>
+<p align="center"><img border="0" src="../images/NautilusDergr2.JPG" width="602" height="461"></p>
+<p align="left">Notice from these graphs, the larger graph is <font color="#0000FF"><b> the
+Nautilus</b></font>, which starts at 1 when <font FACE="Mathematica1Mono"><b>q =
+0</b></font> and goes to 3.2 (a growth of 3.2 times in 360<sup>o</sup>),
+while the <font color="#993366"><b>little spiral</b></font> <font color="#FF00FF"> </font><font color="#000000">is a
+fraction of the Nautilus</font>, and grows from 0.185339 when <font FACE="Mathematica1Mono"><b>q
+= 0, </b></font>to ~3.2*0.185339= ~0.6 in 360<sup>o</sup> . The two spirals have
+the same growth ratio and the same angle of the tangent-it is really the same
+spiral! Whoops, looks like I was wrong.. I graphed the spirals from theta (<font FACE="Mathematica1Mono"><b>q)</b></font>= -Pi to
+4 Pi and got the graph below. I thought the little one would &quot;run into&quot; and
+become the larger one. But NO. Will they intersect? NO. But the angle of the
+tangent is the same (79.5<sup>o</sup>) and the growth rate of the radius is the
+same (3.2) in 360<sup>o</sup>. The radius of the smaller spiral is always&nbsp;
+0.185339 times the radius of the Nautilus shell.Can we say they are similar
+spirals?! </p>
+
+<p align="center"><img border="0" src="../images/NautilusDer3.JPG" width="471" height="545"> </p>
+
+<p align="left">&nbsp; </p>
+
+</body>
+
+</html>

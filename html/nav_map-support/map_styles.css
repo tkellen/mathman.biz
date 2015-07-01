@@ -1,0 +1,78 @@
+body {
+	margin: 0px 0px 0px 0px;
+	behavior: url('csshover3.htc'); /*Hack for some IE versions*/
+	min-width: 1024px;
+}
+#close {
+	float: right;
+	position: relative;
+	top: -10px;
+	left: 10px;
+	width: 16px;
+	height: 16px;
+	font-family: courier;
+	text-align: center;
+	color: #1E7D61;
+	vertical-align: top;
+	cursor: pointer;
+}
+#float_page {
+	border: none;
+}
+.float-link {
+	border: 0px teal solid;
+	background-image: url('trans_bg.png'); /*Hack for IE*/
+	background-repeat: repeat;
+	position:absolute;
+	z-index: 2;
+}
+.float-link:hover {
+	border: 2px teal solid;
+	background-image: url('menu_bg.png');
+	background-repeat: repeat;
+}
+#shadowbox {
+	padding: 10px;
+	text-align: center;
+	z-index: 100;
+	position: fixed;
+	background-color: #FBFBED;
+	border-style: solid;
+	border-color: #1E7D61;
+	border-width: 3px;
+	display: none;
+}
+#dimmer {
+	background-image: url('menu_bg.png');
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	position: fixed;
+	display: none;
+}
+#copyright {
+	font-size: 8pt;
+	z-index:1;
+	top: 620px;
+	left: 675px;
+	position: absolute;
+}
+#quote {
+	font-family: arial;
+	font-size: 8pt;
+	z-index: 1;
+	height: 2em;
+	width: 23em;
+	top: 17px;
+	left: 535px;
+	position: absolute;
+}
+#colbox { float: left; }
+#sidebar { float: right; width: 300px;}
+#main img {
+  position: absolute;
+  top: 0;
+  left: 0
+}

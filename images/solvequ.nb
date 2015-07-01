@@ -1,0 +1,145 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3792,        135]
+NotebookOptionsPosition[      3196,        108]
+NotebookOutlinePosition[      3605,        126]
+CellTagsIndexPosition[      3562,        123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", 
+     RowBox[{"2", " "}]], "-", 
+    RowBox[{"4845149454845", "*", "x"}], "+", "579804000000000000000000"}], 
+   "\[Equal]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5741000285183077`*^9, 3.574100244972871*^9}, 
+   3.574100312665687*^9, 3.574100346009759*^9, {3.574100385475171*^9, 
+   3.574100386217761*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["5", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"969029890969", "-", 
+        SqrtBox["846250289591392027758961"]}], ")"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["5", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"969029890969", "+", 
+        SqrtBox["846250289591392027758961"]}], ")"}]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.574100248837199*^9, 3.574100401180238*^9, 
+  3.5741004666070004`*^9, 3.574100525324394*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", 
+     RowBox[{"2", " "}]], "-", 
+    RowBox[{"4845149454845", "*", "x"}], "+", "579804000000000000000000"}], 
+   "\[Equal]", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5741000285183077`*^9, 3.574100244972871*^9}, 
+   3.574100312665687*^9, 3.574100346009759*^9, {3.574100385475171*^9, 
+   3.574100386217761*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["5", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"969029890969", "-", 
+        SqrtBox["846250289591392027758961"]}], ")"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      FractionBox["5", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{"969029890969", "+", 
+        SqrtBox["846250289591392027758961"]}], ")"}]}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.574100248837199*^9, 3.574100401180238*^9, 
+  3.5741004666070004`*^9, 3.574100525324394*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"1", "/", "\[Pi]"}], ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.574112127068729*^9, 3.574112172579578*^9}}],
+
+Cell[BoxData["0.\
+318309886183790671537767526745028724068919291480912897495334688117793595268453\
+070180227605532506171912145685453515916073785823692229157305755934821463399678\
+458479933874818155146155492793850615377434785792434795323386724780483447196`\
+200."], "Output",
+ CellChangeTimes->{3.5741122013133802`*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 756},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 399, 10, 35, "Input"],
+Cell[981, 34, 615, 19, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1633, 58, 399, 10, 35, "Input"],
+Cell[2035, 70, 615, 19, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2687, 94, 173, 4, 28, "Input"],
+Cell[2863, 100, 317, 5, 63, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

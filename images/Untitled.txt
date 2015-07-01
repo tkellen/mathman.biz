@@ -1,0 +1,1 @@
+Assume that the population of deer in Champaign County varies sinusoidally with time.  Records started being kept in the year 2000, which is called year 0.  A minimum number, 800 deer, occurred when t=3 years.  The next maximum, 1400 deer, occurred at 15 years.  Write an equation expressing the number of deer as a function of time t, years.

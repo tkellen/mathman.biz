@@ -1,0 +1,20 @@
+A "root" of a function is the x-value where the line or curve crosses the x-axis. In the figure above, the root is the red dot. You guess the root is at x0, then you plug x0, the function of x0 and the derivative of the function at x0 into the formula
+
+x1 = x0 - f(x0)/f'(x0)
+
+to get x1, the next approximation for the root. Do that again and x2 is even closer to the red dot in the picture.
+
+I just wrote a short program in Sage to print 9 approximations and used x = 5 as my first guess:
+
+
+f(x)= x^2-5*x+6
+g(x)= derivative (f,x)
+a=5
+d=1
+while d < 10:
+    b=a-(f(a)/g(a))
+    N(b)
+    a = b
+    d = d + 1
+
+Here are the approximations:

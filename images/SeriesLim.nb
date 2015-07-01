@@ -1,0 +1,6567 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    182930,       6558]
+NotebookOptionsPosition[    157107,       5623]
+NotebookOutlinePosition[    159993,       5693]
+CellTagsIndexPosition[    159869,       5687]
+WindowTitle->Series - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["BUILT-IN MATHEMATICA SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Tutorials",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Tutorials", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->
+         False], {"\<\"Symbolic Mathematics: Basic Operations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/SymbolicCalculations"], "\<\"Power Series\"\>":>
+       Documentation`HelpLookup[
+       "paclet:tutorial/PowerSeries"], "\<\"Making Power Series \
+Expansions\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/MakingPowerSeriesExpansions"], "\<\"Operations on \
+Power Series\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/OperationsOnPowerSeries"], "\<\"The Representation of \
+Power Series\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/TheRepresentationOfPowerSeries"], "\<\"Converting \
+Power Series to Normal Expressions\"\>":>Documentation`HelpLookup[
+       "paclet:tutorial/ConvertingPowerSeriesToNormalExpressions"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"Tutorials"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "See Also",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"See Also", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"SeriesCoefficient\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SeriesCoefficient"], "\<\"InverseSeries\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InverseSeries"], "\<\"ComposeSeries\"\>":>
+       Documentation`HelpLookup["paclet:ref/ComposeSeries"], "\<\"Limit\"\>":>
+       Documentation`HelpLookup["paclet:ref/Limit"], "\<\"Normal\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/Normal"], "\<\"InverseZTransform\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/InverseZTransform"], "\<\"RSolve\"\>":>
+       Documentation`HelpLookup["paclet:ref/RSolve"], "\<\"O\"\>":>
+       Documentation`HelpLookup["paclet:ref/O"], "\<\"SeriesData\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/SeriesData"], "\<\"PadeApproximant\"\>":>
+       Documentation`HelpLookup[
+       "paclet:ref/PadeApproximant"], "\<\"FourierSeries\"\>":>
+       Documentation`HelpLookup["paclet:ref/FourierSeries"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"SeeAlso"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "Related Guides",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"Related Guides", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"Analytic Number Theory\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/AnalyticNumberTheory"], "\<\"Calculus\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/Calculus"], "\<\"Manipulating Equations\"\>":>
+       Documentation`HelpLookup[
+       "paclet:guide/ManipulatingEquations"], "\<\"Multiplicative Number \
+Theory\"\>":>Documentation`HelpLookup[
+       "paclet:guide/MultiplicativeNumberTheory"], "\<\"Series \
+Expansions\"\>":>Documentation`HelpLookup[
+       "paclet:guide/SeriesExpansions"], "\<\"New in 6.0: Mathematics & \
+Algorithms\"\>":>Documentation`HelpLookup[
+       "paclet:guide/NewIn60MathematicsAndAlgorithms"]},
+       Appearance->None,
+       MenuAppearance->Automatic,
+       MenuStyle->"MoreAbout"]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox[
+        InterpretationBox[Cell[TextData[{
+          "URL",
+          StyleBox[" \[FilledDownTriangle]", "AnchorBarArrow",
+           StripOnInput->False]
+         }]],
+         TextCell[
+          Row[{"URL", 
+            Style[" \[FilledDownTriangle]", "AnchorBarArrow"]}]]],
+        StripOnInput->False], {"\<\"ref/Series\"\>":>
+       None, "\<\"Copy Mathematica URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["ref/Series"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web URL\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/ref/Series.html"], 
+                StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", "ref/Series", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["Series", "ObjectName",
+ CellID->13613],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Series"]],"paclet:ref/Series"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["f", "TI"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["x", "TI"], ",", 
+          SubscriptBox[
+           StyleBox["x", "TI"], 
+           StyleBox["0", "TR"]], ",", 
+          StyleBox["n", "TI"]}], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]generates a power series expansion for ",
+     Cell[BoxData[
+      StyleBox["f", "TI"]], "InlineFormula"],
+     " about the point ",
+     Cell[BoxData[
+      RowBox[{
+       StyleBox["x", "TI"], "=", 
+       SubscriptBox[
+        StyleBox["x", "TI"], 
+        StyleBox["0", "TR"]]}]], "InlineFormula"],
+     " to order ",
+     Cell[BoxData[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         StyleBox["x", "TI"], "-", 
+         SubscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["0", "TR"]]}], ")"}], 
+       StyleBox["n", "TI"]]], "InlineFormula"],
+     ". "
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{
+       TemplateBox[{Cell[
+          TextData["Series"]],"paclet:ref/Series"},
+        "RefLink",
+        BaseStyle->"InlineFormula"], "[", 
+       RowBox[{
+        StyleBox["f", "TI"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["x", "TI"], ",", 
+          SubscriptBox[
+           StyleBox["x", "TI"], 
+           StyleBox["0", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["x", "TI"]]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["y", "TI"], ",", 
+          SubscriptBox[
+           StyleBox["y", "TI"], 
+           StyleBox["0", "TR"]], ",", 
+          SubscriptBox[
+           StyleBox["n", "TI"], 
+           StyleBox["y", "TI"]]}], "}"}], ",", 
+        StyleBox["\[Ellipsis]", "TR"]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]successively finds series expansions with respect to ",
+     Cell[BoxData[
+      StyleBox["x", "TI"]], "InlineFormula"],
+     ", then ",
+     Cell[BoxData[
+      StyleBox["y", "TI"]], "InlineFormula"],
+     ", etc. "
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->29333],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[Cell[TextData[{
+   Cell[BoxData[
+    InterpretationBox[
+     StyleBox[
+      GraphicsBox[{},
+       BaselinePosition->Baseline,
+       ImageSize->{6, 0}],
+      CacheGraphics->False],
+     Spacer[6]]]],
+   "Details and Options"
+  }], "NotesFrameText"],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1525826],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can construct standard Taylor series, as well as certain expansions \
+involving negative powers, fractional powers, and logarithms. "
+}], "Notes",
+ CellID->19542],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " detects certain essential singularities. ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["On"]],"paclet:ref/On"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{"Series", "::", 
+    StyleBox["esss", "TI"]}], "]"}]], "InlineFormula"],
+ " makes ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " generate a message in this case. "
+}], "Notes",
+ CellID->1500],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can expand about the point ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["x", "TI"], "=", 
+   StyleBox["\[Infinity]", "TR"]}]], "InlineFormula"],
+ ". "
+}], "Notes",
+ CellID->20189],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Series"]],"paclet:ref/Series"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["x", "TI"], ",", "0", ",", 
+      StyleBox["n", "TI"]}], "}"}]}], "]"}]], "InlineFormula"],
+ " constructs Taylor series for any function ",
+ Cell[BoxData[
+  StyleBox["f", "TI"]], "InlineFormula"],
+ " according to the formula ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", 
+    RowBox[{"(", "0", ")"}], "+", 
+    SuperscriptBox["f", "\[Prime]"], 
+    RowBox[{"(", "0", ")"}], "x", "+", 
+    SuperscriptBox["f", "\[Prime]\[Prime]"], 
+    RowBox[{"(", "0", ")"}], 
+    SuperscriptBox["x", "2"], "/", "2", "+", "\[Ellipsis]", 
+    SuperscriptBox["f", 
+     RowBox[{"(", "n", ")"}]], 
+    RowBox[{"(", "0", ")"}], 
+    SuperscriptBox["x", "n"], "/", "n", "!"}], TraditionalForm]], 
+  "InlineMath"],
+ ". "
+}], "Notes",
+ CellID->30032],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " effectively evaluates partial derivatives using ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["D"]],"paclet:ref/D"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ". It assumes that different variables are independent. "
+}], "Notes",
+ CellID->5887],
+
+Cell[TextData[{
+ "The result of ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is usually a ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeriesData"]],"paclet:ref/SeriesData"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " object, which you can manipulate with other functions. "
+}], "Notes",
+ CellID->26247],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Normal"]],"paclet:ref/Normal"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   StyleBox["series", "TI"], "]"}]], "InlineFormula"],
+ " truncates a power series and converts it to a normal expression. "
+}], "Notes",
+ CellID->16161],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["SeriesCoefficient"]],"paclet:ref/SeriesCoefficient"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   RowBox[{
+    StyleBox["series", "TI"], ",", 
+    StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+ " finds the coefficient of the ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Null]", "th"], TraditionalForm]]],
+ "-order term. "
+}], "Notes",
+ CellID->28908],
+
+Cell["", "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(45)", "ExampleCount"]
+}], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->73335600],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->819459354],
+
+Cell[TextData[{
+ "Power series for the exponential function around ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "0"}], TraditionalForm]], "InlineMath"],
+ ":"
+}], "ExampleText",
+ CellID->5926],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->32102],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", "x", "+", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "2"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "4"], "24"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "6"], "720"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "8"], "40320"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "10"], "3628800"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 0, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 1, 
+    Rational[1, 2], 
+    Rational[1, 6], 
+    Rational[1, 24], 
+    Rational[1, 120], 
+    Rational[1, 720], 
+    Rational[1, 5040], 
+    Rational[1, 40320], 
+    Rational[1, 362880], 
+    Rational[1, 3628800]}, 0, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{482, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->11779506]
+}, Open  ]],
+
+Cell["Convert to a normal expression:", "ExampleText",
+ CellID->26411],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Normal", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->20191],
+
+Cell[BoxData[
+ RowBox[{"1", "+", "x", "+", 
+  FractionBox[
+   SuperscriptBox["x", "2"], "2"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "3"], "6"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "4"], "24"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "5"], "120"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "6"], "720"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "7"], "5040"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "8"], "40320"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "9"], "362880"], "+", 
+  FractionBox[
+   SuperscriptBox["x", "10"], "3628800"]}]], "Output",
+ ImageSize->{430, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->972964009]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->9157],
+
+Cell[TextData[{
+ "Power series of an arbitrary function around ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "a"}], TraditionalForm]], "InlineMath"],
+ ":"
+}], "ExampleText",
+ CellID->25737],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->26978],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"f", "[", "a", "]"}], "+", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]",
+      MultilineFunction->None], "[", "a", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "a"}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "a", "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "-", "a"}], ")"}], "2"]}], "+", 
+   RowBox[{
+    FractionBox["1", "6"], " ", 
+    RowBox[{
+     SuperscriptBox["f", 
+      TagBox[
+       RowBox[{"(", "3", ")"}],
+       Derivative],
+      MultilineFunction->None], "[", "a", "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "-", "a"}], ")"}], "3"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      RowBox[{"x", "-", "a"}], "]"}], "4"],
+    SeriesData[$CellContext`x, $CellContext`a, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, $CellContext`a, {
+    $CellContext`f[$CellContext`a], 
+    Derivative[1][$CellContext`f][$CellContext`a], Rational[1, 2] 
+    Derivative[2][$CellContext`f][$CellContext`a], Rational[1, 6] 
+    Derivative[3][$CellContext`f][$CellContext`a]}, 0, 4, 1],
+  Editable->False]], "Output",
+ ImageSize->{422, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->7682684]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->4136],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Cos", "[", "x", "]"}], "/", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->7318],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", "x"], "-", 
+   FractionBox["x", "2"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "24"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "720"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "40320"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "3628800"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, -1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 2], 0, 
+    Rational[1, 24], 0, 
+    Rational[-1, 720], 0, 
+    Rational[1, 40320], 0, 
+    Rational[-1, 3628800]}, -1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{286, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->146451066]
+}, Open  ]],
+
+Cell["In any operation on series, only appropriate terms are kept:", \
+"ExampleText",
+ CellID->10644],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "/", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", "%"}], ")"}]}], "+", 
+  RowBox[{"%", "^", "2"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->7742],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SuperscriptBox["x", "2"]], "-", "1", "+", "x", "-", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     SuperscriptBox["x", "2"]}], "3"], "+", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "3"]}], "2"], "-", 
+   FractionBox[
+    RowBox[{"92", " ", 
+     SuperscriptBox["x", "4"]}], "45"], "+", 
+   FractionBox[
+    RowBox[{"65", " ", 
+     SuperscriptBox["x", "5"]}], "24"], "-", 
+   FractionBox[
+    RowBox[{"1154", " ", 
+     SuperscriptBox["x", "6"]}], "315"], "+", 
+   FractionBox[
+    RowBox[{"3571", " ", 
+     SuperscriptBox["x", "7"]}], "720"], "-", 
+   FractionBox[
+    RowBox[{"95132", " ", 
+     SuperscriptBox["x", "8"]}], "14175"], "+", 
+   FractionBox[
+    RowBox[{"366113", " ", 
+     SuperscriptBox["x", "9"]}], "40320"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "10"],
+    SeriesData[$CellContext`x, 0, {}, -2, 10, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, -1, 1, 
+    Rational[-2, 3], 
+    Rational[3, 2], 
+    Rational[-92, 45], 
+    Rational[65, 24], 
+    Rational[-1154, 315], 
+    Rational[3571, 720], 
+    Rational[-95132, 14175], 
+    Rational[366113, 40320]}, -2, 10, 1],
+  Editable->False]], "Output",
+ ImageSize->{558, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->176209128]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Scope",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(10)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->28396],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Univariate Series",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(10)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->20762],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can handle fractional powers and logarithms:"
+}], "ExampleText",
+ CellID->7532],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"Sin", "[", "x", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->23767],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   SqrtBox["x"], "-", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"5", "/", "2"}]], "12"], "+", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"9", "/", "2"}]], "1440"], "-", 
+   FractionBox[
+    SuperscriptBox["x", 
+     RowBox[{"13", "/", "2"}]], "24192"], "-", 
+   FractionBox[
+    RowBox[{"67", " ", 
+     SuperscriptBox["x", 
+      RowBox[{"17", "/", "2"}]]}], "29030400"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], 
+     RowBox[{"21", "/", "2"}]],
+    SeriesData[$CellContext`x, 0, {}, 1, 21, 2],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 0, 0, 
+    Rational[-1, 12], 0, 0, 0, 
+    Rational[1, 1440], 0, 0, 0, 
+    Rational[-1, 24192], 0, 0, 0, 
+    Rational[-67, 29030400]}, 1, 21, 2],
+  Editable->False]], "Output",
+ ImageSize->{307, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->46125494]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"x", "^", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->29061],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{
+    RowBox[{"Log", "[", "x", "]"}], " ", "x"}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"Log", "[", "x", "]"}], "2"], " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{
+    FractionBox["1", "6"], " ", 
+    SuperscriptBox[
+     RowBox[{"Log", "[", "x", "]"}], "3"], " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{
+    FractionBox["1", "24"], " ", 
+    SuperscriptBox[
+     RowBox[{"Log", "[", "x", "]"}], "4"], " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "5"],
+    SeriesData[$CellContext`x, 0, {}, 0, 5, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 
+    Log[$CellContext`x], Rational[1, 2] Log[$CellContext`x]^2, Rational[1, 6] 
+    Log[$CellContext`x]^3, Rational[1, 24] Log[$CellContext`x]^4}, 0, 5, 1],
+  Editable->False]], "Output",
+ ImageSize->{404, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->320528793]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->6492],
+
+Cell["Symbolic parameters can often be used:", "ExampleText",
+ CellID->6866],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", "x"}], ")"}], "^", "n"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->6654],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{"n", " ", "x"}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "n", " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{
+    FractionBox["1", "6"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "n", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{
+    FractionBox["1", "24"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "3"}], "+", "n"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", "n"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "n"}], ")"}], " ", "n", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "5"],
+    SeriesData[$CellContext`x, 0, {}, 0, 5, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+   1, $CellContext`n, Rational[1, 2] (-1 + $CellContext`n) $CellContext`n, 
+    Rational[1, 6] (-2 + $CellContext`n) (-1 + $CellContext`n) $CellContext`n,
+     Rational[
+     1, 24] (-3 + $CellContext`n) (-2 + $CellContext`n) (-1 + $CellContext`n) \
+$CellContext`n}, 0, 5, 1],
+  Editable->False]], "Output",
+ ImageSize->{558, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->239586897]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->15584],
+
+Cell["Laurent series with negative powers can be generated:", "ExampleText",
+ CellID->32322],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], "^", "10"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->17407],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SuperscriptBox["x", "10"]], "+", 
+   FractionBox["5", 
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "8"]}]], "+", 
+   FractionBox["13", 
+    RowBox[{"9", " ", 
+     SuperscriptBox["x", "6"]}]], "+", 
+   FractionBox["164", 
+    RowBox[{"189", " ", 
+     SuperscriptBox["x", "4"]}]], "+", 
+   FractionBox["128", 
+    RowBox[{"315", " ", 
+     SuperscriptBox["x", "2"]}]], "+", 
+   FractionBox["14797", "93555"], "+", 
+   FractionBox[
+    RowBox[{"6803477", " ", 
+     SuperscriptBox["x", "2"]}], "127702575"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "3"],
+    SeriesData[$CellContext`x, 0, {}, -10, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[5, 3], 0, 
+    Rational[13, 9], 0, 
+    Rational[164, 189], 0, 
+    Rational[128, 315], 0, 
+    Rational[14797, 93555], 0, 
+    Rational[6803477, 127702575]}, -10, 3, 1],
+  Editable->False]], "Output",
+ ImageSize->{403, 36},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->59272053]
+}, Open  ]],
+
+Cell["Truncate the series to the specified negative power: ", "ExampleText",
+ CellID->13648],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], "^", "10"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"-", "5"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->32313],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    SuperscriptBox["x", "10"]], "+", 
+   FractionBox["5", 
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "8"]}]], "+", 
+   FractionBox["13", 
+    RowBox[{"9", " ", 
+     SuperscriptBox["x", "6"]}]], "+", 
+   InterpretationBox[
+    FractionBox["1", 
+     SuperscriptBox[
+      RowBox[{"O", "[", "x", "]"}], "4"]],
+    SeriesData[$CellContext`x, 0, {}, -10, -4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[5, 3], 0, 
+    Rational[13, 9]}, -10, -4, 1],
+  Editable->False]], "Output",
+ ImageSize->{158, 34},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->111072621]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->26694],
+
+Cell["Find power series for special functions:", "ExampleText",
+ CellID->19],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Gamma", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->14996],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", "x"], "-", "EulerGamma", "+", 
+   RowBox[{
+    FractionBox["1", "12"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"6", " ", 
+       SuperscriptBox["EulerGamma", "2"]}], "+", 
+      SuperscriptBox["\[Pi]", "2"]}], ")"}], " ", "x"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "2"],
+    SeriesData[$CellContext`x, 0, {}, -1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+   1, -EulerGamma, Rational[1, 12] (6 EulerGamma^2 + Pi^2)}, -1, 2, 1],
+  Editable->False]], "Output",
+ ImageSize->{316, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->677493435]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Zeta", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->29385],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox["1", "2"]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"Log", "[", 
+     RowBox[{"2", " ", "\[Pi]"}], "]"}], " ", "x"}], "+", 
+   RowBox[{
+    FractionBox["1", "48"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"12", " ", 
+       SuperscriptBox["EulerGamma", "2"]}], "-", 
+      SuperscriptBox["\[Pi]", "2"], "-", 
+      RowBox[{"12", " ", 
+       SuperscriptBox[
+        RowBox[{"Log", "[", "2", "]"}], "2"]}], "-", 
+      RowBox[{"24", " ", 
+       RowBox[{"Log", "[", "2", "]"}], " ", 
+       RowBox[{"Log", "[", "\[Pi]", "]"}]}], "-", 
+      RowBox[{"12", " ", 
+       SuperscriptBox[
+        RowBox[{"Log", "[", "\[Pi]", "]"}], "2"]}], "+", 
+      RowBox[{"24", " ", 
+       RowBox[{"StieltjesGamma", "[", "1", "]"}]}]}], ")"}], " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "3"],
+    SeriesData[$CellContext`x, 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+    Rational[-1, 2], Rational[-1, 2] Log[2 Pi], 
+    Rational[1, 48] (12 EulerGamma^2 - Pi^2 - 12 Log[2]^2 - 24 Log[2] Log[Pi] - 
+     12 Log[Pi]^2 + 24 StieltjesGamma[1])}, 0, 3, 1],
+  Editable->False]], "Output",
+ ImageSize->{435, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->181822680]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"BesselK", "[", 
+    RowBox[{"0", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->15382],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "EulerGamma"}], "+", 
+     RowBox[{"Log", "[", "2", "]"}], "-", 
+     RowBox[{"Log", "[", "x", "]"}]}], ")"}], "+", 
+   RowBox[{
+    FractionBox["1", "4"], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "EulerGamma", "+", 
+      RowBox[{"Log", "[", "2", "]"}], "-", 
+      RowBox[{"Log", "[", "x", "]"}]}], ")"}], " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "3"],
+    SeriesData[$CellContext`x, 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 
+   0, {-EulerGamma + Log[2] - Log[$CellContext`x], 0, 
+    Rational[1, 4] (1 - EulerGamma + Log[2] - Log[$CellContext`x])}, 0, 3, 1],
+  Editable->False]], "Output",
+ ImageSize->{511, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->33583065]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"BesselJ", "[", 
+    RowBox[{"n", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->32601],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "n"], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["2", 
+       RowBox[{"-", "n"}]], 
+      RowBox[{"Gamma", "[", 
+       RowBox[{"1", "+", "n"}], "]"}]], "-", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["2", 
+        RowBox[{
+         RowBox[{"-", "2"}], "-", "n"}]], " ", 
+       SuperscriptBox["x", "2"]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", "n"}], ")"}], " ", 
+       RowBox[{"Gamma", "[", 
+        RowBox[{"1", "+", "n"}], "]"}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["2", 
+        RowBox[{
+         RowBox[{"-", "5"}], "-", "n"}]], " ", 
+       SuperscriptBox["x", "4"]}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", "n"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"2", "+", "n"}], ")"}], " ", 
+       RowBox[{"Gamma", "[", 
+        RowBox[{"1", "+", "n"}], "]"}]}]], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "5"],
+      SeriesData[$CellContext`x, 0, {}, 0, 5, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {
+     2^(-$CellContext`n)/Gamma[1 + $CellContext`n], 
+      0, -2^(-2 - $CellContext`n) (1 + $CellContext`n)^(-1)/Gamma[
+      1 + $CellContext`n], 0, 
+      2^(-5 - $CellContext`n) (1 + $CellContext`n)^(-1) (
+        2 + $CellContext`n)^(-1)/Gamma[1 + $CellContext`n]}, 0, 5, 1],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{480, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->114528062]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"JacobiSN", "[", 
+    RowBox[{"u", ",", "m"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->4352],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"u", "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "6"]}], "-", 
+      FractionBox["m", "6"]}], ")"}], " ", 
+    SuperscriptBox["u", "3"]}], "+", 
+   RowBox[{
+    FractionBox["1", "120"], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"14", " ", "m"}], "+", 
+      SuperscriptBox["m", "2"]}], ")"}], " ", 
+    SuperscriptBox["u", "5"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "u", "]"}], "6"],
+    SeriesData[$CellContext`u, 0, {}, 1, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`u, 0, {
+   1, 0, Rational[-1, 6] + Rational[-1, 6] $CellContext`m, 0, 
+    Rational[1, 120] (1 + 14 $CellContext`m + $CellContext`m^2)}, 1, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{289, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->209745710]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"HermiteH", "[", 
+    RowBox[{"n", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->21334],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"HermiteH", "[", 
+    RowBox[{"n", ",", "1"}], "]"}], "+", 
+   RowBox[{"2", " ", "n", " ", 
+    RowBox[{"HermiteH", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "n"}], ",", "1"}], "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "1"}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "2"}], " ", "n", " ", 
+       RowBox[{"HermiteH", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "2"}], "+", "n"}], ",", "1"}], "]"}]}], "+", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["n", "2"], " ", 
+       RowBox[{"HermiteH", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "2"}], "+", "n"}], ",", "1"}], "]"}]}]}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "-", "1"}], ")"}], "2"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      RowBox[{"x", "-", "1"}], "]"}], "3"],
+    SeriesData[$CellContext`x, 1, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 1, {
+    HermiteH[$CellContext`n, 1], 2 $CellContext`n 
+    HermiteH[-1 + $CellContext`n, 1], (-2) $CellContext`n 
+     HermiteH[-2 + $CellContext`n, 1] + 
+    2 $CellContext`n^2 HermiteH[-2 + $CellContext`n, 1]}, 0, 3, 1],
+  Editable->False]], "Output",
+ ImageSize->{456, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->907835772]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->6114],
+
+Cell["Find the series for a function at a branch point:", "ExampleText",
+ CellID->30568],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcSin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->8438],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "2"], " ", 
+  RowBox[{"(", 
+   RowBox[{"\[Pi]", "+", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"Floor", "[", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"Arg", "[", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "x"}], "]"}], 
+         RowBox[{"2", " ", "\[Pi]"}]]}], "]"}]], " ", 
+     RowBox[{"(", 
+      InterpretationBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", 
+         SqrtBox["2"], " ", 
+         SqrtBox[
+          RowBox[{"x", "-", "1"}]]}], "+", 
+        InterpretationBox[
+         SuperscriptBox[
+          RowBox[{"O", "[", 
+           RowBox[{"x", "-", "1"}], "]"}], 
+          RowBox[{"3", "/", "2"}]],
+         SeriesData[$CellContext`x, 1, {}, 1, 3, 2],
+         Editable->False]}],
+       SeriesData[$CellContext`x, 1, {Complex[0, -2] 2^Rational[1, 2]}, 1, 3, 
+        2],
+       Editable->False], ")"}]}]}], ")"}]}]], "Output",
+ ImageSize->{364, 38},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->596220086]
+}, Open  ]],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  StyleBox["x", "MR"]], "InlineFormula"],
+ " assumed to be to the left of the branch point, a simpler result is given:"
+}], "ExampleText",
+ CellID->27824],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcSin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"(", 
+     RowBox[{"x", "<", "1"}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->8979],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["\[Pi]", "2"], "+", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", 
+    SqrtBox["2"], " ", 
+    SqrtBox[
+     RowBox[{"x", "-", "1"}]]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      RowBox[{"x", "-", "1"}], "]"}], 
+     RowBox[{"3", "/", "2"}]],
+    SeriesData[$CellContext`x, 1, {}, 0, 3, 2],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 1, {
+   Rational[1, 2] Pi, Complex[0, -1] 2^Rational[1, 2]}, 0, 3, 2],
+  Editable->False]], "Output",
+ ImageSize->{195, 30},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->749749903]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->6191],
+
+Cell["Piecewise functions:", "ExampleText",
+ CellID->11288],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Min", "[", 
+    RowBox[{"x", ",", 
+     RowBox[{"1", "-", "x"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->24298],
+
+Cell[BoxData[
+ RowBox[{"\[Piecewise]", GridBox[{
+    {
+     InterpretationBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "a"}], ")"}], "-", 
+       RowBox[{"(", 
+        RowBox[{"x", "-", "a"}], ")"}], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", 
+          RowBox[{"x", "-", "a"}], "]"}], "6"],
+        SeriesData[$CellContext`x, $CellContext`a, {}, 0, 6, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`x, $CellContext`a, {1 - $CellContext`a, -1}, 0, 
+       6, 1],
+      Editable->False], 
+     RowBox[{
+      RowBox[{"x", "\[Element]", "Reals"}], "&&", 
+      RowBox[{"a", ">", 
+       FractionBox["1", "2"]}]}]},
+    {
+     InterpretationBox[
+      RowBox[{"a", "+", 
+       RowBox[{"(", 
+        RowBox[{"x", "-", "a"}], ")"}], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", 
+          RowBox[{"x", "-", "a"}], "]"}], "6"],
+        SeriesData[$CellContext`x, $CellContext`a, {}, 0, 6, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`x, $CellContext`a, {$CellContext`a, 1}, 0, 6, 1],
+      Editable->False], 
+     RowBox[{
+      RowBox[{"x", "\[Element]", "Reals"}], "&&", 
+      RowBox[{"a", "<", 
+       FractionBox["1", "2"]}]}]},
+    {
+     InterpretationBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "a"}], ")"}], "-", 
+       RowBox[{"(", 
+        RowBox[{"x", "-", "a"}], ")"}], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", 
+          RowBox[{"x", "-", "a"}], "]"}], "6"],
+        SeriesData[$CellContext`x, $CellContext`a, {}, 0, 6, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`x, $CellContext`a, {1 - $CellContext`a, -1}, 0, 
+       6, 1],
+      Editable->False], 
+     RowBox[{
+      RowBox[{"a", "\[Equal]", 
+       FractionBox["1", "2"]}], "&&", 
+      RowBox[{"x", "\[GreaterEqual]", 
+       FractionBox["1", "2"]}]}]},
+    {
+     InterpretationBox[
+      RowBox[{"a", "+", 
+       RowBox[{"(", 
+        RowBox[{"x", "-", "a"}], ")"}], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", 
+          RowBox[{"x", "-", "a"}], "]"}], "6"],
+        SeriesData[$CellContext`x, $CellContext`a, {}, 0, 6, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`x, $CellContext`a, {$CellContext`a, 1}, 0, 6, 1],
+      Editable->False], 
+     TagBox["True",
+      "PiecewiseDefault",
+      AutoDelete->False,
+      DeletionWarning->True]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxItemSize->{
+    "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.84]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}]}]], "Output",
+ ImageSize->{296, 90},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->249919586]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->15506],
+
+Cell["Power series at infinity:", "ExampleText",
+ CellID->275],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"1", "/", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->30673],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", "x"], "-", 
+   RowBox[{
+    FractionBox["1", "6"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "3"]}], "+", 
+   RowBox[{
+    FractionBox["1", "120"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "5"]}], "-", 
+   FractionBox[
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "9"], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      FractionBox["1", "x"], "]"}], "11"],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[1], {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 
+   DirectedInfinity[1], {1, 0, 
+    Rational[-1, 6], 0, 
+    Rational[1, 120], 0, 
+    Rational[-1, 5040], 0, 
+    Rational[1, 362880]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{309, 42},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->340994965]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcSin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->15018],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{"\[Pi]", "-", 
+      RowBox[{"\[ImaginaryI]", " ", 
+       RowBox[{"Log", "[", "4", "]"}]}], "+", 
+      RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+       RowBox[{"Log", "[", 
+        FractionBox["1", "x"], "]"}]}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "4"], " ", "\[ImaginaryI]", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "2"]}], "+", 
+   RowBox[{
+    FractionBox["3", "32"], " ", "\[ImaginaryI]", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "x"], ")"}], "4"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      FractionBox["1", "x"], "]"}], "6"],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[1], {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 
+   DirectedInfinity[1], {
+   Rational[1, 2] (Pi + Complex[0, -1] Log[4] + 
+     Complex[0, 2] Log[$CellContext`x^(-1)]), 0, 
+    Complex[0, 
+     Rational[1, 4]], 0, 
+    Complex[0, 
+     Rational[3, 32]]}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{378, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->455371198]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->15693],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can give asymptotic series:"
+}], "ExampleText",
+ CellID->27386],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"x", "!"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->18616],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   InterpretationBox[
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{"-", "1"}], "-", 
+       RowBox[{"Log", "[", 
+        FractionBox["1", "x"], "]"}]}], 
+      FractionBox["1", "x"]], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}], "6"],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[1], {}, -1, 6, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[1], {-1 - Log[$CellContext`x^(-1)]}, -1, 6, 1],
+    Editable->False]], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{
+     FractionBox[
+      SqrtBox[
+       RowBox[{"2", " ", "\[Pi]"}]], 
+      SqrtBox[
+       FractionBox["1", "x"]]], "+", 
+     RowBox[{
+      FractionBox["1", "6"], " ", 
+      SqrtBox[
+       FractionBox["\[Pi]", "2"]], " ", 
+      SqrtBox[
+       FractionBox["1", "x"]]}], "+", 
+     RowBox[{
+      FractionBox["1", "144"], " ", 
+      SqrtBox[
+       FractionBox["\[Pi]", "2"]], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["1", "x"], ")"}], 
+       RowBox[{"3", "/", "2"}]]}], "-", 
+     FractionBox[
+      RowBox[{"139", " ", 
+       SqrtBox[
+        FractionBox["\[Pi]", "2"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox["1", "x"], ")"}], 
+        RowBox[{"5", "/", "2"}]]}], "25920"], "-", 
+     FractionBox[
+      RowBox[{"571", " ", 
+       SqrtBox[
+        FractionBox["\[Pi]", "2"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox["1", "x"], ")"}], 
+        RowBox[{"7", "/", "2"}]]}], "1244160"], "+", 
+     FractionBox[
+      RowBox[{"163879", " ", 
+       SqrtBox[
+        FractionBox["\[Pi]", "2"]], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox["1", "x"], ")"}], 
+        RowBox[{"9", "/", "2"}]]}], "104509440"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}], 
+       RowBox[{"11", "/", "2"}]],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[1], {}, -1, 11, 2],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[
+     1], {(2 Pi)^Rational[1, 2], 0, 
+      Rational[1, 6] (Rational[1, 2] Pi)^Rational[1, 2], 0, 
+      Rational[1, 144] (Rational[1, 2] Pi)^Rational[1, 2], 0, 
+      Rational[-139, 25920] (Rational[1, 2] Pi)^Rational[1, 2], 0, 
+      Rational[-571, 1244160] (Rational[1, 2] Pi)^Rational[1, 2], 0, 
+      Rational[163879, 104509440] (Rational[1, 2] Pi)^Rational[1, 2]}, -1, 11,
+      2],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{447, 163},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->219872506]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"BesselJ", "[", 
+    RowBox[{"0", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->10499],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    RowBox[{
+     FractionBox["\[Pi]", "4"], "-", "x"}], "]"}], " ", 
+   RowBox[{"(", 
+    InterpretationBox[
+     RowBox[{
+      RowBox[{
+       SqrtBox[
+        FractionBox["2", "\[Pi]"]], " ", 
+       SqrtBox[
+        FractionBox["1", "x"]]}], "-", 
+      FractionBox[
+       RowBox[{"9", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox["1", "x"], ")"}], 
+         RowBox[{"5", "/", "2"}]]}], 
+       RowBox[{"64", " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "+", 
+      FractionBox[
+       RowBox[{"3675", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox["1", "x"], ")"}], 
+         RowBox[{"9", "/", "2"}]]}], 
+       RowBox[{"16384", " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "+", 
+      InterpretationBox[
+       SuperscriptBox[
+        RowBox[{"O", "[", 
+         FractionBox["1", "x"], "]"}], 
+        RowBox[{"11", "/", "2"}]],
+       SeriesData[$CellContext`x, 
+        DirectedInfinity[1], {}, 1, 11, 2],
+       Editable->False]}],
+     SeriesData[$CellContext`x, 
+      DirectedInfinity[
+      1], {(2/Pi)^Rational[1, 2], 0, 0, 0, 
+       Rational[-9, 64] (2 Pi)^Rational[-1, 2], 0, 0, 0, 
+       Rational[3675, 16384] (2 Pi)^Rational[-1, 2]}, 1, 11, 2],
+     Editable->False], ")"}]}], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    InterpretationBox[
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox["1", "x"], ")"}], 
+         RowBox[{"3", "/", "2"}]], 
+        RowBox[{"4", " ", 
+         SqrtBox[
+          RowBox[{"2", " ", "\[Pi]"}]]}]]}], "+", 
+      FractionBox[
+       RowBox[{"75", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox["1", "x"], ")"}], 
+         RowBox[{"7", "/", "2"}]]}], 
+       RowBox[{"512", " ", 
+        SqrtBox[
+         RowBox[{"2", " ", "\[Pi]"}]]}]], "+", 
+      InterpretationBox[
+       SuperscriptBox[
+        RowBox[{"O", "[", 
+         FractionBox["1", "x"], "]"}], 
+        RowBox[{"11", "/", "2"}]],
+       SeriesData[$CellContext`x, 
+        DirectedInfinity[1], {}, 3, 11, 2],
+       Editable->False]}],
+     SeriesData[$CellContext`x, 
+      DirectedInfinity[1], {
+      Rational[-1, 4] (2 Pi)^Rational[-1, 2], 0, 0, 0, 
+       Rational[75, 512] (2 Pi)^Rational[-1, 2]}, 3, 11, 2],
+     Editable->False], ")"}], " ", 
+   RowBox[{"Sin", "[", 
+    RowBox[{
+     FractionBox["\[Pi]", "4"], "-", "x"}], "]"}]}]}]], "Output",
+ ImageSize->{386, 104},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->74362257]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Normal", "[", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"LambertW", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "Infinity", ",", "0"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->14752],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"Log", "[", 
+    FractionBox["1", "x"], "]"}]}], "-", 
+  RowBox[{"Log", "[", 
+   RowBox[{"-", 
+    RowBox[{"Log", "[", 
+     FractionBox["1", "x"], "]"}]}], "]"}], "-", 
+  FractionBox[
+   RowBox[{"Log", "[", 
+    RowBox[{"-", 
+     RowBox[{"Log", "[", 
+      FractionBox["1", "x"], "]"}]}], "]"}], 
+   SuperscriptBox[
+    RowBox[{"Log", "[", 
+     FractionBox["1", "x"], "]"}], "2"]], "-", 
+  FractionBox[
+   RowBox[{"Log", "[", 
+    RowBox[{"-", 
+     RowBox[{"Log", "[", 
+      FractionBox["1", "x"], "]"}]}], "]"}], 
+   RowBox[{"Log", "[", 
+    FractionBox["1", "x"], "]"}]], "+", 
+  FractionBox[
+   SuperscriptBox[
+    RowBox[{"Log", "[", 
+     RowBox[{"-", 
+      RowBox[{"Log", "[", 
+       FractionBox["1", "x"], "]"}]}], "]"}], "2"], 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{"Log", "[", 
+      FractionBox["1", "x"], "]"}], "2"]}]]}]], "Output",
+ ImageSize->{480, 53},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->437732422]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14577],
+
+Cell["Series expansions of implicit solutions to equations:", "ExampleText",
+ CellID->1038],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Root", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "^", "5"}], "+", 
+       RowBox[{"a", " ", "#"}], "+", "1"}], "&"}], ",", "1"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12916],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", "1"}], "+", 
+   FractionBox["a", "5"], "+", 
+   FractionBox[
+    SuperscriptBox["a", "2"], "25"], "+", 
+   FractionBox[
+    SuperscriptBox["a", "3"], "125"], "-", 
+   FractionBox[
+    RowBox[{"21", " ", 
+     SuperscriptBox["a", "5"]}], "15625"], "-", 
+   FractionBox[
+    RowBox[{"78", " ", 
+     SuperscriptBox["a", "6"]}], "78125"], "-", 
+   FractionBox[
+    RowBox[{"187", " ", 
+     SuperscriptBox["a", "7"]}], "390625"], "-", 
+   FractionBox[
+    RowBox[{"286", " ", 
+     SuperscriptBox["a", "8"]}], "1953125"], "+", 
+   FractionBox[
+    RowBox[{"9367", " ", 
+     SuperscriptBox["a", "10"]}], "244140625"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "a", "]"}], "11"],
+    SeriesData[$CellContext`a, 0, {}, 0, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`a, 0, {-1, 
+    Rational[1, 5], 
+    Rational[1, 25], 
+    Rational[1, 125], 0, 
+    Rational[-21, 15625], 
+    Rational[-78, 78125], 
+    Rational[-187, 390625], 
+    Rational[-286, 1953125], 0, 
+    Rational[9367, 244140625]}, 0, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{489, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->27945289]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->11109],
+
+Cell["Series expansions of unevaluated integrals:", "ExampleText",
+ CellID->23575],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"a", " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "a"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->9322],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "a"], 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"a", " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "]"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Output",
+ ImageSize->{127, 29},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->485685863]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "0", ",", "15"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->8436],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox[
+    SuperscriptBox["a", "3"], "2"], "-", 
+   FractionBox[
+    SuperscriptBox["a", "5"], "24"], "-", 
+   FractionBox[
+    RowBox[{"29", " ", 
+     SuperscriptBox["a", "7"]}], "720"], "+", 
+   FractionBox[
+    RowBox[{"559", " ", 
+     SuperscriptBox["a", "9"]}], "40320"], "-", 
+   FractionBox[
+    RowBox[{"3149", " ", 
+     SuperscriptBox["a", "11"]}], "3628800"], "-", 
+   FractionBox[
+    RowBox[{"307561", " ", 
+     SuperscriptBox["a", "13"]}], "479001600"], "+", 
+   FractionBox[
+    RowBox[{"19701683", " ", 
+     SuperscriptBox["a", "15"]}], "87178291200"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "a", "]"}], "16"],
+    SeriesData[$CellContext`a, 0, {}, 3, 16, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`a, 0, {
+    Rational[1, 2], 0, 
+    Rational[-1, 24], 0, 
+    Rational[-29, 720], 0, 
+    Rational[559, 40320], 0, 
+    Rational[-3149, 3628800], 0, 
+    Rational[-307561, 479001600], 0, 
+    Rational[19701683, 87178291200]}, 3, 16, 1],
+  Editable->False]], "Output",
+ ImageSize->{461, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->403902948]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Generalizations & Extensions",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->19148],
+
+Cell["Power series in two variables:", "ExampleText",
+ CellID->23437],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", "+", "y"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "0", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->6890],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"(", 
+    InterpretationBox[
+     RowBox[{"y", "-", 
+      FractionBox[
+       SuperscriptBox["y", "3"], "6"], "+", 
+      InterpretationBox[
+       SuperscriptBox[
+        RowBox[{"O", "[", "y", "]"}], "4"],
+       SeriesData[$CellContext`y, 0, {}, 1, 4, 1],
+       Editable->False]}],
+     SeriesData[$CellContext`y, 0, {1, 0, 
+       Rational[-1, 6]}, 1, 4, 1],
+     Editable->False], ")"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     InterpretationBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        SuperscriptBox["y", "2"], "2"], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", "y", "]"}], "4"],
+        SeriesData[$CellContext`y, 0, {}, 0, 4, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`y, 0, {1, 0, 
+        Rational[-1, 2]}, 0, 4, 1],
+      Editable->False], ")"}], " ", "x"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     InterpretationBox[
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["y", "2"]}], "+", 
+       FractionBox[
+        SuperscriptBox["y", "3"], "12"], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", "y", "]"}], "4"],
+        SeriesData[$CellContext`y, 0, {}, 1, 4, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`y, 0, {
+        Rational[-1, 2], 0, 
+        Rational[1, 12]}, 1, 4, 1],
+      Editable->False], ")"}], " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     InterpretationBox[
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["1", "6"]}], "+", 
+       FractionBox[
+        SuperscriptBox["y", "2"], "12"], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", "y", "]"}], "4"],
+        SeriesData[$CellContext`y, 0, {}, 0, 4, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`y, 0, {
+        Rational[-1, 6], 0, 
+        Rational[1, 12]}, 0, 4, 1],
+      Editable->False], ")"}], " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "4"],
+    SeriesData[$CellContext`x, 0, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+    SeriesData[$CellContext`y, 0, {1, 0, 
+      Rational[-1, 6]}, 1, 4, 1], 
+    SeriesData[$CellContext`y, 0, {1, 0, 
+      Rational[-1, 2]}, 0, 4, 1], 
+    SeriesData[$CellContext`y, 0, {
+      Rational[-1, 2], 0, 
+      Rational[1, 12]}, 1, 4, 1], 
+    SeriesData[$CellContext`y, 0, {
+      Rational[-1, 6], 0, 
+      Rational[1, 12]}, 0, 4, 1]}, 0, 4, 1],
+  Editable->False]], "Output",
+ ImageSize->{552, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->308057178]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->31229],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " is threaded element-wise over lists:"
+}], "ExampleText",
+ CellID->7767],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], ",", 
+     RowBox[{"Cos", "[", "x", "]"}], ",", 
+     RowBox[{"Tan", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->5168],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"x", "-", 
+     FractionBox[
+      SuperscriptBox["x", "3"], "6"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "5"], "120"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "6"],
+      SeriesData[$CellContext`x, 0, {}, 1, 6, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 0, 
+      Rational[-1, 6], 0, 
+      Rational[1, 120]}, 1, 6, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{"1", "-", 
+     FractionBox[
+      SuperscriptBox["x", "2"], "2"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "4"], "24"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "6"],
+      SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 0, 
+      Rational[-1, 2], 0, 
+      Rational[1, 24]}, 0, 6, 1],
+    Editable->False], ",", 
+   InterpretationBox[
+    RowBox[{"x", "+", 
+     FractionBox[
+      SuperscriptBox["x", "3"], "3"], "+", 
+     FractionBox[
+      RowBox[{"2", " ", 
+       SuperscriptBox["x", "5"]}], "15"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "6"],
+      SeriesData[$CellContext`x, 0, {}, 1, 6, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 0, 
+      Rational[1, 3], 0, 
+      Rational[2, 15]}, 1, 6, 1],
+    Editable->False]}], "}"}]], "Output",
+ ImageSize->{403, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->399312589]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->26422],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " generates ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeriesData"]],"paclet:ref/SeriesData"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " expressions:"
+}], "ExampleText",
+ CellID->25547],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->238],
+
+Cell["SeriesData[x, 0, {1, 0, -1/6, 0, 1/120}, 1, 6, 1]", "Output",
+ ImageSize->{343, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]//InputForm=",
+ CellID->177137723]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->27492],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " can work with approximate numbers:"
+}], "ExampleText",
+ CellID->13406],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"2.5", " ", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->10531],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"2.5`", " ", "x"}], "-", 
+   RowBox[{"2.6041666666666665`", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"0.8138020833333334`", " ", 
+    SuperscriptBox["x", "5"]}], "-", 
+   RowBox[{"0.12110150049603174`", " ", 
+    SuperscriptBox["x", "7"]}], "+", 
+   RowBox[{"0.010512283029169423`", " ", 
+    SuperscriptBox["x", "9"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+   2.5, 0, -2.6041666666666665`, 0, 0.8138020833333334, 
+    0, -0.12110150049603174`, 0, 0.010512283029169423`}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{427, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->21389447]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Options",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(4)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->22974],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Analytic",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->6131],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " by default assumes symbolic functions to be analytic:"
+}], "ExampleText",
+ CellID->1973],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], 
+    RowBox[{"Exp", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->25403],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"f", "[", "0", "]"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", "0", "]"}], "+", 
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]",
+        MultilineFunction->None], "[", "0", "]"}]}], ")"}], " ", "x"}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"f", "[", "0", "]"}], "+", 
+      RowBox[{"2", " ", 
+       RowBox[{
+        SuperscriptBox["f", "\[Prime]",
+         MultilineFunction->None], "[", "0", "]"}]}], "+", 
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]\[Prime]",
+        MultilineFunction->None], "[", "0", "]"}]}], ")"}], " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "3"],
+    SeriesData[$CellContext`x, 0, {}, 0, 3, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+    $CellContext`f[0], $CellContext`f[0] + Derivative[1][$CellContext`f][0], 
+    Rational[1, 2] ($CellContext`f[0] + 2 Derivative[1][$CellContext`f][0] + 
+     Derivative[2][$CellContext`f][0])}, 0, 3, 1],
+  Editable->False]], "Output",
+ ImageSize->{378, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->13856329]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], " ", 
+    RowBox[{"Exp", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"Analytic", "->", "False"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->14526],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x", "]"}], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{"1", "+", "x", "+", 
+     FractionBox[
+      SuperscriptBox["x", "2"], "2"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "3"],
+      SeriesData[$CellContext`x, 0, {}, 0, 3, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 1, 
+      Rational[1, 2]}, 0, 3, 1],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{154, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->204036001]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Assumptions",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(3)", "ExampleCount"]
+}], "ExampleSubsection", "ExampleSubsection",
+ WholeCellGroupOpener->True,
+ CellID->19692],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Assumptions"]],"paclet:ref/Assumptions"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to specify regions in the complex plane where expansions should apply:"
+}], "ExampleText",
+ CellID->30319],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcCos", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"(", 
+     RowBox[{"x", ">", "1"}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->8196],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"\[ImaginaryI]", " ", 
+    SqrtBox["2"], " ", 
+    SqrtBox[
+     RowBox[{"x", "-", "1"}]]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      RowBox[{"x", "-", "1"}], "]"}], 
+     RowBox[{"3", "/", "2"}]],
+    SeriesData[$CellContext`x, 1, {}, 1, 3, 2],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 1, {Complex[0, 1] 2^Rational[1, 2]}, 1, 3, 2],
+  Editable->False]], "Output",
+ ImageSize->{162, 18},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->58185149]
+}, Open  ]],
+
+Cell["Without assumptions, piecewise functions appear:", "ExampleText",
+ CellID->16339],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcCos", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->11887],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["\[Pi]", "2"], "+", 
+  RowBox[{
+   FractionBox["1", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "\[Pi]"}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], 
+       RowBox[{"Floor", "[", 
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"Arg", "[", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "x"}], "]"}], 
+          RowBox[{"2", " ", "\[Pi]"}]]}], "]"}]], " ", 
+      RowBox[{"(", 
+       InterpretationBox[
+        RowBox[{
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+          SqrtBox["2"], " ", 
+          SqrtBox[
+           RowBox[{"x", "-", "1"}]]}], "+", 
+         InterpretationBox[
+          SuperscriptBox[
+           RowBox[{"O", "[", 
+            RowBox[{"x", "-", "1"}], "]"}], 
+           RowBox[{"3", "/", "2"}]],
+          SeriesData[$CellContext`x, 1, {}, 1, 3, 2],
+          Editable->False]}],
+        SeriesData[$CellContext`x, 1, {Complex[0, 2] 2^Rational[1, 2]}, 1, 3, 
+         2],
+        Editable->False], ")"}]}]}], ")"}]}]}]], "Output",
+ ImageSize->{388, 38},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->24545132]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->5151],
+
+Cell["Get expansions in Stokes regions:", "ExampleText",
+ CellID->30678],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"AiryAi", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "ComplexInfinity", ",", "0"}], "}"}], ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"(", 
+     RowBox[{"0", "<", 
+      RowBox[{"Arg", "[", "x", "]"}], "<", 
+      RowBox[{"Pi", "/", "6"}]}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->31960],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"2", " ", 
+      SuperscriptBox["x", 
+       RowBox[{"3", "/", "2"}]]}], "3"]}]], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["1", "x"], ")"}], 
+       RowBox[{"1", "/", "4"}]], 
+      RowBox[{"2", " ", 
+       SqrtBox["\[Pi]"]}]], "+", 
+     InterpretationBox[
+      SqrtBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}]],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[], {}, 1, 2, 4],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[], {Rational[1, 2] Pi^Rational[-1, 2]}, 1, 2, 4],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{173, 51},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->95550686]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->11473],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"AiryAi", "[", 
+    RowBox[{"a", " ", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "0"}], "}"}], ",", 
+   RowBox[{"Assumptions", "->", 
+    RowBox[{"(", 
+     RowBox[{"a", ">", "0"}], ")"}]}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->31097],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["2", "3"]}], " ", 
+    SuperscriptBox["a", 
+     RowBox[{"3", "/", "2"}]], " ", 
+    SuperscriptBox["x", 
+     RowBox[{"3", "/", "2"}]]}]], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["1", "x"], ")"}], 
+       RowBox[{"1", "/", "4"}]], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["a", 
+        RowBox[{"1", "/", "4"}]], " ", 
+       SqrtBox["\[Pi]"]}]], "+", 
+     InterpretationBox[
+      SqrtBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}]],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[1], {}, 1, 2, 4],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 
+     DirectedInfinity[1], {
+     Rational[1, 2] $CellContext`a^Rational[-1, 4] Pi^Rational[-1, 2]}, 1, 2, 
+     4],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{217, 51},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->8650577]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"AiryAi", "[", 
+    RowBox[{"a", " ", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->20578],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["2", "3"]}], " ", "\[ImaginaryI]", " ", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["a", "3"]}], " ", 
+      SuperscriptBox["x", "3"]}]]}]], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", 
+       FractionBox["1", "x"], "]"}], 
+      RowBox[{"1", "/", "4"}]],
+     SeriesData[$CellContext`x, 
+      DirectedInfinity[1], {}, 1, 1, 4],
+     Editable->False], "+", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       FractionBox["4", "3"], " ", "\[ImaginaryI]", " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["a", "3"]}], " ", 
+         SuperscriptBox["x", "3"]}]]}]], " ", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}], 
+       RowBox[{"1", "/", "4"}]],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[1], {}, 1, 1, 4],
+      Editable->False]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       FractionBox["4", "3"], " ", "\[ImaginaryI]", " ", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["a", "3"]}], " ", 
+         SuperscriptBox["x", "3"]}]]}]], " ", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        FractionBox["1", "x"], "]"}], 
+       RowBox[{"7", "/", "4"}]],
+      SeriesData[$CellContext`x, 
+       DirectedInfinity[1], {}, 7, 7, 4],
+      Editable->False]}]}], ")"}]}]], "Output",
+ ImageSize->{406, 41},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->341607676]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Applications",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(8)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->4218],
+
+Cell[TextData[{
+ "Plot successive series approximations to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", 
+    RowBox[{"(", "x", ")"}]}], TraditionalForm]], "InlineMath"],
+ ":"
+}], "ExampleText",
+ CellID->15212],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "n"}], "}"}]}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "20"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->3542],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+13Sgj1pVtQSKRT+Ag2IADS2X0+LbfN0fd+v2l8cOJuKdbzyaPnausd4cW2aJ
+gHRhXlRIJwkwbkdjXDjzVXxR1atDtTl4tf30yXaiXumB+LqqdskvpDx0jfvx
+8XyWtgeH18E46FaZk+RcFefInh6bDq6ZTVEjZ62SXDq0lqBgJWjZId/J4d3D
+2ZlkW2R2SxzKTqhXkR1L2nrVR1m51ywEqnPPUjQOJWXKjmakuZU/culmKXzf
+XhUP3T6y73s486WEV6enm/etu5TF6/q7oTN856ymVRPELXjkPQgsANLBgpSH
+xxcGz7m6WSr0DRJMmvKy+Ldc/Prri9IPepZtXrz0Pkj1e1iF4qMDaMR9Nf29
+x/fP6v4TQfxr5H+Z8nZXVmw7btr2Se/x3xakn5BGNccp+Jv2fnnz4tWhnmS/
+bstgaRD3I0xNTZEAAru+e8pzuKmHsvOw9ujU156fooBZ/OOjyK/Cec/OzjaP
+va6GzMrY5rh99wF0g3Qe379+/Wbepn+CblW575ZXbbLX7P769qfyhbGWpXMR
+6Ic+MLRdaQGu6bfES/kDxD3lORbVI0PqptwdeXvzQpi4OJSaOqTIr2Js9J4+
+shlfl313Kc3Je3k03IoMZ1FSorB0//6nwyPVubtth/7tn5eaWf/ZF17PZCBQ
+bdMxIp3zQyfh6VBeonEX4BIroX3iPFIe+PLLzw3a94l6uakZLaaRQGtO8q+X
++VeBkhKNuKK3W30uX+l8I+SKoG/gVnJkc9mxIfc+k+62DnPeTrxjZQfjDkf9
+43+kljqkLXp8IzJdkHkmIKYfTcY273r40/3Ano5fdSjvA1JeTP3mK3d+H0R4
+vjAP9epLtlr1kfr0ZDSdBs/c8nuOl61KSdu2HiAGJLhljTjvoaRKfv1vHs5p
+93ala9rdW3B1VdVW/Zt4l4p1cSdqE//33vjvH0Rpix4frHHpEMHimyx9qyKY
+TpXQP27TDybiG7aWdKV5fL9ofyrZCMyofa8g5hg+8F/e8btwnDy/CjQzjQmd
+R95tX+Xqi0hbcEC3/PwzydubXKsJPXw0W6U/CNfqDK8XH4pd1knyMsMp84mk
+KJ3EXYchB7BOrhbFqp0qLwMI9y2o6tVBPQjoGcDxkqqcaKiHr7mJefptzfaK
+i977W6T+tMEy5FnDlqb+Ln9zqxxuuVaq6//4eL746ADqyUrLRVJPouFmzot1
+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
+BAKFEdIJBOHz/9lsiGE=
+    "], {{0, 182}, {295, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{295, 182},
+  PlotRange->{{0, 295}, {0, 182}}]], "Output",
+ ImageSize->{299, 182},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ GraphicsBoxOptions->{ImageSize->{295., Automatic}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->150500927]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->16265],
+
+Cell["\<\
+Find a series expansion for a standard combinatorial problem:\
+\>", "ExampleText",
+ CellID->11888],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"1", "/", "n"}]}], ")"}], "^", "n"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "Infinity", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->19063],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\[ExponentialE]", "-", 
+   FractionBox["\[ExponentialE]", 
+    RowBox[{"2", " ", "n"}]], "+", 
+   RowBox[{
+    FractionBox["11", "24"], " ", "\[ExponentialE]", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "n"], ")"}], "2"]}], "-", 
+   RowBox[{
+    FractionBox["7", "16"], " ", "\[ExponentialE]", " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "n"], ")"}], "3"]}], "+", 
+   FractionBox[
+    RowBox[{"2447", " ", "\[ExponentialE]", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "n"], ")"}], "4"]}], "5760"], "-", 
+   FractionBox[
+    RowBox[{"959", " ", "\[ExponentialE]", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["1", "n"], ")"}], "5"]}], "2304"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      FractionBox["1", "n"], "]"}], "6"],
+    SeriesData[$CellContext`n, 
+     DirectedInfinity[1], {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`n, 
+   DirectedInfinity[1], {
+   E, Rational[-1, 2] E, Rational[11, 24] E, Rational[-7, 16] E, 
+    Rational[2447, 5760] E, Rational[-959, 2304] E}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{414, 43},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->91984016]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->16435],
+
+Cell["Find Fibonacci numbers from a generating function: ", "ExampleText",
+ CellID->22736],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoefficientList", "[", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "t", "-", 
+        RowBox[{"t", "^", "2"}]}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "15"}], "}"}]}], "]"}], ",", "t"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->20606],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "2", ",", "3", ",", "5", ",", "8", ",", "13", ",", "21",
+    ",", "34", ",", "55", ",", "89", ",", "144", ",", "233", ",", "377", ",", 
+   "610", ",", "987"}], "}"}]], "Output",
+ ImageSize->{400, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->552540]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->26616],
+
+Cell["\<\
+Find Legendre polynomials by expanding a generating function:\
+\>", "ExampleText",
+ CellID->6171],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoefficientList", "[", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"1", "/", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"1", "-", 
+        RowBox[{"2", " ", "t", " ", "x"}], " ", "+", 
+        RowBox[{"t", "^", "2"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "5"}], "}"}]}], "]"}], ",", "t"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->11534],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "x", ",", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "2"]}], "+", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SuperscriptBox["x", "2"]}], "2"]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"3", " ", "x"}], "2"]}], "+", 
+    FractionBox[
+     RowBox[{"5", " ", 
+      SuperscriptBox["x", "3"]}], "2"]}], ",", 
+   RowBox[{
+    FractionBox["1", "8"], " ", 
+    RowBox[{"(", 
+     RowBox[{"3", "-", 
+      RowBox[{"30", " ", 
+       SuperscriptBox["x", "2"]}], "+", 
+      RowBox[{"35", " ", 
+       SuperscriptBox["x", "4"]}]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "8"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"15", " ", "x"}], "-", 
+      RowBox[{"70", " ", 
+       SuperscriptBox["x", "3"]}], "+", 
+      RowBox[{"63", " ", 
+       SuperscriptBox["x", "5"]}]}], ")"}]}]}], "}"}]], "Output",
+ ImageSize->{476, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->606455740]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"LegendreP", "[", 
+    RowBox[{"n", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->5550],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "x", ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"3", " ", 
+       SuperscriptBox["x", "2"]}]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "3"}], " ", "x"}], "+", 
+      RowBox[{"5", " ", 
+       SuperscriptBox["x", "3"]}]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "8"], " ", 
+    RowBox[{"(", 
+     RowBox[{"3", "-", 
+      RowBox[{"30", " ", 
+       SuperscriptBox["x", "2"]}], "+", 
+      RowBox[{"35", " ", 
+       SuperscriptBox["x", "4"]}]}], ")"}]}], ",", 
+   RowBox[{
+    FractionBox["1", "8"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"15", " ", "x"}], "-", 
+      RowBox[{"70", " ", 
+       SuperscriptBox["x", "3"]}], "+", 
+      RowBox[{"63", " ", 
+       SuperscriptBox["x", "5"]}]}], ")"}]}]}], "}"}]], "Output",
+ ImageSize->{515, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->378954404]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->25417],
+
+Cell["\<\
+Set up a generating function to enumerate ways to make change using U.S. \
+coins:\
+\>", "ExampleText",
+ CellID->8643],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gf", "=", 
+  RowBox[{"1", "/", 
+   RowBox[{"Apply", "[", 
+    RowBox[{"Times", ",", 
+     RowBox[{"1", "-", 
+      RowBox[{"z", "^", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "5", ",", "10", ",", "25", ",", "50", ",", "100"}], 
+        "}"}]}]}]}], "]"}]}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->36],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", "z"}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["z", "5"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["z", "10"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["z", "25"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["z", "50"]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["z", "100"]}], ")"}]}]]], "Output",
+ ImageSize->{325, 37},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->146747575]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{"gf", ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->20499],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", "z", "+", 
+   SuperscriptBox["z", "2"], "+", 
+   SuperscriptBox["z", "3"], "+", 
+   SuperscriptBox["z", "4"], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["z", "5"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["z", "6"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["z", "7"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["z", "8"]}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["z", "9"]}], "+", 
+   RowBox[{"4", " ", 
+    SuperscriptBox["z", "10"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "z", "]"}], "11"],
+    SeriesData[$CellContext`z, 0, {}, 0, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`z, 0, {1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 4}, 0, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{382, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->304134880]
+}, Open  ]],
+
+Cell["The number of ways to make change for $1:", "ExampleText",
+ CellID->22534],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SeriesCoefficient", "[", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{"gf", ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", "0", ",", "100"}], "}"}]}], "]"}], ",", "100"}], 
+  "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->8399],
+
+Cell[BoxData["293"], "Output",
+ ImageSize->{25, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->180515216]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->21501],
+
+Cell["Find the lowest-order terms in a large polynomial:", "ExampleText",
+ CellID->16640],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"2", "x"}]}], ")"}], "^", "1000"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->17934],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{"2000", " ", "x"}], "+", 
+   RowBox[{"1998000", " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{"1329336000", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"662673996000", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   RowBox[{"264009320006400", " ", 
+    SuperscriptBox["x", "5"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "6"],
+    SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {
+   1, 2000, 1998000, 1329336000, 662673996000, 264009320006400}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{557, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->112766590]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Normal", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->26168],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"2000", " ", "x"}], "+", 
+  RowBox[{"1998000", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{"1329336000", " ", 
+   SuperscriptBox["x", "3"]}], "+", 
+  RowBox[{"662673996000", " ", 
+   SuperscriptBox["x", "4"]}], "+", 
+  RowBox[{"264009320006400", " ", 
+   SuperscriptBox["x", "5"]}]}]], "Output",
+ ImageSize->{510, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->594045336]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->16983],
+
+Cell[TextData[{
+ "Find higher-order terms in Newton's approximation for a root of ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["f", "TI"], "[", 
+   StyleBox["x", "TI"], "]"}]], "InlineFormula"],
+ " near ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "a"}], TraditionalForm]], "InlineMath"],
+ ":"
+}], "ExampleText",
+ CellID->17218],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InverseSeries", "[", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "a", ",", "3"}], "}"}]}], "]"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->17340],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"a", "+", 
+   FractionBox[
+    RowBox[{"x", "-", 
+     RowBox[{"f", "[", "a", "]"}]}], 
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]",
+      MultilineFunction->None], "[", "a", "]"}]], "-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["f", "\[Prime]\[Prime]",
+       MultilineFunction->None], "[", "a", "]"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", 
+        RowBox[{"f", "[", "a", "]"}]}], ")"}], "2"]}], 
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]",
+        MultilineFunction->None], "[", "a", "]"}], "3"]}]], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", " ", 
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["f", "\[Prime]\[Prime]",
+           MultilineFunction->None], "[", "a", "]"}], "2"]}], "-", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]",
+          MultilineFunction->None], "[", "a", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["f", 
+          TagBox[
+           RowBox[{"(", "3", ")"}],
+           Derivative],
+          MultilineFunction->None], "[", "a", "]"}]}]}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", 
+        RowBox[{"f", "[", "a", "]"}]}], ")"}], "3"]}], 
+    RowBox[{"6", " ", 
+     SuperscriptBox[
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]",
+        MultilineFunction->None], "[", "a", "]"}], "5"]}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", 
+      RowBox[{"x", "-", 
+       RowBox[{"f", "[", "a", "]"}]}], "]"}], "4"],
+    SeriesData[$CellContext`x, 
+     $CellContext`f[$CellContext`a], {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 
+   $CellContext`f[$CellContext`a], {$CellContext`a, 
+    Derivative[1][$CellContext`f][$CellContext`a]^(-1), Rational[-1, 2] 
+    Derivative[1][$CellContext`f][$CellContext`a]^(-3) 
+    Derivative[2][$CellContext`f][$CellContext`a], Rational[1, 6] 
+    Derivative[1][$CellContext`f][$CellContext`a]^(-5) (
+     3 Derivative[2][$CellContext`f][$CellContext`a]^2 - 
+     Derivative[1][$CellContext`f][$CellContext`a] 
+     Derivative[3][$CellContext`f][$CellContext`a])}, 0, 4, 1],
+  Editable->False]], "Output",
+ ImageSize->{533, 38},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->494525567]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Normal", "[", "%", "]"}], "/.", 
+  RowBox[{"x", "->", "0"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->3944],
+
+Cell[BoxData[
+ RowBox[{"a", "-", 
+  FractionBox[
+   RowBox[{"f", "[", "a", "]"}], 
+   RowBox[{
+    SuperscriptBox["f", "\[Prime]",
+     MultilineFunction->None], "[", "a", "]"}]], "-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"f", "[", "a", "]"}], "2"], " ", 
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]\[Prime]",
+      MultilineFunction->None], "[", "a", "]"}]}], 
+   RowBox[{"2", " ", 
+    SuperscriptBox[
+     RowBox[{
+      SuperscriptBox["f", "\[Prime]",
+       MultilineFunction->None], "[", "a", "]"}], "3"]}]], "-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"f", "[", "a", "]"}], "3"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"3", " ", 
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox["f", "\[Prime]\[Prime]",
+          MultilineFunction->None], "[", "a", "]"}], "2"]}], "-", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["f", "\[Prime]",
+         MultilineFunction->None], "[", "a", "]"}], " ", 
+       RowBox[{
+        SuperscriptBox["f", 
+         TagBox[
+          RowBox[{"(", "3", ")"}],
+          Derivative],
+         MultilineFunction->None], "[", "a", "]"}]}]}], ")"}]}], 
+   RowBox[{"6", " ", 
+    SuperscriptBox[
+     RowBox[{
+      SuperscriptBox["f", "\[Prime]",
+       MultilineFunction->None], "[", "a", "]"}], "5"]}]]}]], "Output",
+ ImageSize->{361, 38},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->25365084]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->3402],
+
+Cell[TextData[{
+ "Plot the complex zeros for a series approximation to ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["Exp"]],"paclet:ref/Exp"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   StyleBox["x", "TI"], "]"}]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->20305],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Re", "[", "#", "]"}], ",", 
+      RowBox[{"Im", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+   RowBox[{"(", 
+    RowBox[{"x", "/.", 
+     RowBox[{"NSolve", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Normal", "[", 
+         RowBox[{"Series", "[", 
+          RowBox[{
+           RowBox[{"Exp", "[", "x", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "0", ",", "40"}], "}"}]}], "]"}], "]"}], "==", 
+        "0"}], ",", "x"}], "]"}]}], ")"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->30261],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {Hue[0.67, 0.6, 0.6], PointBox[CompressedData["
+1:eJxdx1kowwEcwPGZvzNbc5Rry2jzn1ybEVrxE0ruI+TvYUvkQc3V1OZI8uCB
+WntyhHLkBckZOX4hUoqSvLjmmuJBaCLL8fp7+PbtE1pVX1zD5/F4ir/+rzFe
+zlrDFVjUPuN55HjYIk7tv+e3et6yeFBm3VYkOyEx6M4lhdccixbL2Do77oXE
+IG3mXGr7wrHL5ted9emLxKAub5AGGOWYnt8d99oXiMQgOVlSngTLMN7nnavw
+CEFisK24qfeawvDO0PNUEBeGxMDYvYNyTVLsLbgp4x/KkBhGBPHDpkox7jtt
+BuXksUgM7jpBUbnQH7XeeuZuLgKJ4Weyc/LHIUL56ThX/xKJxJC2tmwYiGaw
+UlCV5MXEIDFoubb1M7t16za/WbpojUViSHJ2DCUufKUKbQeZkk0lEsNGy9q8
+6EIE79qj4WOdConhw9LgYRkQQ5YpQSg8VCEx1LHKiYwIOTyazWLJswqJYdV1
+sPO7Ohqm9Z+l9lEVEgPfmL1guFFDScc0tzulRGLov7poZBI1kJHyttS1E4XE
+8AvezSGd
+     "]]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{-12.075940575272957`, 27.21491157214004}, {-17.92231920747227, 
+   17.92231920747227}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ ImageSize->{184, 112},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->1004645747]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Properties & Relations",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(9)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1696],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " always only keeps terms up to the specified order:"
+}], "ExampleText",
+ CellID->21370],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", "x"}], ")"}], "^", "10"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->9343],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{"10", " ", "x"}], "+", 
+   RowBox[{"45", " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{"120", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"210", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   RowBox[{"252", " ", 
+    SuperscriptBox["x", "5"]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "6"],
+    SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 10, 45, 120, 210, 252}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{288, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->468430257]
+}, Open  ]],
+
+Cell["Operations on series keep only the appropriate terms:", "ExampleText",
+ CellID->30888],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->15260],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{"5", " ", "x"}], "+", 
+   RowBox[{"10", " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{"10", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"5", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   SuperscriptBox["x", "5"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "6"],
+    SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 5, 10, 10, 5, 1}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{236, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->15856241]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Normal"]],"paclet:ref/Normal"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " converts to an ordinary polynomial:"
+}], "ExampleText",
+ CellID->23873],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sqrt", "[", 
+  RowBox[{"Normal", "[", 
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "x"}], ")"}], "^", "10"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->1008],
+
+Cell[BoxData[
+ SqrtBox[
+  RowBox[{"1", "+", 
+   RowBox[{"10", " ", "x"}], "+", 
+   RowBox[{"45", " ", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{"120", " ", 
+    SuperscriptBox["x", "3"]}], "+", 
+   RowBox[{"210", " ", 
+    SuperscriptBox["x", "4"]}], "+", 
+   RowBox[{"252", " ", 
+    SuperscriptBox["x", "5"]}]}]]], "Output",
+ ImageSize->{259, 23},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->54768910]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->28613],
+
+Cell["Any mathematical function can be applied to a series:", "ExampleText",
+ CellID->10979],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->30554],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "-", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 6], 0, 
+    Rational[1, 120], 0, 
+    Rational[-1, 5040], 0, 
+    Rational[1, 362880]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{238, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->85862527]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BesselJ", "[", 
+   RowBox[{"0", ",", "%"}], "]"}], "^", "%"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->501],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "4"], "+", 
+   FractionBox[
+    RowBox[{"7", " ", 
+     SuperscriptBox["x", "5"]}], "64"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "6"], "32"], "-", 
+   FractionBox[
+    RowBox[{"91", " ", 
+     SuperscriptBox["x", "7"]}], "5760"], "-", 
+   FractionBox[
+    RowBox[{"7", " ", 
+     SuperscriptBox["x", "8"]}], "256"], "-", 
+   FractionBox[
+    RowBox[{"7445", " ", 
+     SuperscriptBox["x", "9"]}], "3096576"], "+", 
+   FractionBox[
+    RowBox[{"3661", " ", 
+     SuperscriptBox["x", "10"]}], "368640"], "+", 
+   FractionBox[
+    RowBox[{"77509", " ", 
+     SuperscriptBox["x", "11"]}], "22118400"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "12"],
+    SeriesData[$CellContext`x, 0, {}, 0, 12, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 0, 
+    Rational[-1, 4], 0, 
+    Rational[7, 64], 
+    Rational[1, 32], 
+    Rational[-91, 5760], 
+    Rational[-7, 256], 
+    Rational[-7445, 3096576], 
+    Rational[3661, 368640], 
+    Rational[77509, 22118400]}, 0, 12, 1],
+  Editable->False]], "Output",
+ ImageSize->{466, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->824358]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->32533],
+
+Cell["\<\
+Adding a series of lower order causes the higher-order terms to be dropped:\
+\>", "ExampleText",
+ CellID->27021],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->7374],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", "x", "+", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "2"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "4"], "24"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "6"], "720"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "8"], "40320"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "10"], "3628800"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 0, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 1, 
+    Rational[1, 2], 
+    Rational[1, 6], 
+    Rational[1, 24], 
+    Rational[1, 120], 
+    Rational[1, 720], 
+    Rational[1, 5040], 
+    Rational[1, 40320], 
+    Rational[1, 362880], 
+    Rational[1, 3628800]}, 0, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{482, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->127956741]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "+", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->23815],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   RowBox[{"2", " ", "x"}], "+", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "2"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "4"], "24"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "60"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "6"],
+    SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 2, 
+    Rational[1, 2], 0, 
+    Rational[1, 24], 
+    Rational[1, 60]}, 0, 6, 1],
+  Editable->False]], "Output",
+ ImageSize->{181, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->532270401]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->22536],
+
+Cell["Differentiate a series:", "ExampleText",
+ CellID->12828],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"Tan", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->20052],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", 
+   SuperscriptBox["x", "2"], "+", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     SuperscriptBox["x", "4"]}], "3"], "+", 
+   FractionBox[
+    RowBox[{"17", " ", 
+     SuperscriptBox["x", "6"]}], "45"], "+", 
+   FractionBox[
+    RowBox[{"62", " ", 
+     SuperscriptBox["x", "8"]}], "315"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "10"],
+    SeriesData[$CellContext`x, 0, {}, 0, 10, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 1, 0, 
+    Rational[2, 3], 0, 
+    Rational[17, 45], 0, 
+    Rational[62, 315]}, 0, 10, 1],
+  Editable->False]], "Output",
+ ImageSize->{224, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->231069]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->21068],
+
+Cell["Solve equations for series coefficients:", "ExampleText",
+ CellID->27383],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", " ", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "+", 
+     RowBox[{"b", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "x"}], "]"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "3"}], "}"}]}], "]"}], "==", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Sinh", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "3"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->11588],
+
+Cell[BoxData[
+ RowBox[{
+  InterpretationBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "+", 
+       RowBox[{"2", " ", "b"}]}], ")"}], " ", "x"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["a", "6"]}], "-", 
+       FractionBox[
+        RowBox[{"4", " ", "b"}], "3"]}], ")"}], " ", 
+     SuperscriptBox["x", "3"]}], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "x", "]"}], "4"],
+     SeriesData[$CellContext`x, 0, {}, 1, 4, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`x, 
+    0, {$CellContext`a + 2 $CellContext`b, 0, Rational[-1, 6] $CellContext`a + 
+     Rational[-4, 3] $CellContext`b}, 1, 4, 1],
+   Editable->False], "\[Equal]", 
+  InterpretationBox[
+   RowBox[{"x", "+", 
+    FractionBox[
+     SuperscriptBox["x", "3"], "6"], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "x", "]"}], "4"],
+     SeriesData[$CellContext`x, 0, {}, 1, 4, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`x, 0, {1, 0, 
+     Rational[1, 6]}, 1, 4, 1],
+   Editable->False]}]], "Output",
+ ImageSize->{311, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->329354205]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->30776],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", 
+     FractionBox["5", "3"]}], ",", 
+    RowBox[{"b", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox["1", "3"]}]}]}], "}"}], "}"}]], "Output",
+ ImageSize->{122, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->749477507]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->23851],
+
+Cell["Find the list of coefficients in a series:", "ExampleText",
+ CellID->32428],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->27535],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "-", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 6], 0, 
+    Rational[1, 120], 0, 
+    Rational[-1, 5040], 0, 
+    Rational[1, 362880]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{238, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->220101670]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoefficientList", "[", 
+  RowBox[{"%", ",", "x"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->3684],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "1", ",", "0", ",", 
+   RowBox[{"-", 
+    FractionBox["1", "6"]}], ",", "0", ",", 
+   FractionBox["1", "120"], ",", "0", ",", 
+   RowBox[{"-", 
+    FractionBox["1", "5040"]}], ",", "0", ",", 
+   FractionBox["1", "362880"]}], "}"}]], "Output",
+ ImageSize->{292, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->430194684]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->2110],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  RowBox[{
+   TemplateBox[{Cell[
+      TextData["O"]],"paclet:ref/O"},
+    "RefLink",
+    BaseStyle->"InlineFormula"], "[", 
+   StyleBox["x", "TI"], "]"}]], "InlineFormula"],
+ " to force the construction of a series:"
+}], "ExampleText",
+ CellID->3192],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sin", "[", "x", "]"}], " ", "+", " ", 
+  RowBox[{
+   RowBox[{"O", "[", "x", "]"}], "^", "10"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->19577],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "-", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "10"],
+    SeriesData[$CellContext`x, 0, {}, 1, 10, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 6], 0, 
+    Rational[1, 120], 0, 
+    Rational[-1, 5040], 0, 
+    Rational[1, 362880]}, 1, 10, 1],
+  Editable->False]], "Output",
+ ImageSize->{238, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->35649079]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1836],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ComposeSeries"]],"paclet:ref/ComposeSeries"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " treats a series as a function to apply to another series:"
+}], "ExampleText",
+ CellID->23491],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComposeSeries", "[", 
+  RowBox[{
+   RowBox[{"x", "+", 
+    RowBox[{"2", 
+     RowBox[{"x", "^", "2"}]}], "+", 
+    RowBox[{
+     RowBox[{"O", "[", "x", "]"}], "^", "10"}]}], ",", 
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Exp", "[", "x", "]"}], "-", "1"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->29081],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "+", 
+   FractionBox[
+    RowBox[{"5", " ", 
+     SuperscriptBox["x", "2"]}], "2"], "+", 
+   FractionBox[
+    RowBox[{"13", " ", 
+     SuperscriptBox["x", "3"]}], "6"], "+", 
+   FractionBox[
+    RowBox[{"29", " ", 
+     SuperscriptBox["x", "4"]}], "24"], "+", 
+   FractionBox[
+    RowBox[{"61", " ", 
+     SuperscriptBox["x", "5"]}], "120"], "+", 
+   FractionBox[
+    RowBox[{"25", " ", 
+     SuperscriptBox["x", "6"]}], "144"], "+", 
+   FractionBox[
+    RowBox[{"253", " ", 
+     SuperscriptBox["x", "7"]}], "5040"], "+", 
+   FractionBox[
+    RowBox[{"509", " ", 
+     SuperscriptBox["x", "8"]}], "40320"], "+", 
+   FractionBox[
+    RowBox[{"1021", " ", 
+     SuperscriptBox["x", "9"]}], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "10"],
+    SeriesData[$CellContext`x, 0, {}, 1, 10, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 
+    Rational[5, 2], 
+    Rational[13, 6], 
+    Rational[29, 24], 
+    Rational[61, 120], 
+    Rational[25, 144], 
+    Rational[253, 5040], 
+    Rational[509, 40320], 
+    Rational[1021, 362880]}, 1, 10, 1],
+  Editable->False]], "Output",
+ ImageSize->{462, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->19369380]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->16168],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InverseSeries"]],"paclet:ref/InverseSeries"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " does series reversion to find the series for the inverse function of a \
+series: "
+}], "ExampleText",
+ CellID->30565],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->3889],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "-", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "-", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[-1, 6], 0, 
+    Rational[1, 120], 0, 
+    Rational[-1, 5040], 0, 
+    Rational[1, 362880]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{238, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->29404004]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InverseSeries", "[", 
+  RowBox[{"%", ",", "x"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->29216],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "5"]}], "40"], "+", 
+   FractionBox[
+    RowBox[{"5", " ", 
+     SuperscriptBox["x", "7"]}], "112"], "+", 
+   FractionBox[
+    RowBox[{"35", " ", 
+     SuperscriptBox["x", "9"]}], "1152"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[1, 6], 0, 
+    Rational[3, 40], 0, 
+    Rational[5, 112], 0, 
+    Rational[35, 1152]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{221, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->650137702]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"ArcSin", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->17596],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"x", "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    RowBox[{"3", " ", 
+     SuperscriptBox["x", "5"]}], "40"], "+", 
+   FractionBox[
+    RowBox[{"5", " ", 
+     SuperscriptBox["x", "7"]}], "112"], "+", 
+   FractionBox[
+    RowBox[{"35", " ", 
+     SuperscriptBox["x", "9"]}], "1152"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 0, 
+    Rational[1, 6], 0, 
+    Rational[3, 40], 0, 
+    Rational[5, 112], 0, 
+    Rational[35, 1152]}, 1, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{221, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->343203074]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Possible Issues",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(7)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->31379],
+
+Cell[TextData[{
+ "When there is an essential singularity, ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " will attempt to factor it out:"
+}], "ExampleText",
+ CellID->27923],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"1", "/", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->30939],
+
+Cell[BoxData[
+ RowBox[{"Sin", "[", 
+  FractionBox["1", "x"], "]"}]], "Output",
+ ImageSize->{51, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->409892971]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{"1", "/", "x"}], "]"}], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->25835],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{"x", "-", 
+     FractionBox[
+      SuperscriptBox["x", "3"], "6"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "5"], "120"], "-", 
+     FractionBox[
+      SuperscriptBox["x", "7"], "5040"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "9"], "362880"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "11"],
+      SeriesData[$CellContext`x, 0, {}, 1, 11, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 0, 
+      Rational[-1, 6], 0, 
+      Rational[1, 120], 0, 
+      Rational[-1, 5040], 0, 
+      Rational[1, 362880]}, 1, 11, 1],
+    Editable->False], ")"}], " ", 
+  RowBox[{"Sin", "[", 
+   FractionBox["1", "x"], "]"}]}]], "Output",
+ ImageSize->{301, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->270161124]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->13340],
+
+Cell["\<\
+Numeric values cannot be substituted directly for the expansion variable in a \
+series:\
+\>", "ExampleText",
+ CellID->24555],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->25994],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "+", "x", "+", 
+   FractionBox[
+    SuperscriptBox["x", "2"], "2"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "3"], "6"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "4"], "24"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "5"], "120"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "6"], "720"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "7"], "5040"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "8"], "40320"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "9"], "362880"], "+", 
+   FractionBox[
+    SuperscriptBox["x", "10"], "3628800"], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "x", "]"}], "11"],
+    SeriesData[$CellContext`x, 0, {}, 0, 11, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`x, 0, {1, 1, 
+    Rational[1, 2], 
+    Rational[1, 6], 
+    Rational[1, 24], 
+    Rational[1, 120], 
+    Rational[1, 720], 
+    Rational[1, 5040], 
+    Rational[1, 40320], 
+    Rational[1, 362880], 
+    Rational[1, 3628800]}, 0, 11, 1],
+  Editable->False]], "Output",
+ ImageSize->{482, 35},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->598220945]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "/.", 
+  RowBox[{"x", "->", "1"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->23895],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SeriesData", "::", "\<\"ssdn\"\>"}], ":", 
+  " ", "\<\"Attempt to evaluate a series at the number \\!\\(1\\). Returning \
+Indeterminate. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/SeriesData/ssdn\\\", ButtonNote -> \
+\\\"SeriesData::ssdn\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->438514865],
+
+Cell[BoxData["Indeterminate"], "Output",
+ ImageSize->{95, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->24630259]
+}, Open  ]],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Normal"]],"paclet:ref/Normal"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " to get a normal expression in which the substitution can be done:"
+}], "ExampleText",
+ CellID->21256],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Normal", "[", 
+   RowBox[{"Series", "[", 
+    RowBox[{
+     RowBox[{"Exp", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}], "]"}], "/.", 
+  RowBox[{"x", "->", "1"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->9093],
+
+Cell[BoxData[
+ FractionBox["9864101", "3628800"]], "Output",
+ ImageSize->{62, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->143088891]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->14793],
+
+Cell["\<\
+Series must be converted to normal expressions before being plotted:\
+\>", "ExampleText",
+ CellID->23654],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"Normal", "[", 
+     RowBox[{"Series", "[", 
+      RowBox[{
+       RowBox[{"Sin", "[", "x", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->2993],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1: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
+jHhMr3AjjqaCkfA/c5c0uQ==
+    "], {{0, 83}, {150, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{150, 83},
+  PlotRange->{{0, 150}, {0, 83}}]], "Output",
+ ImageSize->{154, 83},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ GraphicsBoxOptions->{ImageSize->{150, Automatic}},
+ CellTags->"RasterizedOutput",
+ CellLabel->"Out[1]=",
+ CellID->62289154]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->21713],
+
+Cell["\<\
+Power series with different expansion points cannot be combined:\
+\>", "ExampleText",
+ CellID->10741],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "1", ",", "3"}], "}"}]}], "]"}], " ", "+", " ", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "3"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->10141],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Series", "::", "\<\"icm\"\>"}], ":", 
+  " ", "\<\"Series in \\!\\(x\\) to be combined have unequal expansion points \
+\\!\\(0\\) and \\!\\(1\\). \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/Series/icm\\\", ButtonNote -> \
+\\\"Series::icm\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->26751044],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{"1", "+", "x", "+", 
+     FractionBox[
+      SuperscriptBox["x", "2"], "2"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "3"], "6"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "4"],
+      SeriesData[$CellContext`x, 0, {}, 0, 4, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 1, 
+      Rational[1, 2], 
+      Rational[1, 6]}, 0, 4, 1],
+    Editable->False], ")"}], "+", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{"\[ExponentialE]", "+", 
+     RowBox[{"\[ExponentialE]", " ", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "1"}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", "\[ExponentialE]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"x", "-", "1"}], ")"}], "2"]}], "+", 
+     RowBox[{
+      FractionBox["1", "6"], " ", "\[ExponentialE]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"x", "-", "1"}], ")"}], "3"]}], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", 
+        RowBox[{"x", "-", "1"}], "]"}], "4"],
+      SeriesData[$CellContext`x, 1, {}, 0, 4, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 1, {E, E, Rational[1, 2] E, Rational[1, 6] E}, 
+     0, 4, 1],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{486, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->167488968]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->24519],
+
+Cell[TextData[{
+ "Not all series are represented by expressions with head ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeriesData"]],"paclet:ref/SeriesData"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->2056],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "a"}], " ", 
+    RowBox[{"Exp", "[", "x", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->26903],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["x", "a"], " ", 
+  RowBox[{"(", 
+   InterpretationBox[
+    RowBox[{"1", "+", "x", "+", 
+     FractionBox[
+      SuperscriptBox["x", "2"], "2"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "3"], "6"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "4"], "24"], "+", 
+     FractionBox[
+      SuperscriptBox["x", "5"], "120"], "+", 
+     InterpretationBox[
+      SuperscriptBox[
+       RowBox[{"O", "[", "x", "]"}], "6"],
+      SeriesData[$CellContext`x, 0, {}, 0, 6, 1],
+      Editable->False]}],
+    SeriesData[$CellContext`x, 0, {1, 1, 
+      Rational[1, 2], 
+      Rational[1, 6], 
+      Rational[1, 24], 
+      Rational[1, 120]}, 0, 6, 1],
+    Editable->False], ")"}]}]], "Output",
+ ImageSize->{238, 39},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->282158771]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InputForm", "[", "%", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->26926],
+
+Cell["x^a*SeriesData[x, 0, {1, 1, 1/2, 1/6, 1/24, 1/120}, 0, 6, 1]", "Output",
+ ImageSize->{420, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]//InputForm=",
+ CellID->348371638]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->25334],
+
+Cell["\<\
+Some functions cannot be decomposed into series of power-like functions:\
+\>", "ExampleText",
+ CellID->5895],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Zeta", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "Infinity", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->10836],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  SuperscriptBox["2", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["3", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["4", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["5", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["6", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["7", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["8", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["9", 
+   RowBox[{"-", "x"}]], "+", 
+  SuperscriptBox["10", 
+   RowBox[{"-", "x"}]]}]], "Output",
+ ImageSize->{297, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->249843950]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->246313868],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Series"]],"paclet:ref/Series"},
+   "RefLink",
+   BaseStyle->"InlineFormula"]], "InlineFormula"],
+ " does not change expressions independent of the expansion variable:"
+}], "ExampleText",
+ CellID->287981579],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->218219875],
+
+Cell[BoxData["0"], "Output",
+ ImageSize->{11, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[1]=",
+ CellID->185640027]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "y", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->626723184],
+
+Cell[BoxData[
+ RowBox[{"Sin", "[", "y", "]"}]], "Output",
+ ImageSize->{46, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->160427775]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "See Also"
+}], "SeeAlsoSection",
+ WholeCellGroupOpener->True,
+ CellID->20607],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeriesCoefficient"]],"paclet:ref/SeriesCoefficient"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InverseSeries"]],"paclet:ref/InverseSeries"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["ComposeSeries"]],"paclet:ref/ComposeSeries"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Limit"]],"paclet:ref/Limit"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Normal"]],"paclet:ref/Normal"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["InverseZTransform"]],"paclet:ref/InverseZTransform"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["RSolve"]],"paclet:ref/RSolve"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["O"]],"paclet:ref/O"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["SeriesData"]],"paclet:ref/SeriesData"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["PadeApproximant"]],"paclet:ref/PadeApproximant"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["FourierSeries"]],"paclet:ref/FourierSeries"},
+   "RefLink",
+   BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->20333]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Tutorials"
+}], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->13619],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Symbolic Mathematics: Basic Operations"]],
+   "paclet:tutorial/SymbolicCalculations"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->82228336],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Power Series"]],"paclet:tutorial/PowerSeries"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->30232],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Making Power Series Expansions"]],
+   "paclet:tutorial/MakingPowerSeriesExpansions"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->31271],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Operations on Power Series"]],
+   "paclet:tutorial/OperationsOnPowerSeries"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->720780250],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["The Representation of Power Series"]],
+   "paclet:tutorial/TheRepresentationOfPowerSeries"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->31832],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Converting Power Series to Normal Expressions"]],
+   "paclet:tutorial/ConvertingPowerSeriesToNormalExpressions"},
+  "RefLink",
+  BaseStyle->"Tutorials"]], "Tutorials",
+ CellID->22435],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Guides"
+}], "MoreAboutSection",
+ WholeCellGroupOpener->True,
+ CellID->28426649],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Analytic Number Theory"]],"paclet:guide/AnalyticNumberTheory"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->534477409],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Calculus"]],"paclet:guide/Calculus"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->226864929],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Manipulating Equations"]],"paclet:guide/ManipulatingEquations"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->31866270],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Multiplicative Number Theory"]],
+   "paclet:guide/MultiplicativeNumberTheory"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->687554250],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Series Expansions"]],"paclet:guide/SeriesExpansions"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->6085253],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["New in 6.0: Mathematics & Algorithms"]],
+   "paclet:guide/NewIn60MathematicsAndAlgorithms"},
+  "RefLink",
+  BaseStyle->"MoreAbout"]], "MoreAbout",
+ CellID->267873392],
+
+Cell["", "SectionFooterSpacer"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  InterpretationBox[
+   StyleBox[
+    GraphicsBox[{},
+     BaselinePosition->Baseline,
+     ImageSize->{6, 0}],
+    CacheGraphics->False],
+   Spacer[6]]]],
+ "Related Links"
+}], "RelatedLinksSection",
+ WholeCellGroupOpener->True,
+ CellID->2544],
+
+Cell["", "SectionHeaderSpacer"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Demonstrations with Series"]],
+    "http://demonstrations.wolfram.com/symbol.html?symbol=Series"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ " (",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["Wolfram Demonstrations Project"]],
+    "http://demonstrations.wolfram.com/"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ ")"
+}], "RelatedLinks"],
+
+Cell[BoxData[
+ TemplateBox[{Cell[
+    TextData["Implementation notes: Algebra and Calculus"]],
+   "paclet:tutorial/SomeNotesOnInternalImplementation#26477"},
+  "RefLink",
+  BaseStyle->"RelatedLinks"]], "RelatedLinks",
+ CellID->30247],
+
+Cell[TextData[{
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["NKS|Online"]],
+    "http://www.wolframscience.com/nksonline/index/search.cgi?SearchIndex=\
+Series"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks"}]]],
+ " (",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["A New Kind of Science"]],
+    "http://www.wolframscience.com/nksonline/"},
+   "WebLink",
+   BaseStyle->{"RelatedLinks", FontSlant -> "Italic"}]]],
+ ")"
+}], "RelatedLinks"]
+}, Open  ]],
+
+Cell["New in 1 | Last modified in 3", "History"],
+
+Cell[" ", "FooterCell"]
+},
+FileChangeProtection->None,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 753},
+WindowMargins->{{Automatic, Automatic}, {Automatic, Automatic}},
+WindowFrame->"Normal",
+WindowTitle->"Series - Wolfram Mathematica",
+DockedCells->FEPrivate`FrontEndResource["FEExpressions", "HelpViewerToolbar"],
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        StyleBox[
+         ButtonBox[
+         "Mathematica", ButtonData -> "paclet:guide/Mathematica", 
+          BaseStyle -> {"Link", "DockedLinkTrail"}], FontSlant -> 
+         "Italic"]}]}}, ColumnAlignments -> Left], "HasOptions" -> True, 
+  "ExampleCounter" -> 1, "ExamplePageLinks" -> {}, "RootCaptions" -> "", 
+  "Metadata" -> {
+   "built" -> "{2012, 11, 20, 1, 31, 43.3397372}", 
+    "history" -> {"1", "3", "", ""}, "context" -> "System`", 
+    "keywords" -> {
+     "approximate formulas", "approximation of functions", "approximations", 
+      "asymptotic expansions", "expansion", "Laurent series", 
+      "Maclaurin series", "power series", "series expansions", "asympt", 
+      "laurent", "mtaylor", "order", "powcreate", "powexp", "powlog", 
+      "powpoly", "powser", "powsolve", "series", "taylor", "series"}, 
+    "specialkeywords" -> {
+     "asympt", "laurent", "mtaylor", "order", "powcreate", "powexp", "powlog",
+       "powpoly", "powser", "powsolve", "series", "taylor", "series"}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Built-in Mathematica Symbol", "language" -> "en", "paclet" -> 
+    "Mathematica", "status" -> "None", "summary" -> 
+    "Series[f, {x, x_0, n}] generates a power series expansion for f about \
+the point x = x_0 to order (x - x_0) n. Series[f, {x, x_0, n_x}, {y, y_0, \
+n_y}, ...] successively finds series expansions with respect to x, then y, \
+etc. ", "synonyms" -> {"Taylor series"}, "title" -> "Series", "titlemodifier" -> 
+    "", "windowtitle" -> "Series", "type" -> "Symbol", "uri" -> "ref/Series"},
+   "SearchTextTranslated" -> ""},
+Magnification->1.,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 20, \
+2012)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[14154, 440, 387, 15, 29, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->73335600]},
+ "RasterizedOutput"->{
+  Cell[82126, 2980, 10112, 174, 70, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->150500927],
+  Cell[138875, 4968, 2851, 55, 70, "Output",
+   CellTags->"RasterizedOutput",
+   CellID->62289154]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 159500, 5673},
+ {"RasterizedOutput", 159643, 5677}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[599, 21, 6108, 143, 51, "AnchorBarGrid",
+ CellID->1],
+Cell[6710, 166, 44, 1, 43, "ObjectName",
+ CellID->13613],
+Cell[CellGroupData[{
+Cell[6779, 171, 2431, 80, 148, "Usage",
+ CellID->29333],
+Cell[CellGroupData[{
+Cell[9235, 255, 748, 24, 32, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1525826],
+Cell[9986, 281, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[10020, 283, 329, 9, 70, "Notes",
+ CellID->19542],
+Cell[10352, 294, 662, 23, 70, "Notes",
+ CellID->1500],
+Cell[11017, 319, 342, 13, 70, "Notes",
+ CellID->20189],
+Cell[11362, 334, 982, 33, 70, "Notes",
+ CellID->30032],
+Cell[12347, 369, 442, 14, 70, "Notes",
+ CellID->5887],
+Cell[12792, 385, 446, 15, 70, "Notes",
+ CellID->26247],
+Cell[13241, 402, 319, 10, 70, "Notes",
+ CellID->16161],
+Cell[13563, 414, 508, 18, 70, "Notes",
+ CellID->28908],
+Cell[14074, 434, 31, 0, 70, "SectionFooterSpacer"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14154, 440, 387, 15, 29, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->73335600],
+Cell[CellGroupData[{
+Cell[14566, 459, 195, 6, 24, "ExampleSection",
+ CellID->819459354],
+Cell[14764, 467, 196, 7, 35, "ExampleText",
+ CellID->5926],
+Cell[CellGroupData[{
+Cell[14985, 478, 212, 7, 26, "Input",
+ CellID->32102],
+Cell[15200, 487, 1191, 41, 56, "Output",
+ CellID->11779506]
+}, Open  ]],
+Cell[16406, 531, 70, 1, 35, "ExampleText",
+ CellID->26411],
+Cell[CellGroupData[{
+Cell[16501, 536, 98, 3, 25, "Input",
+ CellID->20191],
+Cell[16602, 541, 709, 24, 56, "Output",
+ CellID->972964009]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17348, 570, 120, 3, 9, "ExampleDelimiter",
+ CellID->9157],
+Cell[17471, 575, 193, 7, 35, "ExampleText",
+ CellID->25737],
+Cell[CellGroupData[{
+Cell[17689, 586, 209, 7, 25, "Input",
+ CellID->26978],
+Cell[17901, 595, 1443, 45, 53, "Output",
+ CellID->7682684]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19393, 646, 120, 3, 9, "ExampleDelimiter",
+ CellID->4136],
+Cell[CellGroupData[{
+Cell[19538, 653, 236, 8, 25, "Input",
+ CellID->7318],
+Cell[19777, 663, 858, 29, 56, "Output",
+ CellID->146451066]
+}, Open  ]],
+Cell[20650, 695, 101, 2, 35, "ExampleText",
+ CellID->10644],
+Cell[CellGroupData[{
+Cell[20776, 701, 182, 7, 25, "Input",
+ CellID->7742],
+Cell[20961, 710, 1407, 48, 56, "Output",
+ CellID->176209128]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22429, 765, 183, 6, 24, "ExampleSection",
+ CellID->28396],
+Cell[CellGroupData[{
+Cell[22637, 775, 201, 6, 70, "ExampleSubsection",
+ CellID->20762],
+Cell[22841, 783, 246, 8, 70, "ExampleText",
+ CellID->7532],
+Cell[CellGroupData[{
+Cell[23112, 795, 245, 8, 70, "Input",
+ CellID->23767],
+Cell[23360, 805, 979, 33, 56, "Output",
+ CellID->46125494]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24376, 843, 204, 7, 70, "Input",
+ CellID->29061],
+Cell[24583, 852, 1087, 33, 53, "Output",
+ CellID->320528793]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25707, 890, 120, 3, 70, "ExampleDelimiter",
+ CellID->6492],
+Cell[25830, 895, 76, 1, 70, "ExampleText",
+ CellID->6866],
+Cell[CellGroupData[{
+Cell[25931, 900, 254, 9, 70, "Input",
+ CellID->6654],
+Cell[26188, 911, 1494, 47, 53, "Output",
+ CellID->239586897]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27731, 964, 121, 3, 70, "ExampleDelimiter",
+ CellID->15584],
+Cell[27855, 969, 92, 1, 70, "ExampleText",
+ CellID->32322],
+Cell[CellGroupData[{
+Cell[27972, 974, 263, 9, 70, "Input",
+ CellID->17407],
+Cell[28238, 985, 1128, 38, 57, "Output",
+ CellID->59272053]
+}, Open  ]],
+Cell[29381, 1026, 92, 1, 70, "ExampleText",
+ CellID->13648],
+Cell[CellGroupData[{
+Cell[29498, 1031, 284, 10, 70, "Input",
+ CellID->32313],
+Cell[29785, 1043, 716, 25, 55, "Output",
+ CellID->111072621]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30550, 1074, 121, 3, 70, "ExampleDelimiter",
+ CellID->26694],
+Cell[30674, 1079, 76, 1, 70, "ExampleText",
+ CellID->19],
+Cell[CellGroupData[{
+Cell[30775, 1084, 213, 7, 70, "Input",
+ CellID->14996],
+Cell[30991, 1093, 735, 23, 53, "Output",
+ CellID->677493435]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31763, 1121, 212, 7, 70, "Input",
+ CellID->29385],
+Cell[31978, 1130, 1419, 42, 71, "Output",
+ CellID->181822680]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33434, 1177, 240, 8, 70, "Input",
+ CellID->15382],
+Cell[33677, 1187, 930, 28, 53, "Output",
+ CellID->33583065]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34644, 1220, 240, 8, 70, "Input",
+ CellID->32601],
+Cell[34887, 1230, 1624, 51, 60, "Output",
+ CellID->114528062]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36548, 1286, 240, 8, 70, "Input",
+ CellID->4352],
+Cell[36791, 1296, 940, 30, 53, "Output",
+ CellID->209745710]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37768, 1331, 241, 8, 70, "Input",
+ CellID->21334],
+Cell[38012, 1341, 1470, 46, 56, "Output",
+ CellID->907835772]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39531, 1393, 120, 3, 70, "ExampleDelimiter",
+ CellID->6114],
+Cell[39654, 1398, 88, 1, 70, "ExampleText",
+ CellID->30568],
+Cell[CellGroupData[{
+Cell[39767, 1403, 213, 7, 70, "Input",
+ CellID->8438],
+Cell[39983, 1412, 1157, 38, 59, "Output",
+ CellID->596220086]
+}, Open  ]],
+Cell[41155, 1453, 195, 6, 70, "ExampleText",
+ CellID->27824],
+Cell[CellGroupData[{
+Cell[41375, 1463, 309, 10, 70, "Input",
+ CellID->8979],
+Cell[41687, 1475, 680, 23, 51, "Output",
+ CellID->749749903]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42416, 1504, 120, 3, 70, "ExampleDelimiter",
+ CellID->6191],
+Cell[42539, 1509, 59, 1, 70, "ExampleText",
+ CellID->11288],
+Cell[CellGroupData[{
+Cell[42623, 1514, 262, 9, 70, "Input",
+ CellID->24298],
+Cell[42888, 1525, 3144, 95, 111, "Output",
+ CellID->249919586]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46081, 1626, 121, 3, 70, "ExampleDelimiter",
+ CellID->15506],
+Cell[46205, 1631, 62, 1, 70, "ExampleText",
+ CellID->275],
+Cell[CellGroupData[{
+Cell[46292, 1636, 244, 8, 70, "Input",
+ CellID->30673],
+Cell[46539, 1646, 1118, 40, 63, "Output",
+ CellID->340994965]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47694, 1691, 221, 7, 70, "Input",
+ CellID->15018],
+Cell[47918, 1700, 1277, 42, 53, "Output",
+ CellID->455371198]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49244, 1748, 121, 3, 70, "ExampleDelimiter",
+ CellID->15693],
+Cell[49368, 1753, 230, 8, 70, "ExampleText",
+ CellID->27386],
+Cell[CellGroupData[{
+Cell[49623, 1765, 206, 7, 70, "Input",
+ CellID->18616],
+Cell[49832, 1774, 2775, 89, 184, "Output",
+ CellID->219872506]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52644, 1868, 247, 8, 70, "Input",
+ CellID->10499],
+Cell[52894, 1878, 2656, 88, 125, "Output",
+ CellID->74362257]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55587, 1971, 260, 8, 70, "Input",
+ CellID->14752],
+Cell[55850, 1981, 1050, 38, 74, "Output",
+ CellID->437732422]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56949, 2025, 121, 3, 70, "ExampleDelimiter",
+ CellID->14577],
+Cell[57073, 2030, 91, 1, 70, "ExampleText",
+ CellID->1038],
+Cell[CellGroupData[{
+Cell[57189, 2035, 352, 12, 70, "Input",
+ CellID->12916],
+Cell[57544, 2049, 1265, 43, 56, "Output",
+ CellID->27945289]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58858, 2098, 121, 3, 70, "ExampleDelimiter",
+ CellID->11109],
+Cell[58982, 2103, 82, 1, 70, "ExampleText",
+ CellID->23575],
+Cell[CellGroupData[{
+Cell[59089, 2108, 271, 9, 70, "Input",
+ CellID->9322],
+Cell[59363, 2119, 359, 12, 50, "Output",
+ CellID->485685863]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59759, 2136, 180, 6, 70, "Input",
+ CellID->8436],
+Cell[59942, 2144, 1214, 40, 56, "Output",
+ CellID->403902948]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[61229, 2192, 205, 6, 18, "ExampleSection",
+ CellID->19148],
+Cell[61437, 2200, 69, 1, 70, "ExampleText",
+ CellID->23437],
+Cell[CellGroupData[{
+Cell[61531, 2205, 304, 10, 70, "Input",
+ CellID->6890],
+Cell[61838, 2217, 2714, 87, 60, "Output",
+ CellID->308057178]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64589, 2309, 121, 3, 70, "ExampleDelimiter",
+ CellID->31229],
+Cell[64713, 2314, 238, 8, 70, "ExampleText",
+ CellID->7767],
+Cell[CellGroupData[{
+Cell[64976, 2326, 337, 11, 70, "Input",
+ CellID->5168],
+Cell[65316, 2339, 1611, 53, 56, "Output",
+ CellID->399312589]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66976, 2398, 121, 3, 70, "ExampleDelimiter",
+ CellID->26422],
+Cell[67100, 2403, 387, 14, 70, "ExampleText",
+ CellID->25547],
+Cell[CellGroupData[{
+Cell[67512, 2421, 249, 8, 70, "Input",
+ CellID->238],
+Cell[67764, 2431, 209, 5, 50, "Output",
+ CellID->177137723]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68022, 2442, 121, 3, 70, "ExampleDelimiter",
+ CellID->27492],
+Cell[68146, 2447, 237, 8, 70, "ExampleText",
+ CellID->13406],
+Cell[CellGroupData[{
+Cell[68408, 2459, 239, 8, 70, "Input",
+ CellID->10531],
+Cell[68650, 2469, 873, 25, 36, "Output",
+ CellID->21389447]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[69584, 2501, 184, 6, 18, "ExampleSection",
+ CellID->22974],
+Cell[CellGroupData[{
+Cell[69793, 2511, 190, 6, 70, "ExampleSubsection",
+ CellID->6131],
+Cell[69986, 2519, 255, 8, 70, "ExampleText",
+ CellID->1973],
+Cell[CellGroupData[{
+Cell[70266, 2531, 261, 9, 70, "Input",
+ CellID->25403],
+Cell[70530, 2542, 1284, 38, 53, "Output",
+ CellID->13856329]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71851, 2585, 312, 10, 70, "Input",
+ CellID->14526],
+Cell[72166, 2597, 607, 20, 60, "Output",
+ CellID->204036001]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[72822, 2623, 194, 6, 70, "ExampleSubsection",
+ CellID->19692],
+Cell[73019, 2631, 292, 9, 70, "ExampleText",
+ CellID->30319],
+Cell[CellGroupData[{
+Cell[73336, 2644, 309, 10, 70, "Input",
+ CellID->8196],
+Cell[73648, 2656, 599, 20, 39, "Output",
+ CellID->58185149]
+}, Open  ]],
+Cell[74262, 2679, 87, 1, 70, "ExampleText",
+ CellID->16339],
+Cell[CellGroupData[{
+Cell[74374, 2684, 214, 7, 70, "Input",
+ CellID->11887],
+Cell[74591, 2693, 1230, 40, 59, "Output",
+ CellID->24545132]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75858, 2738, 120, 3, 70, "ExampleDelimiter",
+ CellID->5151],
+Cell[75981, 2743, 72, 1, 70, "ExampleText",
+ CellID->30678],
+Cell[CellGroupData[{
+Cell[76078, 2748, 396, 12, 70, "Input",
+ CellID->31960],
+Cell[76477, 2762, 920, 32, 72, "Output",
+ CellID->95550686]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77446, 2800, 121, 3, 70, "ExampleDelimiter",
+ CellID->11473],
+Cell[CellGroupData[{
+Cell[77592, 2807, 342, 11, 70, "Input",
+ CellID->31097],
+Cell[77937, 2820, 1090, 38, 72, "Output",
+ CellID->8650577]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79064, 2863, 246, 8, 70, "Input",
+ CellID->20578],
+Cell[79313, 2873, 1747, 59, 62, "Output",
+ CellID->341607676]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[81133, 2940, 188, 6, 18, "ExampleSection",
+ CellID->4218],
+Cell[81324, 2948, 211, 8, 70, "ExampleText",
+ CellID->15212],
+Cell[CellGroupData[{
+Cell[81560, 2960, 563, 18, 70, "Input",
+ CellID->3542],
+Cell[82126, 2980, 10112, 174, 70, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->150500927]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[92275, 3159, 121, 3, 70, "ExampleDelimiter",
+ CellID->16265],
+Cell[92399, 3164, 108, 3, 70, "ExampleText",
+ CellID->11888],
+Cell[CellGroupData[{
+Cell[92532, 3171, 289, 10, 70, "Input",
+ CellID->19063],
+Cell[92824, 3183, 1341, 41, 64, "Output",
+ CellID->91984016]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[94214, 3230, 121, 3, 70, "ExampleDelimiter",
+ CellID->16435],
+Cell[94338, 3235, 90, 1, 70, "ExampleText",
+ CellID->22736],
+Cell[CellGroupData[{
+Cell[94453, 3240, 376, 13, 70, "Input",
+ CellID->20606],
+Cell[94832, 3255, 367, 10, 36, "Output",
+ CellID->552540]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[95248, 3271, 121, 3, 70, "ExampleDelimiter",
+ CellID->26616],
+Cell[95372, 3276, 107, 3, 70, "ExampleText",
+ CellID->6171],
+Cell[CellGroupData[{
+Cell[95504, 3283, 427, 14, 70, "Input",
+ CellID->11534],
+Cell[95934, 3299, 1033, 37, 56, "Output",
+ CellID->606455740]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[97004, 3341, 240, 8, 70, "Input",
+ CellID->5550],
+Cell[97247, 3351, 1096, 39, 53, "Output",
+ CellID->378954404]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98392, 3396, 121, 3, 70, "ExampleDelimiter",
+ CellID->25417],
+Cell[98516, 3401, 127, 4, 70, "ExampleText",
+ CellID->8643],
+Cell[CellGroupData[{
+Cell[98668, 3409, 335, 11, 70, "Input",
+ CellID->36],
+Cell[99006, 3422, 676, 24, 58, "Output",
+ CellID->146747575]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[99719, 3451, 182, 6, 70, "Input",
+ CellID->20499],
+Cell[99904, 3459, 927, 29, 36, "Output",
+ CellID->304134880]
+}, Open  ]],
+Cell[100846, 3491, 80, 1, 70, "ExampleText",
+ CellID->22534],
+Cell[CellGroupData[{
+Cell[100951, 3496, 261, 9, 70, "Input",
+ CellID->8399],
+Cell[101215, 3507, 160, 5, 36, "Output",
+ CellID->180515216]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101424, 3518, 121, 3, 70, "ExampleDelimiter",
+ CellID->21501],
+Cell[101548, 3523, 89, 1, 70, "ExampleText",
+ CellID->16640],
+Cell[CellGroupData[{
+Cell[101662, 3528, 280, 10, 70, "Input",
+ CellID->17934],
+Cell[101945, 3540, 797, 24, 36, "Output",
+ CellID->112766590]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[102779, 3569, 98, 3, 70, "Input",
+ CellID->26168],
+Cell[102880, 3574, 479, 15, 36, "Output",
+ CellID->594045336]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[103408, 3595, 121, 3, 70, "ExampleDelimiter",
+ CellID->16983],
+Cell[103532, 3600, 329, 12, 70, "ExampleText",
+ CellID->17218],
+Cell[CellGroupData[{
+Cell[103886, 3616, 284, 10, 70, "Input",
+ CellID->17340],
+Cell[104173, 3628, 2455, 73, 59, "Output",
+ CellID->494525567]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[106665, 3706, 145, 5, 70, "Input",
+ CellID->3944],
+Cell[106813, 3713, 1466, 49, 59, "Output",
+ CellID->25365084]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108328, 3768, 120, 3, 70, "ExampleDelimiter",
+ CellID->3402],
+Cell[108451, 3773, 307, 11, 70, "ExampleText",
+ CellID->20305],
+Cell[CellGroupData[{
+Cell[108783, 3788, 636, 21, 70, "Input",
+ CellID->30261],
+Cell[109422, 3811, 1091, 27, 133, "Output",
+ CellID->1004645747]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[110574, 3845, 198, 6, 18, "ExampleSection",
+ CellID->1696],
+Cell[110775, 3853, 253, 8, 70, "ExampleText",
+ CellID->21370],
+Cell[CellGroupData[{
+Cell[111053, 3865, 255, 9, 70, "Input",
+ CellID->9343],
+Cell[111311, 3876, 723, 23, 36, "Output",
+ CellID->468430257]
+}, Open  ]],
+Cell[112049, 3902, 92, 1, 70, "ExampleText",
+ CellID->30888],
+Cell[CellGroupData[{
+Cell[112166, 3907, 96, 3, 70, "Input",
+ CellID->15260],
+Cell[112265, 3912, 685, 22, 36, "Output",
+ CellID->15856241]
+}, Open  ]],
+Cell[112965, 3937, 238, 8, 70, "ExampleText",
+ CellID->23873],
+Cell[CellGroupData[{
+Cell[113228, 3949, 335, 12, 70, "Input",
+ CellID->1008],
+Cell[113566, 3963, 464, 16, 44, "Output",
+ CellID->54768910]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[114067, 3984, 121, 3, 70, "ExampleDelimiter",
+ CellID->28613],
+Cell[114191, 3989, 92, 1, 70, "ExampleText",
+ CellID->10979],
+Cell[CellGroupData[{
+Cell[114308, 3994, 212, 7, 70, "Input",
+ CellID->30554],
+Cell[114523, 4003, 770, 26, 56, "Output",
+ CellID->85862527]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[115330, 4034, 144, 5, 70, "Input",
+ CellID->501],
+Cell[115477, 4041, 1293, 44, 56, "Output",
+ CellID->824358]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[116819, 4091, 121, 3, 70, "ExampleDelimiter",
+ CellID->32533],
+Cell[116943, 4096, 122, 3, 70, "ExampleText",
+ CellID->27021],
+Cell[CellGroupData[{
+Cell[117090, 4103, 211, 7, 70, "Input",
+ CellID->7374],
+Cell[117304, 4112, 1192, 41, 56, "Output",
+ CellID->127956741]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[118533, 4158, 238, 8, 70, "Input",
+ CellID->23815],
+Cell[118774, 4168, 699, 24, 56, "Output",
+ CellID->532270401]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[119522, 4198, 121, 3, 70, "ExampleDelimiter",
+ CellID->22536],
+Cell[119646, 4203, 62, 1, 70, "ExampleText",
+ CellID->12828],
+Cell[CellGroupData[{
+Cell[119733, 4208, 275, 10, 70, "Input",
+ CellID->20052],
+Cell[120011, 4220, 793, 27, 56, "Output",
+ CellID->231069]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[120853, 4253, 121, 3, 70, "ExampleDelimiter",
+ CellID->21068],
+Cell[120977, 4258, 79, 1, 70, "ExampleText",
+ CellID->27383],
+Cell[CellGroupData[{
+Cell[121081, 4263, 531, 18, 70, "Input",
+ CellID->11588],
+Cell[121615, 4283, 1246, 41, 56, "Output",
+ CellID->329354205]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122898, 4329, 169, 6, 70, "Input",
+ CellID->30776],
+Cell[123070, 4337, 360, 13, 53, "Output",
+ CellID->749477507]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[123479, 4356, 121, 3, 70, "ExampleDelimiter",
+ CellID->23851],
+Cell[123603, 4361, 81, 1, 70, "ExampleText",
+ CellID->32428],
+Cell[CellGroupData[{
+Cell[123709, 4366, 212, 7, 70, "Input",
+ CellID->27535],
+Cell[123924, 4375, 771, 26, 56, "Output",
+ CellID->220101670]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[124732, 4406, 129, 4, 70, "Input",
+ CellID->3684],
+Cell[124864, 4412, 422, 13, 53, "Output",
+ CellID->430194684]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[125335, 4431, 120, 3, 70, "ExampleDelimiter",
+ CellID->2110],
+Cell[125458, 4436, 291, 11, 70, "ExampleText",
+ CellID->3192],
+Cell[CellGroupData[{
+Cell[125774, 4451, 181, 6, 70, "Input",
+ CellID->19577],
+Cell[125958, 4459, 770, 26, 56, "Output",
+ CellID->35649079]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126777, 4491, 120, 3, 70, "ExampleDelimiter",
+ CellID->1836],
+Cell[126900, 4496, 274, 8, 70, "ExampleText",
+ CellID->23491],
+Cell[CellGroupData[{
+Cell[127199, 4508, 448, 15, 70, "Input",
+ CellID->29081],
+Cell[127650, 4525, 1316, 46, 56, "Output",
+ CellID->19369380]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[129015, 4577, 121, 3, 70, "ExampleDelimiter",
+ CellID->16168],
+Cell[129139, 4582, 298, 9, 70, "ExampleText",
+ CellID->30565],
+Cell[CellGroupData[{
+Cell[129462, 4595, 211, 7, 70, "Input",
+ CellID->3889],
+Cell[129676, 4604, 770, 26, 56, "Output",
+ CellID->29404004]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130483, 4635, 128, 4, 70, "Input",
+ CellID->29216],
+Cell[130614, 4641, 841, 29, 56, "Output",
+ CellID->650137702]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[131492, 4675, 215, 7, 70, "Input",
+ CellID->17596],
+Cell[131710, 4684, 841, 29, 56, "Output",
+ CellID->343203074]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[132612, 4720, 192, 6, 18, "ExampleSection",
+ CellID->31379],
+Cell[132807, 4728, 278, 9, 70, "ExampleText",
+ CellID->27923],
+Cell[CellGroupData[{
+Cell[133110, 4741, 236, 8, 70, "Input",
+ CellID->30939],
+Cell[133349, 4751, 208, 7, 53, "Output",
+ CellID->409892971]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[133594, 4763, 295, 10, 70, "Input",
+ CellID->25835],
+Cell[133892, 4775, 910, 30, 60, "Output",
+ CellID->270161124]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134839, 4810, 121, 3, 70, "ExampleDelimiter",
+ CellID->13340],
+Cell[134963, 4815, 134, 4, 70, "ExampleText",
+ CellID->24555],
+Cell[CellGroupData[{
+Cell[135122, 4823, 212, 7, 70, "Input",
+ CellID->25994],
+Cell[135337, 4832, 1192, 41, 56, "Output",
+ CellID->598220945]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[136566, 4878, 113, 4, 70, "Input",
+ CellID->23895],
+Cell[136682, 4884, 458, 9, 70, "Message",
+ CellID->438514865],
+Cell[137143, 4895, 169, 5, 36, "Output",
+ CellID->24630259]
+}, Open  ]],
+Cell[137327, 4903, 277, 9, 70, "ExampleText",
+ CellID->21256],
+Cell[CellGroupData[{
+Cell[137629, 4916, 301, 10, 70, "Input",
+ CellID->9093],
+Cell[137933, 4928, 190, 6, 53, "Output",
+ CellID->143088891]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[138172, 4940, 121, 3, 70, "ExampleDelimiter",
+ CellID->14793],
+Cell[138296, 4945, 115, 3, 70, "ExampleText",
+ CellID->23654],
+Cell[CellGroupData[{
+Cell[138436, 4952, 436, 14, 70, "Input",
+ CellID->2993],
+Cell[138875, 4968, 2851, 55, 70, "Output",
+ CellTags->"RasterizedOutput",
+ CellID->62289154]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[141775, 5029, 121, 3, 70, "ExampleDelimiter",
+ CellID->21713],
+Cell[141899, 5034, 111, 3, 70, "ExampleText",
+ CellID->10741],
+Cell[CellGroupData[{
+Cell[142035, 5041, 398, 13, 70, "Input",
+ CellID->10141],
+Cell[142436, 5056, 455, 9, 70, "Message",
+ CellID->26751044],
+Cell[142894, 5067, 1497, 47, 60, "Output",
+ CellID->167488968]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144440, 5120, 121, 3, 70, "ExampleDelimiter",
+ CellID->24519],
+Cell[144564, 5125, 271, 9, 70, "ExampleText",
+ CellID->2056],
+Cell[CellGroupData[{
+Cell[144860, 5138, 261, 9, 70, "Input",
+ CellID->26903],
+Cell[145124, 5149, 864, 29, 60, "Output",
+ CellID->282158771]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[146025, 5183, 101, 3, 70, "Input",
+ CellID->26926],
+Cell[146129, 5188, 220, 5, 50, "Output",
+ CellID->348371638]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[146398, 5199, 121, 3, 70, "ExampleDelimiter",
+ CellID->25334],
+Cell[146522, 5204, 118, 3, 70, "ExampleText",
+ CellID->5895],
+Cell[CellGroupData[{
+Cell[146665, 5211, 220, 7, 70, "Input",
+ CellID->10836],
+Cell[146888, 5220, 649, 24, 36, "Output",
+ CellID->249843950]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147586, 5250, 125, 3, 70, "ExampleDelimiter",
+ CellID->246313868],
+Cell[147714, 5255, 273, 8, 70, "ExampleText",
+ CellID->287981579],
+Cell[CellGroupData[{
+Cell[148012, 5267, 184, 6, 70, "Input",
+ CellID->218219875],
+Cell[148199, 5275, 158, 5, 36, "Output",
+ CellID->185640027]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[148394, 5285, 215, 7, 70, "Input",
+ CellID->626723184],
+Cell[148612, 5294, 187, 6, 36, "Output",
+ CellID->160427775]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[148838, 5305, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[148906, 5310, 265, 12, 29, "SeeAlsoSection",
+ CellID->20607],
+Cell[149174, 5324, 3260, 97, 77, "SeeAlso",
+ CellID->20333]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[152471, 5426, 268, 12, 29, "TutorialsSection",
+ CellID->13619],
+Cell[152742, 5440, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[152776, 5442, 207, 6, 22, "Tutorials",
+ CellID->82228336],
+Cell[152986, 5450, 165, 5, 22, "Tutorials",
+ CellID->30232],
+Cell[153154, 5457, 203, 6, 22, "Tutorials",
+ CellID->31271],
+Cell[153360, 5465, 199, 6, 22, "Tutorials",
+ CellID->720780250],
+Cell[153562, 5473, 210, 6, 22, "Tutorials",
+ CellID->31832],
+Cell[153775, 5481, 231, 6, 22, "Tutorials",
+ CellID->22435],
+Cell[154009, 5489, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[154077, 5494, 276, 12, 29, "MoreAboutSection",
+ CellID->28426649],
+Cell[154356, 5508, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[154390, 5510, 185, 5, 22, "MoreAbout",
+ CellID->534477409],
+Cell[154578, 5517, 159, 5, 22, "MoreAbout",
+ CellID->226864929],
+Cell[154740, 5524, 185, 5, 22, "MoreAbout",
+ CellID->31866270],
+Cell[154928, 5531, 201, 6, 22, "MoreAbout",
+ CellID->687554250],
+Cell[155132, 5539, 174, 5, 22, "MoreAbout",
+ CellID->6085253],
+Cell[155309, 5546, 214, 6, 22, "MoreAbout",
+ CellID->267873392],
+Cell[155526, 5554, 31, 0, 29, "SectionFooterSpacer"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[155594, 5559, 274, 12, 29, "RelatedLinksSection",
+ CellID->2544],
+Cell[155871, 5573, 31, 0, 14, "SectionHeaderSpacer"],
+Cell[155905, 5575, 424, 15, 21, "RelatedLinks"],
+Cell[156332, 5592, 233, 6, 22, "RelatedLinks",
+ CellID->30247],
+Cell[156568, 5600, 446, 16, 21, "RelatedLinks"]
+}, Open  ]],
+Cell[157029, 5619, 48, 0, 45, "History"],
+Cell[157080, 5621, 23, 0, 24, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

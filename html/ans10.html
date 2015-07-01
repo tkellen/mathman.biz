@@ -1,0 +1,51 @@
+<title>Answers for Chapter 10 Sample Problems</title>
+<body bgcolor="#ffffff" text color="#00000">
+<center><h2>Answers for Chapter 10 Sample Problems</h2></center><br>
+<b>1. Kohler follows Archimedes</b><br>Kohler got the <font color="#FF0000"> ratios</font> p/d of 2.6, 3, 
+and 3.1 for the 3-, 6- and 12-sided 
+inscribed regular polygons. To generalize this ratio, let N = the # of 
+sides of the polygon and since we are doubling the # of sides N = 
+3*2<sup><font size=-2>f</font></sup>, d= the diameter of the circle, and s = 
+the length of one 
+side of the polygon. <br><img align=right src="../images/pdfini.gif" width="274" height="278">From 
+the diagram at the right, sin(180/N) = s/2<font color=#ff0000>/</font>d/2 
+and s = d*sin(180/N) or in radians, s = d*sin(Pi/N). A program in Basic to 
+get the first 10 ratios would be:<br>
+10 f = 0<br>
+20 N = 3*2<sup><font size=-2>f</font></sup><br>
+30 Print N*sin(Pi/N)<br>
+40 f = f + 1<br>
+50 IF f>10 THEN STOP<br>
+60 GOTO 20<br>
+Running the program we get the <font color="#FF0000"> infinite sequence</font> 2.59807, 3, 3.1058, 
+3.1326, 3.1393, ... and after 10 loops, we get 3.14159... . Notice the 
+first 3 are very close to what Kohler had.  And notice that we are 
+correct to 5 places for Pi!
+
+
+<p><b>4. Iterating the square root of a number.</b><br>This is the graph of 
+iterating the squart root of 10 (at the right). 
+<img align=right src="../images/sqrt10.gif" width="249" height="222"><br> A program in Basic, to 
+get 19 iterations,<br> would be:<ul><LI>10 INPUT N <LI>20 For c = 1 
+to 20 <LI>30  N = 
+Sqrt(N)<LI>40 PRINT N<LI>50 Next c</uL> 
+<p><br><b>6. Finding the square root of N by the 
+iteration of the averaging method.</b><br>Gayla, a 6th grader wrote this 
+program to get the square root 
+of N , starting with <b>G</b><UL><LI>10 C=0<LI>20 INPUT N<LI>30 INPUT 
+G<LI>40 G=(G+N/G)/2<LI>50 C=C+1<LI>60 PRINT G<LI>70 If C is less than 19 
+THEN GOTO 40<LI>80 END</UL><hr> 
+<a href="prob10.html">Back to
+Ch. 10 problems</a><br>
+<font 
+color=#ff0000><font size=4>To order</font><a
+href="https://www.mathman.biz/html/order.html"> Don's
+materials</a>
+
+
+
+<br><a href="chapters.html">To choose sample problems from
+other chapters</a>
+ 
+
+<br> <a href="http://www.mathman.biz">Mathman home</a>

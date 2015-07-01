@@ -1,0 +1,138 @@
+<title>Answers for Chapter 13 Sample Problems</title>
+<body bgcolor="#ffffff" text color="#00000">
+<center><h2>Answers for Chapter 13 Sample Problems</h2></center><br>
+<b>1. Area on the geoboard.</b> Each triangle has an area of 1.<br>
+<b>2. Achimedes' method of finding the area within a parabolic 
+segment.</b> -not 
+shown here.<br> <b>3. My progam to plot the points to make a square:</b> 
+<table>
+<tr>
+<td valign=top>
+<ul>
+<li> On the calculator
+<hr>
+<li>1)Range -2.35, 2.35, 1, -1.55, 1.55, 1
+<li>2) 0 -> x (sets left side)
+<li>3) 0 -> N (counts points in both cases)
+<li>4) Lbl 3
+<li>5) 1 -> y (sets top of figure)
+<li>6) Lbl 4 <p><br>
+<li>7) Plot x,y (plots the point)
+<li>8) 1+N -> N
+<li>9) y-.07 -> y (moves next pt. down)
+<li>10) y >or= 0 then goto 4 (sets bottom)
+<li>11) x+.07-> x (moves next pt. to rt)
+<li>12) x &ltor= 1 then goto 3 (sets rt end)
+<li>13) "N = ": N Disp (displays no. of points)
+</ul></td>
+<td valign=top>
+<ul>
+<li> &nbsp   &nbsp  in Basic
+<hr>
+<li>10 FOR X=0 TO 9 STEP .1
+<LI>15 N=0
+<LI>20 FOR Y=0 TO 81
+<LI>30 T=150 + 9*X
+<LI>40 V=150-Y (30 and 40 adjust for <br>the way pts are plotted on the 
+<br>computer screen)<p> <LI>50 PSET (T,V)
+<LI>60 N = N+1
+<LI>90 NEXT Y
+(moves next point up screen)
+<LI>100 NEXT X
+(moves next point to right)<p><p>
+<LI>110 PRINT N
+<LI>120 STOP 
+   
+</ul></td></tr>
+</table><br>
+Running this program fills in a 1x1 square; the number of dots varies 
+with the calculator or computer. On my calculator I got 400 points. To 
+change the program to plot the points under a parabola y = 
+x<sup><font size=-2>2</font></sup> from 0 to 1, replace the 1 in line 
+5 with x<sup><font size=-2>2</font></sup>. In the basic program 
+change statement 20 from 81 to x<sup><font 
+size=-2>2</font></sup>. I got the picture on the right and N=133. So 
+the area under the curve y = x<sup><font size=-2>2</font></sup> from 
+0 to 1 was 133/400, very close to 1/3 = 133/399, which is the integral of 
+x<sup><font size=-2>2</font></sup>, from 0 to 1!!<br> Needless to say, 
+this was very exciting. I showed it to everyone- teachers, students, and 
+parents.<br> <b>4. Finding the area under curves on 
+graph paper:</b> (From the scan of Sean's graph below I added the colors 
+and some lines to make things more readable) <br> Matt, a 7 year old, 
+counted the squares
+under y = x<sup><font size=-2>2</font></sup> from x = 0 to x = 1.
+He counted 32 squares, and 32/100 of the 1 x 1 <font color=#0000ff>blue 
+</font>square below as the 
+area. Byron, 
+a 10 year old recently doing this, counted 42 squares and I told him to go 
+back and do it again and be more careful. He too came up with 32. I asked 
+Matt what simple fraction was close to this. He said 1/3; I wrote this 
+as 1/3*1*1<sup><font
+size=-2>2</font></sup> or 1/3*1<sup><font
+size=-2>3</font></sup>.<br> <center><img 
+src="../images/sean7.gif" width="297" height="663"></center> 
+<br> From 0 to 2 he correctly predicted 1/3 of the 2x2<sup><font 
+size=-2>2</font></sup> rectangle or 1/3*2<sup><font
+size=-2>3</font></sup> (the  <font color=#40FF6F>green</font> 
+rectangle above) as the area under 
+the curve y = x<sup><font size=-2>2</font></sup> from x = 0 to x = 
+2.<br>Sean counted approximately 279 squares in going from 0 to 2, but 
+was satisfied this was close enough. He figured there are 20*40 = 800 
+little squares in the 2x4  <font color=#40FF6F>green</font> rectangle and 
+the area should be 1/3 of 800 or 266.66... which is close to 279. The 
+notation I used on his graph I now have changed to and use A<sub><font 
+size=-2>0-1</font></sub> (x<sup><font size=-2>2</font></sup>) = 
+1/3*1<sup><font
+size=-2>3</font></sup>. Then the area from 0-2 he wrote as A<sub><font
+size=-2>0-2</font></sub> (x<sup><font size=-2>2</font></sup>) =
+1/3*2<sup><font
+size=-2>3</font></sup>. Writing the area this way instead of 1 and 8, 
+makes it possible to see a pattern. I always want my students to look for 
+patterns. Writing the answers different ways often helps to see the 
+pattern. <p>What would you predict would be the area from 0-3? 0-4? 0-n?
+<br> How about finding the area under the curve y = x<sup><font 
+size=-1>3</sup></font> from 0-1? 0-2? 0-n?... Look for patterns!
+<br><b>7. The logs</b><br>
+<img align=left
+src="../images/logscal.gif" width="140" height="252">
+Notice  0.602 = 2*0.301 or log 4 = <font
+color=#ff0000>2</font>*log<font color=#0000ff>
+2</font> =  log<font color=#0000ff>
+2</font><sup><font size=-1><font
+color=#ff0000>2</font></sup></font> 
+
+
+
+<br> and 0.903 = 3*0.301 <br> or log 8 = <font
+color=#ff0000>3</font>*log<font color=#0000ff>
+2</font> =  log<font color=#0000ff>
+2</font><sup><font size=-1><font
+color=#ff0000>3</font></sup></font> 
+
+<br>Generalizing,<br> <font
+color=#ff0000>a</font>*log<font color=#0000ff>
+b</font> =  log<font color=#0000ff> 
+b</font><sup><font size=-1><font 
+color=#ff0000>a</font></sup></font>
+<p>Some youngsters do the above first, some do the following 
+first.<br>Notice also 0.301 + 0.477 = 0.778, which is<br>
+
+log <font color=#ff0000>2</font> + log<font color=#0000ff> 
+3</font> = log 6 = log (<font color=#ff0000>2</font>*<font 
+color=#0000ff>3</font>)
+<br>Test out more of these, then generalize.<p>How about this, log (1/ 
+<font color=#ff0000>2</font>) =  <sup><b>-</b></sup> log  <font 
+color=#ff0000>2</font>.<br> And log (1/4) = ? Can you generlize these 
+statements?<br><center><font color=#FF40FF>PATTERNS ARE EVERYWHERE!!</FONT>
+</center>
+
+ <hr>
+ <a href="prob13.html">Back to 
+Ch. 13 problems</a>
+<br><a href="chapters.html">To choose sample problems from
+other chapters</a>
+<br>
+<font color=#ff0000><font size=4>To order</font><a
+href="https://www.mathman.biz/html/order.html"> Don's materials</a>                  
+
+<br> <a href="http://www.mathman.biz">Mathman home</a>

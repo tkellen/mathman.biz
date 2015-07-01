@@ -1,0 +1,13 @@
+
+A man buys a truck for $600, then sells it for $700. Later, he decides to buy it back again and pays $800 dollars. However, someone offers him $900, so he sells it again. After all these transactions, did he make money, lose money, or break even? Enter a negative number if he lost money, 0 if he broke even, or a positive number if he made money.
+
+
+A man buys a truck for $600, then sells it for $700. Later, he decides to buy it back again and pays $800 dollars. However, someone offers him $900, so he sells it again. After all these transactions, did he make money, lose money, or break even? Enter a negative number if he lost money, 0 if he broke even, or a positive number if he made money.
+
+
+
+A man buys a truck for $600, then sells it for $700. Later, he decides to buy it back again and pays $800 dollars. However, someone offers him $900, so he sells it again. After all these transactions, did he make money, lose money, or break even? Enter a negative number if he lost money, 0 if he broke even, or a positive number if he made money.
+
+
+
+A man buys a truck for $600, then sells it for $700. Later, he decides to buy it back again and pays $800 dollars. However, someone offers him $900, so he sells it again. After all these transactions, did he make money, lose money, or break even? Enter a negative number if he lost money, 0 if he broke even, or a positive number if he made money.

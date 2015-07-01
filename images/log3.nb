@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3239,        119]
+NotebookOptionsPosition[      2659,         93]
+NotebookOutlinePosition[      3015,        109]
+CellTagsIndexPosition[      2972,        106]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   UnderoverscriptBox["\[Product]", 
+    RowBox[{"a", "=", "2"}], "4"], 
+   RowBox[{"[", 
+    RowBox[{"log", "[", 
+     RowBox[{"a", ",", 
+      RowBox[{"2", "*", "a"}]}], "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5565498295908003`*^9, 3.5565499301081877`*^9}, {
+  3.556550355152548*^9, 3.556550409748374*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Syntax", "::", "tsntxi"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\\\"\[NoBreak]\\!\\([\\(\\(log[\\(\\(a, \\(\\(2 * \
+a\\)\\)\\)\\)]\\)\\)]\\)\[NoBreak]\\\" is incomplete; more input is needed.\
+\[NoBreak]\\!\\(\\\"\\\"\\)\[NoBreak]\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.556550431080926*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Syntax", "::", "sntxi"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Incomplete expression; more input is needed \
+\[NoBreak]\\!\\(\\\"\\\"\\)\[NoBreak].\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5565504310826902`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Log10", "[", 
+  RowBox[{"Log10", "[", 
+   RowBox[{"Log10", "[", "2", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5565504617363462`*^9, 3.5565504733557787`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"\[ImaginaryI]", " ", "\[Pi]"}], "+", 
+   RowBox[{"Log", "[", 
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{"Log", "[", 
+       FractionBox[
+        RowBox[{"Log", "[", "2", "]"}], 
+        RowBox[{"Log", "[", "10", "]"}]], "]"}], 
+      RowBox[{"Log", "[", "10", "]"}]]}], "]"}]}], 
+  RowBox[{"Log", "[", "10", "]"}]]], "Output",
+ CellChangeTimes->{3.556550476636786*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Log", "[", 
+  RowBox[{"2", ",", "10"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5565499939331703`*^9, 3.556550007489822*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"Log", "[", "10", "]"}], 
+  RowBox[{"Log", "[", "2", "]"}]]], "Output",
+ CellChangeTimes->{{3.5565499975795517`*^9, 3.5565500087731533`*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 756},
+WindowMargins->{{23, Automatic}, {4, Automatic}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 398, 11, 56, "Input"],
+Cell[980, 35, 357, 8, 23, "Message"],
+Cell[1340, 45, 276, 7, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1653, 57, 193, 4, 27, "Input"],
+Cell[1849, 63, 427, 13, 71, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2313, 81, 148, 3, 27, "Input"],
+Cell[2464, 86, 179, 4, 49, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,17 @@
+Calculating Fuel Efficiency
+Ton-mile per gallon is a unit of measurement to describe the efficiency of hauling freight by various modes of transportation.
+
+The rail industry tracks and reports revenue ton-miles in the “Annual Report to the Surface Transportation Board” (commonly referred to as the R1 Report). The “Ton-Miles of Freight” annual value is reported in Schedule 755, line 110 of the R1 Report. The rail industry also tracks and reports annual fuel usage in the R1 Report, Schedule 750, line 4. These two reported values are used to determine a system-wide train efficiency value.
+
+For example, in 2010, the CSX ton-miles of freight reported in the R1 Report = 229,172,569,000 ton-miles and the CSX 2010 reported fuel usage = 490,049,749 gallons.
+The 2010 CSX system-wide train efficiency metric equals  (229,172,569,000 ton-miles) divided by (490,049,749 gallons) equals 468 ton-miles per gallon.
+In other words CSX trains, on average, can move a ton of freight nearly 500 mile on a gallon of fuel, based on our 2010 revenue ton miles and 2010 fuel use.
+
+For example, a heavy-duty diesel truck that hauls 19 tons of freight a distance of 500 miles would consume approximately 71 gallons of diesel fuel. The efficiency of this freight haul would be calculated as:
+(19 tons times 500 miles) divided by (71 gallons) equals 134 ton-miles per gallon.
+This efficiency might be stated as “a truck can move a ton of freight 134 miles on a gallon of fuel.”
+Similarly, a typical train might haul 3000 tons of freight 500 miles and consume approximately 3200 gallons of diesel fuel. The efficiency of this freight haul would be calculated as:
+(3000 tons multiplied by 500 miles) divided by (3200 gallons) equals 469 ton-miles per gallon.
+This efficiency might be stated as “a train can move a ton of freight 469 miles on a gallon of fuel.”
+In this example, the train is approximately 3.5 times more efficient at hauling freight.
+Additional information about fuel efficiency for various modes can be found on Mother Nature Network .

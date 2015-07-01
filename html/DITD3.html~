@@ -1,0 +1,74 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="File-List" href="DITD3_files/filelist.xml">
+<title>g</title>
+<!--[if !mso]>
+<style>
+v\:*         { behavior: url(#default#VML) }
+o\:*         { behavior: url(#default#VML) }
+.shape       { behavior: url(#default#VML) }
+</style>
+<![endif]--><!--[if gte mso 9]>
+<xml><o:shapedefaults v:ext="edit" spidmax="1027"/>
+</xml><![endif]-->
+</head>
+
+<body>
+
+<p align="center"><font size="5" face="Arial">Iterating I<sup>n</sup></font>
+<font size="5" face="Arial">using complex numbers for n</font></p>
+<p class="MsoNormal"><b>g[x_]=(0+I)^x</b></p>
+<p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t75" style='width:21pt;
+ height:19.5pt'>
+ <v:imagedata src="DITD3_files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=28 height=26
+src="DITD3_files/image002.gif" v:shapes="_x0000_s1025"><![endif]></p>
+<p class="MsoNormal"><b>N[NestList[g,0+I,10],10]</b></p>
+<p class="MsoNormal">{0. +1. <span style="font-family: Mathematica1">ä</span>,0.20788 
++0. <span style="font-family: Mathematica1">ä</span>,0.947159 +0.320764
+<span style="font-family: Mathematica1">ä</span>,0.0500922 +0.602117
+<span style="font-family: Mathematica1">ä</span>,0.387166 +0.0305271
+<span style="font-family: Mathematica1">ä</span>,0.782276 +0.544607
+<span style="font-family: Mathematica1">ä</span>,0.142562 +0.400467
+<span style="font-family: Mathematica1">ä</span>,0.519786 +0.118384
+<span style="font-family: Mathematica1">ä</span>,0.568589 +0.605078
+<span style="font-family: Mathematica1">ä</span>,0.242365 +0.301151
+<span style="font-family: Mathematica1">ä</span>,0.578489 +0.23153
+<span style="font-family: Mathematica1">ä</span>}</p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><b>ListPlot[Map[{Re[#],Im[#]}&amp;,N[NestList[g,0+I,100]]],</b></p>
+<p class="MsoNormal"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PlotJoined-&gt;True,PlotRange-&gt;All,AspectRatio<span style="font-family: Mathematica1">®</span>Automatic]</b></p>
+<p class="MsoNormal"><!--[if gte vml 1]><v:shape
+ id="_x0000_s1026" type="#_x0000_t75" style='width:318pt;height:325.5pt'>
+ <v:imagedata src="DITD3_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=424 height=434
+src="DITD3_files/image004.gif" v:shapes="_x0000_s1026"><![endif]></p>
+<p class="MsoNormal"><span style="font-family: Mathematica1">?</span>Graphics<span style="font-family: Mathematica1">?</span></p>
+
+</body>
+
+</html>
